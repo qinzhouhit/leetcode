@@ -5,3 +5,5 @@ class Solution:
                 nums[i]+=nums[i-1]
         return max(nums)
 
+obj=Solution()
+print (obj.maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
