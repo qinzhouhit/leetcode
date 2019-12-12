@@ -17,12 +17,12 @@ class Solution:
         return res
 
     def helper(self, res, tmp, start, nums):
-        res.append(tmp)
+        res.append(tmp[:])
         for i in range(start, len(nums)):
             if i!=start and nums[i]==nums[i-1]:
                 continue
             tmp.append(nums[i])
-            self.helper(nums, tmp, i+1, nums)
+            self.helper(res, tmp, i+1, nums)
             tmp.pop()
 
 obj=Solution()
