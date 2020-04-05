@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def uniquePaths(self, m, n):
         mat=[[1 for x in range(n)] for x in range(m)]

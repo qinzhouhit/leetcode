@@ -1,11 +1,12 @@
-# Definition for a binary tree node.
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
 
-"""
+
 # Definition for a Node.
 class Node:
     def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
@@ -13,32 +14,35 @@ class Node:
         self.left = left
         self.right = right
         self.next = next
-"""
+
 class Solution:
     def connect(self, root):
         if not root: return []
+
         import collections
-        queue, res = collections.deque([root]), []
+        queue = collections.deque([root])
+        queue.append(None)
+
         while queue:
-            tmp = []
-            for _ in range(len(queue)):
-                node = queue.popleft()
-                # if node:
-                tmp+=[node.val]
+            node = queue.popleft()
+            if node:
+                node.next = queue[0]
                 if node.left: queue+=[node.left]
                 if node.right: queue+=[node.right]
-            res+=[v for v in tmp]
-            res+=['#']
-        return res
+            elif queue: # pay attention!!!
+                queue+=[None]
+        return root
 
 
 
 
-node1 = TreeNode(3)
-node1.left = TreeNode(9)
-node2 = node1.right = TreeNode(20)
-node2.left = TreeNode(15)
-node2.right = TreeNode(7)
+node1 = Node(1)
+node2 = node1.left = Node(2)
+node3 = node1.right = Node(3)
+node2.left = Node(4)
+node2.right = Node(5)
+node3.left = Node(6)
+node3.right = Node(7)
 
 obj = Solution()
-print(obj.zigzagLevelOrder(node1))
+print(obj.connect(node1))

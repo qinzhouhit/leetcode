@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def search(self, nums, target):
         l,r=0, len(nums)-1

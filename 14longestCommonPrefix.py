@@ -1,3 +1,12 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
+
 class Solution:
     def longestCommonPrefix(self, strs):
         if not strs:

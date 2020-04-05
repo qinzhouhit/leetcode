@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def groupAnagrams(self, strs):
         groups={}

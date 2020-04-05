@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def reverse(self, x: int) -> int:
         pos_neg=1

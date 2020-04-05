@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid):
         col=len(obstacleGrid[0])

@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def maxArea(self, height):
         L, R, width, res = 0, len(height) - 1, len(height) - 1, 0

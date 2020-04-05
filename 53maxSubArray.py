@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def maxSubArray(self, nums):
         for i in range(1, len(nums)):

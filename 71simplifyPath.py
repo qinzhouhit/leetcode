@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
 	def simplifyPath(self, path):
 		parts=[p for p in path.split("/")\

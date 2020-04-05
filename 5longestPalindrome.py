@@ -1,3 +1,12 @@
+'''
+keys: two cases
+Solutions:
+Similar:
+T:
+S:
+'''
+
+
 class Solution():
     def longestPalindrome(self, s):
         res = ""

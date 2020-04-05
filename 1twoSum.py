@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution(object):
     def twoSum(self, nums, target):
         if len(nums) <= 1:
@@ -13,3 +21,5 @@ obj=Solution()
 nums=[2,7,11,15]
 target=10
 obj.twoSum(nums, target)
+
+

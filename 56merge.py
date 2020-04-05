@@ -1,4 +1,12 @@
 '''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
+'''
 Just go through the intervals sorted by start coordinate
 and either combine the current interval with the previous one
 if they overlap, or add it to the output by itself if they don't.

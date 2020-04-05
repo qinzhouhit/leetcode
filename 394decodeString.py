@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def decodeString(self, s: str) -> str:
         res = ''; num = 0; stack = []

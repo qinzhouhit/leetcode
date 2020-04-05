@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def isPalindrome(self, s):
         l, r = 0, len(s)-1

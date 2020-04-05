@@ -1,3 +1,13 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
+
+
 class Solution:
     def generateParenthesis(self, n):
         def generate(p, left, right, parens=[]):

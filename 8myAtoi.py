@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def myAtoi(self, s: str) -> int:
         if len(s)==0: return 0

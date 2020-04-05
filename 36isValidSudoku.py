@@ -1,3 +1,12 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
+
 class Solution:
     def isValidSudoku(self, board):
         return (self.isRowValid(board) and

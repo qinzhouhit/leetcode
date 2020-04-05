@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def minPathSum(self, grid):
         r,c=len(grid), len(grid[0])

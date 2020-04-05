@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
 	def wallsAndGates(self, rooms):
 		if not any(rooms):

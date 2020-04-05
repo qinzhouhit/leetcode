@@ -1,3 +1,11 @@
+'''
+keys:
+Solutions:
+Similar:
+T:
+S:
+'''
+
 class Solution:
     def maxProfit1(self, prices):
         maxCur = 0; maxSoFar = 0
