@@ -1,9 +1,9 @@
 '''
-keys:
+keys: two pointer
 Solutions:
 Similar:
-T:
-S:
+T: O(n^2)
+S: O(1) for res
 '''
 
 
@@ -12,6 +12,11 @@ class Solution:
         res = []
         nums.sort()
         for i in range(len(nums)-2):
+            # We do not need to consider i after nums[i]>0,
+            # since sum of 3 positive will be always greater than zero.
+            if nums[i] > 0: break
+            # If the number is the same as the number before,
+            # we have used it as target already
             if i > 0 and nums[i] == nums[i-1]:
                 continue
             l, r = i+1, len(nums)-1
@@ -23,6 +28,7 @@ class Solution:
                     r -= 1
                 else:
                     res.append((nums[i], nums[l], nums[r]))
+                    # exclude possible duplicate triplets
                     while l < r and nums[l] == nums[l+1]:
                         l += 1
                     while l < r and nums[r] == nums[r-1]:

@@ -15,17 +15,28 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, l1, l2):
-        first=tmp=ListNode(0)
+        dummy=cur=ListNode(0)
         while l1 and l2:
             if l1.val<l2.val:
-                tmp.next=l1
+                cur.next=l1
                 l1=l1.next
             else:
-                tmp.next=l2
+                cur.next=l2
                 l2=l2.next
-            tmp=tmp.next
-        tmp.next=l1 or l2
-        return first.next
+            cur=cur.next
+        cur.next=l1 or l2
+        return dummy.next
+
+    # recursively
+    def mergeTwoLists2(self, l1, l2):
+        if not l1 or not l2:
+            return l1 or l2
+        if l1.val < l2.val:
+            l1.next = self.mergeTwoLists(l1.next, l2)
+            return l1
+        else:
+            l2.next = self.mergeTwoLists(l1, l2.next)
+            return l2
 
 
 e1=ListNode(1)

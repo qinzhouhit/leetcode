@@ -1,6 +1,7 @@
 '''
-keys:
-Solutions:
+keys: use carry + value
+Solutions: n.next = n = ListNode(val) means first n.next = ListNode(val)
+then n point to the same address
 Similar:
 T:
 S:

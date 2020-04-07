@@ -1,8 +1,14 @@
 '''
-keys:
-Solutions:
+keys: top right corner
+Solutions: We start search the matrix from top right corner,
+initialize the current position to top right corner,
+if the target is greater than the value in current position,
+then the target can not be in entire row of current position
+because the row is sorted, if the target is less than
+the value in current position, then the target can not
+in the entire column because the column is sorted too.
 Similar:
-T:
+T: O(m+n)
 S:
 '''
 
@@ -24,6 +30,18 @@ class Solution:
                 col_ -= 1
             elif target > matrix[row_][col_]:
                 row_ += 1
+        return False
+
+    def searchMatrix1(self, matrix, target):
+        row = 0
+        col = len(matrix[0]) - 1
+        while row < len(matrix) and col >= 0:
+            if matrix[row][col] > target:
+                col -= 1
+            elif matrix[row][col] < target:
+                row += 1
+            else:
+                return True
         return False
 
 a = [[1,4,7,11,15],

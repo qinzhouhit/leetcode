@@ -1,5 +1,5 @@
 '''
-keys:
+keys: put the min value in stack as element of (x, min)
 Solutions:
 Similar:
 T:

@@ -1,9 +1,9 @@
 '''
-keys:
+keys: sliding window
 Solutions:
 Similar:
-T:
-S:
+T: O(n)
+S: 
 '''
 
 class Solution:
@@ -12,12 +12,12 @@ class Solution:
         start = maxLength = 0
         usedChar = {}
 
-        for i in range(len(s)):
-            if s[i] in usedChar and start <= usedChar[s[i]]:
-                start = usedChar[s[i]] + 1
+        for i, c in enumerate(s):
+            if c in usedChar and start <= usedChar[c]:
+                start = usedChar[c] + 1
             else:
                 maxLength = max(maxLength, i - start + 1)
-            usedChar[s[i]] = i
+            usedChar[c] = i
         return maxLength
 
 
