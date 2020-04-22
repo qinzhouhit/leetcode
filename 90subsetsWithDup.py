@@ -1,7 +1,8 @@
 '''
 keys:
 Solutions:
-Similar:
+Similar: 78 (distinct nums)
+90: duplicate nums
 T:
 S:
 '''
@@ -25,13 +26,30 @@ class Solution:
         return res
 
     def helper(self, res, tmp, start, nums):
-        res.append(tmp[:])
+        res.append(list(tmp))
         for i in range(start, len(nums)):
-            if i!=start and nums[i]==nums[i-1]:
+            # if S[i] is same to S[i - 1], then it needn't to be added to
+            # all of the subset, just add it to the last l subsets
+            # which are created by adding S[i - 1]
+            if i > start and nums[i]==nums[i-1]:
                 continue
             tmp.append(nums[i])
             self.helper(res, tmp, i+1, nums)
             tmp.pop()
+
+
+    def subsetsWithDup1(self, nums):
+        if not nums:
+            return []
+        nums.sort()
+        res, cur = [[]], []
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                cur = [item + [nums[i]] for item in cur]
+            else:
+                cur = [item + [nums[i]] for item in res]
+            res += cur
+        return res
 
 obj=Solution()
 print (obj.subsetsWithDup([1,2,2]))

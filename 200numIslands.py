@@ -25,8 +25,8 @@ class Solution:
 		if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != 1:
 			return
 		grid[i][j] = "#"
-		print (i, j)
-		print (np.matrix(grid))
+		# print (i, j)
+		# print (np.matrix(grid))
 		self.dfs(grid, i+1, j)
 		self.dfs(grid, i-1, j)
 		self.dfs(grid, i, j+1)

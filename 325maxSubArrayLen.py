@@ -1,9 +1,9 @@
 '''
-keys:
+keys: use dict to keep track of; prefix sum
 Solutions:
 Similar:
-T:
-S:
+T: O(n)
+S: O(n)
 '''
 
 class Solution:
@@ -23,7 +23,7 @@ class Solution:
             if sum_ == k:
                 maxLen = i + 1
 
-            elif sum_ - k in dict_:
+            elif sum_ - k in dict_: # cur: sum_; pre: sum_ - k; subtract: k
                 maxLen = max(maxLen, i - dict_[sum_ - k])
 
             if sum_ not in dict_:

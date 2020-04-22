@@ -1,9 +1,10 @@
 '''
-keys:
+keys: store information at the first element of each columns and rows.
+If a column contains a 0, it's first element will be 0. Same for rows.
 Solutions:
 Similar:
 T:
-S:
+S: O(1)
 '''
 
 class Solution:
@@ -13,6 +14,9 @@ class Solution:
         """
         isZeroCol, isZeroRow=False, False
         row_, col_=len(matrix), len(matrix[0])
+        # However, both first column and first row use matrix[0][0]
+        # which is problematic so she creates another variable for first column,
+        # col0. So we consider first row and col separately
         for i in range(0,row_): # check first column
             if matrix[i][0]==0:
                 isZeroCol=True

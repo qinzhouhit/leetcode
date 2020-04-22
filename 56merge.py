@@ -1,9 +1,9 @@
 '''
-keys:
+keys: compare the 1st element of interval to the last element of last interval
 Solutions:
 Similar:
-T:
-S:
+T: O(nlogn)
+S: O(1)
 '''
 
 '''

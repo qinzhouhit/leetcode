@@ -1,8 +1,8 @@
 '''
 keys:
 Solutions:
-Similar:
-T:
+Similar: 107
+T: a O(N) or O(Nodes + Edges) solution
 S:
 '''
 

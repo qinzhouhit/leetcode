@@ -23,7 +23,7 @@ class Solution:
             while l < r:
                 s = nums[i] + nums[l] + nums[r]
                 if s < 0:
-                    l +=1
+                    l += 1
                 elif s > 0:
                     r -= 1
                 else:
@@ -33,7 +33,7 @@ class Solution:
                         l += 1
                     while l < r and nums[r] == nums[r-1]:
                         r -= 1
-                    l += 1; r -= 1
+                    l += 1; r -= 1 # search for new combinations
         return res
 
     # def threeSum(self, nums):

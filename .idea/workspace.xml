@@ -2,26 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/139wordBreak.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/141hasCycle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/160getIntersectionNode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/167twoSum.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/206reverseList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/234isPalindrome.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/239maxSlidingWindow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/98isValidBST.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/105buildTree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/114flatten.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/136singleNumber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/161isOneEditDistance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/168convertToTitle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/204countPrimes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/23mergeKLists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/297serialize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/535encode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/621leastInterval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/68fullJustify.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/762countPrimeSetBits.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/784letterCasePermutation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z100removeDuplicates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/z1395getBarycentre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/127ladderLength.py" beforeDir="false" afterPath="$PROJECT_DIR$/127ladderLength.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/155MinStack.py" beforeDir="false" afterPath="$PROJECT_DIR$/155MinStack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/102levelOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/102levelOrder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/107levelOrderBottom.py" beforeDir="false" afterPath="$PROJECT_DIR$/107levelOrderBottom.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/15threeSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/15threeSum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/17letterCombinations.py" beforeDir="false" afterPath="$PROJECT_DIR$/17letterCombinations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/18fourSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/18fourSum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/215kthLargest.py" beforeDir="false" afterPath="$PROJECT_DIR$/215kthLargest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/21mergeTwoLists.py" beforeDir="false" afterPath="$PROJECT_DIR$/21mergeTwoLists.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/240searchMatrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/240searchMatrix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2addTwoNumbers.py" beforeDir="false" afterPath="$PROJECT_DIR$/2addTwoNumbers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3lengthOfLongestSubstring.py" beforeDir="false" afterPath="$PROJECT_DIR$/3lengthOfLongestSubstring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/88merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/88merge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/200numIslands.py" beforeDir="false" afterPath="$PROJECT_DIR$/200numIslands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20isValid.py" beforeDir="false" afterPath="$PROJECT_DIR$/20isValid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/325maxSubArrayLen.py" beforeDir="false" afterPath="$PROJECT_DIR$/325maxSubArrayLen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/38countAndSay.py" beforeDir="false" afterPath="$PROJECT_DIR$/38countAndSay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/50myPow.py" beforeDir="false" afterPath="$PROJECT_DIR$/50myPow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/56merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/56merge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/73setZeroes.py" beforeDir="false" afterPath="$PROJECT_DIR$/73setZeroes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/78subsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/78subsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/79exist.py" beforeDir="false" afterPath="$PROJECT_DIR$/79exist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/90subsetsWithDup.py" beforeDir="false" afterPath="$PROJECT_DIR$/90subsetsWithDup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,16 +42,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/139wordBreak.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/234isPalindrome.py">
+        <entry file="file://$PROJECT_DIR$/200numIslands.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="6" selection-end-column="3" />
@@ -49,65 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/98isValidBST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/88merge.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/21mergeTwoLists.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3lengthOfLongestSubstring.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/167twoSum.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/15threeSum.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/18fourSum.py">
+        <entry file="file://$PROJECT_DIR$/23mergeKLists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -137,34 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/235lowestCommonAncestor.py" />
-        <option value="$PROJECT_DIR$/236lowestCommonAncestor.py" />
-        <option value="$PROJECT_DIR$/238productExceptSelf.py" />
-        <option value="$PROJECT_DIR$/241diffWaysToCompute.py" />
-        <option value="$PROJECT_DIR$/243shortestDistance.py" />
-        <option value="$PROJECT_DIR$/252canAttendMeetings.py" />
-        <option value="$PROJECT_DIR$/254getFactors.py" />
-        <option value="$PROJECT_DIR$/257binaryTreePaths.py" />
-        <option value="$PROJECT_DIR$/266canPermutePalindrome.py" />
-        <option value="$PROJECT_DIR$/277findCelebrity.py" />
-        <option value="$PROJECT_DIR$/280wiggleSort.py" />
-        <option value="$PROJECT_DIR$/283moveZeroes.py" />
-        <option value="$PROJECT_DIR$/286wallsAndGates.py" />
-        <option value="$PROJECT_DIR$/298longestConsecutive.py" />
-        <option value="$PROJECT_DIR$/299getHint.py" />
-        <option value="$PROJECT_DIR$/314verticalOrder.py" />
-        <option value="$PROJECT_DIR$/325maxSubArrayLen.py" />
-        <option value="$PROJECT_DIR$/329longestIncreasingPath.py" />
-        <option value="$PROJECT_DIR$/332findItinerary.py" />
-        <option value="$PROJECT_DIR$/339depthSum.py" />
-        <option value="$PROJECT_DIR$/341nestedIterator.py" />
-        <option value="$PROJECT_DIR$/347topKFrequent.py" />
-        <option value="$PROJECT_DIR$/364depthSumInverse.py" />
-        <option value="$PROJECT_DIR$/376wiggleMaxLength.py" />
-        <option value="$PROJECT_DIR$/377combinationSum4.py" />
-        <option value="$PROJECT_DIR$/378kthSmallest.py" />
-        <option value="$PROJECT_DIR$/383canConstruct.py" />
-        <option value="$PROJECT_DIR$/388lengthLongestPath.py" />
         <option value="$PROJECT_DIR$/392isSubsequence.py" />
         <option value="$PROJECT_DIR$/394decodeString.py" />
         <option value="$PROJECT_DIR$/395longestSubstring.py" />
@@ -186,15 +105,43 @@
         <option value="$PROJECT_DIR$/21mergeTwoLists.py" />
         <option value="$PROJECT_DIR$/3lengthOfLongestSubstring.py" />
         <option value="$PROJECT_DIR$/167twoSum.py" />
-        <option value="$PROJECT_DIR$/15threeSum.py" />
         <option value="$PROJECT_DIR$/18fourSum.py" />
+        <option value="$PROJECT_DIR$/102levelOrder.py" />
+        <option value="$PROJECT_DIR$/107levelOrderBottom.py" />
+        <option value="$PROJECT_DIR$/73setZeroes.py" />
+        <option value="$PROJECT_DIR$/105buildTree.py" />
+        <option value="$PROJECT_DIR$/114flatten.py" />
+        <option value="$PROJECT_DIR$/136singleNumber.py" />
+        <option value="$PROJECT_DIR$/mergeSortedArray.py" />
+        <option value="$PROJECT_DIR$/z100removeDuplicates.py" />
+        <option value="$PROJECT_DIR$/56merge.py" />
+        <option value="$PROJECT_DIR$/38countAndSay.py" />
+        <option value="$PROJECT_DIR$/20isValid.py" />
+        <option value="$PROJECT_DIR$/784letterCasePermutation.py" />
+        <option value="$PROJECT_DIR$/168convertToTitle.py" />
+        <option value="$PROJECT_DIR$/535encode.py" />
+        <option value="$PROJECT_DIR$/621leastInterval.py" />
+        <option value="$PROJECT_DIR$/325maxSubArrayLen.py" />
+        <option value="$PROJECT_DIR$/161isOneEditDistance.py" />
+        <option value="$PROJECT_DIR$/50myPow.py" />
+        <option value="$PROJECT_DIR$/79exist.py" />
+        <option value="$PROJECT_DIR$/15threeSum.py" />
+        <option value="$PROJECT_DIR$/90subsetsWithDup.py" />
+        <option value="$PROJECT_DIR$/78subsets.py" />
+        <option value="$PROJECT_DIR$/297serialize.py" />
+        <option value="$PROJECT_DIR$/z1395getBarycentre.py" />
+        <option value="$PROJECT_DIR$/204countPrimes.py" />
+        <option value="$PROJECT_DIR$/68fullJustify.py" />
+        <option value="$PROJECT_DIR$/762countPrimeSetBits.py" />
+        <option value="$PROJECT_DIR$/200numIslands.py" />
+        <option value="$PROJECT_DIR$/23mergeKLists.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="566" />
+    <option name="x" value="599" />
     <option name="y" value="23" />
-    <option name="width" value="873" />
+    <option name="width" value="841" />
     <option name="height" value="836" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -236,8 +183,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.139wordBreak">
-    <configuration name="127ladderLength" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.79exist">
+    <configuration name="107levelOrderBottom" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,7 +196,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/127ladderLength.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/107levelOrderBottom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,7 +205,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="139wordBreak" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="20isValid" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -270,49 +217,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/139wordBreak.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="17letterCombinations" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/17letterCombinations.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="206reverseList" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/206reverseList.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20isValid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -363,7 +268,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2addTwoNumbers" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="325maxSubArrayLen" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -375,7 +280,70 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2addTwoNumbers.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/325maxSubArrayLen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="621leastInterval" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/621leastInterval.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="784letterCasePermutation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/784letterCasePermutation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="79exist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/79exist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -407,11 +375,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.139wordBreak" />
-        <item itemvalue="Python.2addTwoNumbers" />
-        <item itemvalue="Python.127ladderLength" />
-        <item itemvalue="Python.206reverseList" />
-        <item itemvalue="Python.17letterCombinations" />
+        <item itemvalue="Python.79exist" />
+        <item itemvalue="Python.325maxSubArrayLen" />
+        <item itemvalue="Python.621leastInterval" />
+        <item itemvalue="Python.784letterCasePermutation" />
+        <item itemvalue="Python.20isValid" />
       </list>
     </recent_temporary>
   </component>
@@ -419,14 +387,14 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="566" y="23" width="873" height="836" extended-state="0" />
+    <frame x="599" y="23" width="841" height="836" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24413146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25243902" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30510753" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30510753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36155915" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -478,212 +446,40 @@
           <line>18</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/105buildTree.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/114flatten.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/621leastInterval.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/325maxSubArrayLen.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/79exist.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="TreeNode" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/241diffWaysToCompute.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/243shortestDistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/252canAttendMeetings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/254getFactors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/257binaryTreePaths.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/266canPermutePalindrome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/277findCelebrity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/280wiggleSort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/283moveZeroes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/286wallsAndGates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/298longestConsecutive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/299getHint.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/314verticalOrder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/325maxSubArrayLen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/329longestIncreasingPath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/332findItinerary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/339depthSum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/341nestedIterator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/347topKFrequent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/364depthSumInverse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/392isSubsequence.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3326">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/395longestSubstring.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/394decodeString.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/388lengthLongestPath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/383canConstruct.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/378kthSmallest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/377combinationSum4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/240searchMatrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-97">
@@ -705,13 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/206reverseList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -799,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/21mergeTwoLists.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/3lengthOfLongestSubstring.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -827,17 +609,234 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/15threeSum.py">
+    <entry file="file://$PROJECT_DIR$/18fourSum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state>
+          <caret selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/18fourSum.py">
+    <entry file="file://$PROJECT_DIR$/107levelOrderBottom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
+        <state relative-caret-position="1230">
+          <caret line="82" selection-start-line="82" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mergeSortedArray.py" />
+    <entry file="file://$PROJECT_DIR$/21mergeTwoLists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/206reverseList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/136singleNumber.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#51#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/114flatten.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/105buildTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="36" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/73setZeroes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/102levelOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z100removeDuplicates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/56merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/38countAndSay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/784letterCasePermutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/535encode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235">
+          <caret selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#134#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/168convertToTitle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-481">
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/20isValid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="25" selection-start-line="25" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/621leastInterval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/325maxSubArrayLen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/161isOneEditDistance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/50myPow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/79exist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/39combinationSum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/15threeSum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="29" column="59" lean-forward="true" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/90subsetsWithDup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/297serialize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/z1395getBarycentre.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/78subsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/204countPrimes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/68fullJustify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/762countPrimeSetBits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/200numIslands.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/23mergeKLists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
