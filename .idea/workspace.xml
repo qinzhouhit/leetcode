@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/105buildTree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/114flatten.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/136singleNumber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/161isOneEditDistance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/168convertToTitle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/204countPrimes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/23mergeKLists.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/297serialize.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/535encode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/621leastInterval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/68fullJustify.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/762countPrimeSetBits.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/784letterCasePermutation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/z100removeDuplicates.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/z1395getBarycentre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/102levelOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/102levelOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/107levelOrderBottom.py" beforeDir="false" afterPath="$PROJECT_DIR$/107levelOrderBottom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15threeSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/15threeSum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/200numIslands.py" beforeDir="false" afterPath="$PROJECT_DIR$/200numIslands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20isValid.py" beforeDir="false" afterPath="$PROJECT_DIR$/20isValid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/325maxSubArrayLen.py" beforeDir="false" afterPath="$PROJECT_DIR$/325maxSubArrayLen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/38countAndSay.py" beforeDir="false" afterPath="$PROJECT_DIR$/38countAndSay.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/50myPow.py" beforeDir="false" afterPath="$PROJECT_DIR$/50myPow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/56merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/56merge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/73setZeroes.py" beforeDir="false" afterPath="$PROJECT_DIR$/73setZeroes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/78subsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/78subsets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/79exist.py" beforeDir="false" afterPath="$PROJECT_DIR$/79exist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/90subsetsWithDup.py" beforeDir="false" afterPath="$PROJECT_DIR$/90subsetsWithDup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/23mergeKLists.py" beforeDir="false" afterPath="$PROJECT_DIR$/23mergeKLists.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/23mergeKLists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -835,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/23mergeKLists.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
