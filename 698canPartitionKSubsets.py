@@ -8,12 +8,16 @@ S:
 
 # https://github.com/bephrem1/backtobackswe/blob/master/Dynamic%20Programming%2C%20Recursion%2C%20%26%20Backtracking/PartitionIntoKEqualSumSubsets/PartitionIntoKEqualSumSubsets.java
 class Solution:
-    def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
+    # the time complexity is O(k * 2^n), at least it's an upper bound.
+    # Because it takes the inner recursion 2^n time to find a good subset.
+    # Once the 1st subset is found, we go on to find the second, which would take
+    # 2^n roughly (because some numbers have been marked as visited).
+    # So T = 2^n + 2^n + 2^n + ... = k * 2^n.
+    def canPartitionKSubsets(self, nums, k) -> bool:
+        # corner cases
         totalSum = sum(nums)
-
         if k <= 0 or k > len(nums) or (totalSum % k):
             return False
-
         return self.canPartition(0, nums, [False]*len(nums), k, 0, totalSum/k)
 
     def canPartition(self, iterationStart, nums, used, k, inProgressBucketSum, targetBucketSum):
@@ -32,5 +36,33 @@ class Solution:
                     return True
                 used[i] = False
         return False
+
+
+    def canPartitionKSubsets1(self, nums, k):
+        # sort and try the bigger values in the buckets
+        # each time, try fill the nums[pos] in the buckets with constraints
+        if len(nums) < k:
+            return False
+        allSum = sum(nums)
+        nums.sort(reverse = True) # descending
+        if allSum % k: return False
+        target = [allSum/k] * k
+
+        def dfs(pos):
+            if pos == len(nums):
+                return True
+            for i in range(k):
+                if target[i] >= nums[pos]:
+                    target[i] -= nums[pos]
+                    if dfs(pos+1):
+                        return True
+                    target[i] += nums[pos]
+            return False
+        return dfs(0)
+
+
+obj = Solution()
+print (obj.canPartitionKSubsets1([4, 3, 2, 3, 5, 2, 1], 4))
+
 
 
