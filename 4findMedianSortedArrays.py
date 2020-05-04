@@ -1,5 +1,5 @@
 '''
-keys:
+keys: two pivots in two arrays, adjust the first pivot by binary fashion
 Solutions:
 Similar:
 T: O(log(min(m,n)))
@@ -13,7 +13,7 @@ B[0], B[1], ..., B[j-1]  |  B[j], B[j+1], ..., B[n-1]
 '''
 # https://www.youtube.com/watch?v=LPFhl65R7ww
 class Solution:
-    def findMedianSortedArrays(self, nums1, nums2):
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         m, n = len(nums1), len(nums2)
         if m > n:
             nums1, nums2, m, n = nums2, nums1, n, m
