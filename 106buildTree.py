@@ -18,10 +18,14 @@ class Solution:
         def helper(l, r):
             if l > r:
                 return None
-            val = postorder.pop()
+            val = postorder.pop() # the last element
             root = TreeNode(val)
             idx = idx_dict[val]
 
+            # the order matters, right -> left
+            # Because in postorder you will first encounter the root of right subtree
+            # unlike preorder where you visit root of left subtree first
+            # (postorder:left->right->root)
             root.right = helper(idx+1, r)
             root.left = helper(l, idx-1)
             return root
