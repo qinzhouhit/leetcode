@@ -18,6 +18,8 @@ class Solution:
         if not s:
             res.append(path[:]) # deep copy
             return
+        # how we split the string, starting from 1 since we don't want to split
+        # an empty string, len(s)+1 means spliting the whole string as substring
         for i in range(1, len(s)+1):
             if self.isPar(s[:i]):
                 path.append(s[:i])
