@@ -10,4 +10,4 @@ Recommended website: [Huahua Website](https://zxi.mytechroad.com/blog/)
 
 Recommended repositories on Github: [The famous animation version](https://github.com/MisterBooo/LeetCodeAnimation), [Python solutions](https://github.com/wuduhren/leetcode-python), [A free company tag lists](https://github.com/youhusky/Leetcode_Company)
 
-Personal routine: LeetCode question -> discuss/Leetcode Solution -> Huahua -> write my own solution + summary (idea, hints, ST complexity, similar questions)
+Personal routine: LeetCode question -> discuss/Leetcode Solution -> Huahua -> my own solution + summary (idea, hints, ST complexity, similar questions)
