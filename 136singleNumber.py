@@ -27,6 +27,8 @@ class Solution:
                 return key
 
     def singleNumber2(self, nums):
+        # the key is associativity law for xor operation
+        # so, x ^ x = 0, 0 ^ x = x, odd number of x will be left.
         res = 0
         for num in nums:
             res ^= num # res=0; res^=2 => res=2; res^=2 => res=0
