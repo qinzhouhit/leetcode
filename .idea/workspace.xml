@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/45jump.py" beforeDir="false" afterPath="$PROJECT_DIR$/45jump.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/68fullJustify.py" beforeDir="false" afterPath="$PROJECT_DIR$/68fullJustify.py" afterDir="false" />
-    </list>
+    <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,14 +54,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/72minDistance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state>
+              <caret selection-end-line="7" selection-end-column="23" />
               <folding>
                 <element signature="e#80#103#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/41firstMissingPositive.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -86,6 +92,7 @@
       <list>
         <option value="$PROJECT_DIR$/143reorderList.py" />
         <option value="$PROJECT_DIR$/72minDistance.py" />
+        <option value="$PROJECT_DIR$/41firstMissingPositive.py" />
       </list>
     </option>
   </component>
@@ -358,7 +365,7 @@
     <frame x="644" y="23" width="796" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12903225" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12903225" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Educational.CheckDetails" />
       <window_info anchor="bottom" id="Version Control" />
@@ -366,7 +373,7 @@
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32843792" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32843792" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3965287" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -618,11 +625,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/72minDistance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state>
+          <caret selection-end-line="7" selection-end-column="23" />
           <folding>
             <element signature="e#80#103#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/41firstMissingPositive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>
