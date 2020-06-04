@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/84largestRectangleArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/84largestRectangleArea.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/85maximalRectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/85maximalRectangle.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
