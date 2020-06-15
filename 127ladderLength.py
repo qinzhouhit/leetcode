@@ -3,7 +3,7 @@ keys: BFS, deque
 Solutions: The idea is simpy to start from the beginWord,
 then visit its neighbors, then the non-visited neighbors of its neighbors
 until we arrive at the endWord. This is a typical BFS structure.
-Similar:
+Similar: 433
 T: O(L * 26 * n)
 S: O(n)
 '''

@@ -5,6 +5,7 @@ Similar:
 T: O(V+E) ~ O(V^2), but V^2 edges must result in multiple loops
 S: O(V+E) ~ O(V^2)
 '''
+from typing import List
 
 # the presence of a cycle in the graph shows us that a proper
 # ordering of prerequisites is not possible at all
