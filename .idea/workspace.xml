@@ -20,45 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/85maximalRectangle.py" beforeDir="false" afterPath="$PROJECT_DIR$/85maximalRectangle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/530getMinimumDifference.py" beforeDir="false" afterPath="$PROJECT_DIR$/530getMinimumDifference.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/76minWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/85maximalRectangle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/84largestRectangleArea.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,45 +40,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/143reorderList.py" />
-        <option value="$PROJECT_DIR$/72minDistance.py" />
-        <option value="$PROJECT_DIR$/41firstMissingPositive.py" />
-        <option value="$PROJECT_DIR$/148sortList.py" />
-        <option value="$PROJECT_DIR$/84largestRectangleArea.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="708" />
-    <option name="y" value="23" />
-    <option name="width" value="732" />
-    <option name="height" value="841" />
-  </component>
   <component name="ProjectId" id="1bHZAQCjR4LH8bCM3pf5Lv8MmQK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Course" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -120,19 +54,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.148sortList">
+  <component name="RunManager" selected="Python.530getMinimumDifference">
     <configuration name="107levelOrderBottom" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,27 +89,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/115numDistinct.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="134canCompleteCircuit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/134canCompleteCircuit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -280,6 +181,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="530getMinimumDifference" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/530getMinimumDifference.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="72minDistance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -327,60 +249,31 @@
       <item itemvalue="Python.232MyQueue" />
       <item itemvalue="Python.29divide" />
       <item itemvalue="Python.od_processing" />
-      <item itemvalue="Python.134canCompleteCircuit" />
       <item itemvalue="Python.115numDistinct" />
       <item itemvalue="Python.137singleNumber" />
       <item itemvalue="Python.72minDistance" />
       <item itemvalue="Python.148sortList" />
+      <item itemvalue="Python.530getMinimumDifference" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.530getMinimumDifference" />
         <item itemvalue="Python.148sortList" />
         <item itemvalue="Python.72minDistance" />
         <item itemvalue="Python.137singleNumber" />
         <item itemvalue="Python.115numDistinct" />
-        <item itemvalue="Python.134canCompleteCircuit" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="708" y="23" width="732" height="841" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14486639" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843792" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3965287" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -399,6 +292,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="600" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588628890477">
@@ -410,54 +304,62 @@
       <screen x="0" y="23" width="2048" height="1061" />
     </state>
     <state x="1372" y="319" key="EnvironmentVariablesDialog/0.23.2048.1061@0.23.2048.1061" timestamp="1588584352133" />
-    <state width="810" height="240" key="GridCell.Tab.0.bottom" timestamp="1589093197793">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.0.bottom" timestamp="1592449117526">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.bottom/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594425" />
     <state width="810" height="240" key="GridCell.Tab.0.bottom/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
     <state width="889" height="240" key="GridCell.Tab.0.bottom/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086580" />
-    <state width="810" height="240" key="GridCell.Tab.0.center" timestamp="1589093197792">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.0.bottom/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117526" />
+    <state width="1355" height="269" key="GridCell.Tab.0.center" timestamp="1592449117525">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.center/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594424" />
     <state width="810" height="240" key="GridCell.Tab.0.center/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197792" />
     <state width="889" height="240" key="GridCell.Tab.0.center/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086580" />
-    <state width="810" height="240" key="GridCell.Tab.0.left" timestamp="1589093197792">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.0.center/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117525" />
+    <state width="1355" height="269" key="GridCell.Tab.0.left" timestamp="1592449117525">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.left/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594384" />
     <state width="810" height="240" key="GridCell.Tab.0.left/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197792" />
     <state width="889" height="240" key="GridCell.Tab.0.left/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086579" />
-    <state width="810" height="240" key="GridCell.Tab.0.right" timestamp="1589093197793">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.0.left/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117525" />
+    <state width="1355" height="269" key="GridCell.Tab.0.right" timestamp="1592449117525">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.right/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594424" />
     <state width="810" height="240" key="GridCell.Tab.0.right/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
     <state width="889" height="240" key="GridCell.Tab.0.right/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086580" />
-    <state width="810" height="240" key="GridCell.Tab.1.bottom" timestamp="1589093197794">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.0.right/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117525" />
+    <state width="1355" height="269" key="GridCell.Tab.1.bottom" timestamp="1592449117527">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="240" key="GridCell.Tab.1.bottom/0.23.2048.1061@0.23.2048.1061" timestamp="1589030293273" />
     <state width="810" height="240" key="GridCell.Tab.1.bottom/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197794" />
     <state width="889" height="240" key="GridCell.Tab.1.bottom/0.23.2048.1064@0.23.2048.1064" timestamp="1588741098440" />
-    <state width="810" height="240" key="GridCell.Tab.1.center" timestamp="1589093197793">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.1.bottom/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117527" />
+    <state width="1355" height="269" key="GridCell.Tab.1.center" timestamp="1592449117526">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="240" key="GridCell.Tab.1.center/0.23.2048.1061@0.23.2048.1061" timestamp="1589030293272" />
     <state width="810" height="240" key="GridCell.Tab.1.center/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
     <state width="889" height="240" key="GridCell.Tab.1.center/0.23.2048.1064@0.23.2048.1064" timestamp="1588741098439" />
-    <state width="810" height="240" key="GridCell.Tab.1.left" timestamp="1589093197793">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.1.center/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117526" />
+    <state width="1355" height="269" key="GridCell.Tab.1.left" timestamp="1592449117526">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="240" key="GridCell.Tab.1.left/0.23.2048.1061@0.23.2048.1061" timestamp="1589030293272" />
     <state width="810" height="240" key="GridCell.Tab.1.left/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
     <state width="889" height="240" key="GridCell.Tab.1.left/0.23.2048.1064@0.23.2048.1064" timestamp="1588741098439" />
-    <state width="810" height="240" key="GridCell.Tab.1.right" timestamp="1589093197793">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state width="1355" height="269" key="GridCell.Tab.1.left/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117526" />
+    <state width="1355" height="269" key="GridCell.Tab.1.right" timestamp="1592449117527">
+      <screen x="0" y="23" width="2048" height="1073" />
     </state>
     <state width="810" height="240" key="GridCell.Tab.1.right/0.23.2048.1061@0.23.2048.1061" timestamp="1589030293272" />
     <state width="810" height="240" key="GridCell.Tab.1.right/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
     <state width="889" height="240" key="GridCell.Tab.1.right/0.23.2048.1064@0.23.2048.1064" timestamp="1588741098439" />
+    <state width="1355" height="269" key="GridCell.Tab.1.right/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117527" />
     <state x="906" y="90" key="SettingsEditor" timestamp="1588591562820">
       <screen x="0" y="23" width="2048" height="1062" />
     </state>
@@ -602,6 +504,11 @@
           <line>29</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/530getMinimumDifference.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -609,80 +516,5 @@
         <watch expression="TreeNode" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/10isMatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/143reorderList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/72minDistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#80#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="331" selection-start-line="331" selection-end-line="331" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/25reverseKGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="137" selection-start-line="137" selection-end-line="138" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/41firstMissingPositive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/148sortList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/76minWindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/85maximalRectangle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/84largestRectangleArea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
