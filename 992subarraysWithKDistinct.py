@@ -1,1 +1,1 @@
-'''keys: Solutions:Similar: T:S:'''from typing import Listclass Solution:    def subarraysWithKDistinct(self, A: List[int], K: int) -> int:                
+'''keys: Solutions:Similar:340T:S:'''from typing import Listclass Solution:    def subarraysWithKDistinct(self, A: List[int], K: int) -> int:        pass        

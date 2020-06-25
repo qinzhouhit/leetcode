@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar:340T:S:'''from typing import Listclass Solution:    def isLongPressedName(self, name: str, typed: str) -> bool:        
