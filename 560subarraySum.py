@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar:340T:S:'''from typing import Listclass Solution:    def subarraySum(self, nums: List[int], k: int) -> int:        
