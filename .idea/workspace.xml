@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/992subarraysWithKDistinct.py" beforeDir="false" afterPath="$PROJECT_DIR$/992subarraysWithKDistinct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.spyproject/config/backups/workspace.ini.bak" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/config/backups/workspace.ini.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.spyproject/config/workspace.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/config/workspace.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/726countOfAtoms.py" beforeDir="false" afterPath="$PROJECT_DIR$/726countOfAtoms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/981TimeMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/981TimeMap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/784letterCasePermutation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -52,11 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/855ExamRoom.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="54" column="63" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="63" />
-              <folding>
-                <element signature="e#40#63#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="229">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -64,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="4785">
               <caret line="319" selection-start-line="319" selection-end-line="319" />
             </state>
           </provider>
@@ -360,11 +360,11 @@
     <frame x="386" y="23" width="1054" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22265247" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22265247" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32843792" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32843792" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39919892" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -653,14 +653,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/700searchBST.py">
+    <entry file="file://$PROJECT_DIR$/986intervalIntersection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/986intervalIntersection.py">
+    <entry file="file://$PROJECT_DIR$/700searchBST.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="7" selection-end-column="23" />
@@ -670,24 +670,21 @@
     <entry file="file://$PROJECT_DIR$/784letterCasePermutation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="4785">
           <caret line="319" selection-start-line="319" selection-end-line="319" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/855ExamRoom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="54" column="63" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="63" />
-          <folding>
-            <element signature="e#40#63#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="229">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
         </state>
       </provider>
     </entry>
