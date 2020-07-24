@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.spyproject/config/backups/workspace.ini.bak" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/config/backups/workspace.ini.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.spyproject/config/workspace.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/config/workspace.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/726countOfAtoms.py" beforeDir="false" afterPath="$PROJECT_DIR$/726countOfAtoms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/981TimeMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/981TimeMap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/560subarraySum.py" beforeDir="false" afterPath="$PROJECT_DIR$/560subarraySum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/802eventualSafeNodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/802eventualSafeNodes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,19 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/855ExamRoom.py">
+        <entry file="file://$PROJECT_DIR$/670maximumSwap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4785">
-              <caret line="319" selection-start-line="319" selection-end-line="319" />
+            <state relative-caret-position="-192">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -88,6 +78,7 @@
         <option value="$PROJECT_DIR$/sort.py" />
         <option value="$PROJECT_DIR$/986intervalIntersection.py" />
         <option value="$PROJECT_DIR$/855ExamRoom.py" />
+        <option value="$PROJECT_DIR$/670maximumSwap.py" />
       </list>
     </option>
   </component>
@@ -142,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.855ExamRoom">
+  <component name="RunManager" selected="Python.670maximumSwap">
     <configuration name="107levelOrderBottom" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,27 +147,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/107levelOrderBottom.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="148sortList" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/148sortList.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,6 +210,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/530getMinimumDifference.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="670maximumSwap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/670maximumSwap.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -337,19 +328,19 @@
       <item itemvalue="Python.232MyQueue" />
       <item itemvalue="Python.29divide" />
       <item itemvalue="Python.od_processing" />
-      <item itemvalue="Python.148sortList" />
       <item itemvalue="Python.530getMinimumDifference" />
       <item itemvalue="Python.sort" />
       <item itemvalue="Python.784letterCasePermutation" />
       <item itemvalue="Python.855ExamRoom" />
+      <item itemvalue="Python.670maximumSwap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.670maximumSwap" />
         <item itemvalue="Python.855ExamRoom" />
         <item itemvalue="Python.784letterCasePermutation" />
         <item itemvalue="Python.sort" />
         <item itemvalue="Python.530getMinimumDifference" />
-        <item itemvalue="Python.148sortList" />
       </list>
     </recent_temporary>
   </component>
@@ -360,12 +351,12 @@
     <frame x="386" y="23" width="1054" height="841" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22265247" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22265247" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32843792" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919892" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39919892" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -630,6 +621,11 @@
           <line>78</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/670maximumSwap.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -674,17 +670,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
+    <entry file="file://$PROJECT_DIR$/855ExamRoom.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4785">
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        <state relative-caret-position="184">
+          <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/855ExamRoom.py">
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        <state relative-caret-position="227">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/670maximumSwap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
