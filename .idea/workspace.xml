@@ -20,55 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.spyproject/config/workspace.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/config/workspace.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1060missingElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/1060missingElement.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/700searchBST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="7" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/784letterCasePermutation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/767reorganizeString.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/953isAlienSorted.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,47 +41,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/sort.py" />
-        <option value="$PROJECT_DIR$/986intervalIntersection.py" />
-        <option value="$PROJECT_DIR$/855ExamRoom.py" />
-        <option value="$PROJECT_DIR$/670maximumSwap.py" />
-        <option value="$PROJECT_DIR$/680validPalindrome.py" />
-        <option value="$PROJECT_DIR$/767reorganizeString.py" />
-        <option value="$PROJECT_DIR$/953isAlienSorted.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="565" />
-    <option name="y" value="23" />
-    <option name="width" value="875" />
-    <option name="height" value="841" />
-  </component>
   <component name="ProjectId" id="1bHZAQCjR4LH8bCM3pf5Lv8MmQK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Course" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -132,19 +55,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.953isAlienSorted">
+  <component name="RunManager" selected="Python.1249minRemoveToMakeValid">
     <configuration name="107levelOrderBottom" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,6 +69,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/107levelOrderBottom.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1249minRemoveToMakeValid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1249minRemoveToMakeValid.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -313,27 +245,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sort" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sort.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.107levelOrderBottom" />
       <item itemvalue="Python.232MyQueue" />
@@ -342,57 +253,28 @@
       <item itemvalue="Python.670maximumSwap" />
       <item itemvalue="Python.784letterCasePermutation" />
       <item itemvalue="Python.855ExamRoom" />
-      <item itemvalue="Python.sort" />
       <item itemvalue="Python.953isAlienSorted" />
+      <item itemvalue="Python.1249minRemoveToMakeValid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1249minRemoveToMakeValid" />
         <item itemvalue="Python.953isAlienSorted" />
         <item itemvalue="Python.670maximumSwap" />
         <item itemvalue="Python.855ExamRoom" />
         <item itemvalue="Python.784letterCasePermutation" />
-        <item itemvalue="Python.sort" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="565" y="23" width="875" height="841" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13583139" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843792" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919892" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -411,6 +293,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="600" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588628890477">
@@ -422,33 +305,33 @@
       <screen x="0" y="23" width="2048" height="1061" />
     </state>
     <state x="1372" y="319" key="EnvironmentVariablesDialog/0.23.2048.1061@0.23.2048.1061" timestamp="1588584352133" />
-    <state width="1355" height="269" key="GridCell.Tab.0.bottom" timestamp="1592449117526">
-      <screen x="0" y="23" width="2048" height="1073" />
+    <state width="1048" height="269" key="GridCell.Tab.0.bottom" timestamp="1595788951423">
+      <screen x="0" y="23" width="2048" height="1064" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.bottom/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594425" />
     <state width="810" height="240" key="GridCell.Tab.0.bottom/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
-    <state width="889" height="240" key="GridCell.Tab.0.bottom/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086580" />
+    <state width="1048" height="269" key="GridCell.Tab.0.bottom/0.23.2048.1064@0.23.2048.1064" timestamp="1595788951423" />
     <state width="1355" height="269" key="GridCell.Tab.0.bottom/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117526" />
-    <state width="1355" height="269" key="GridCell.Tab.0.center" timestamp="1592449117525">
-      <screen x="0" y="23" width="2048" height="1073" />
+    <state width="1048" height="269" key="GridCell.Tab.0.center" timestamp="1595788951418">
+      <screen x="0" y="23" width="2048" height="1064" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.center/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594424" />
     <state width="810" height="240" key="GridCell.Tab.0.center/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197792" />
-    <state width="889" height="240" key="GridCell.Tab.0.center/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086580" />
+    <state width="1048" height="269" key="GridCell.Tab.0.center/0.23.2048.1064@0.23.2048.1064" timestamp="1595788951418" />
     <state width="1355" height="269" key="GridCell.Tab.0.center/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117525" />
-    <state width="1355" height="269" key="GridCell.Tab.0.left" timestamp="1592449117525">
-      <screen x="0" y="23" width="2048" height="1073" />
+    <state width="1048" height="269" key="GridCell.Tab.0.left" timestamp="1595788951418">
+      <screen x="0" y="23" width="2048" height="1064" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.left/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594384" />
     <state width="810" height="240" key="GridCell.Tab.0.left/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197792" />
-    <state width="889" height="240" key="GridCell.Tab.0.left/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086579" />
+    <state width="1048" height="269" key="GridCell.Tab.0.left/0.23.2048.1064@0.23.2048.1064" timestamp="1595788951418" />
     <state width="1355" height="269" key="GridCell.Tab.0.left/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117525" />
-    <state width="1355" height="269" key="GridCell.Tab.0.right" timestamp="1592449117525">
-      <screen x="0" y="23" width="2048" height="1073" />
+    <state width="1048" height="269" key="GridCell.Tab.0.right" timestamp="1595788951419">
+      <screen x="0" y="23" width="2048" height="1064" />
     </state>
     <state width="810" height="243" key="GridCell.Tab.0.right/0.23.2048.1061@0.23.2048.1061" timestamp="1589079594424" />
     <state width="810" height="240" key="GridCell.Tab.0.right/0.23.2048.1062@0.23.2048.1062" timestamp="1589093197793" />
-    <state width="889" height="240" key="GridCell.Tab.0.right/0.23.2048.1064@0.23.2048.1064" timestamp="1588741086580" />
+    <state width="1048" height="269" key="GridCell.Tab.0.right/0.23.2048.1064@0.23.2048.1064" timestamp="1595788951419" />
     <state width="1355" height="269" key="GridCell.Tab.0.right/0.23.2048.1073@0.23.2048.1073" timestamp="1592449117525" />
     <state width="1355" height="269" key="GridCell.Tab.1.bottom" timestamp="1592449117527">
       <screen x="0" y="23" width="2048" height="1073" />
@@ -483,11 +366,12 @@
     </state>
     <state x="276" y="185" key="SettingsEditor/0.23.2048.1061@0.23.2048.1061" timestamp="1588588170640" />
     <state x="906" y="90" key="SettingsEditor/0.23.2048.1062@0.23.2048.1062" timestamp="1588591562820" />
-    <state x="1242" y="410" width="670" height="675" key="search.everywhere.popup" timestamp="1588768476941">
-      <screen x="0" y="23" width="2048" height="1062" />
+    <state x="1242" y="411" width="670" height="677" key="search.everywhere.popup" timestamp="1595744237034">
+      <screen x="0" y="23" width="2048" height="1065" />
     </state>
     <state x="1242" y="410" width="670" height="675" key="search.everywhere.popup/0.23.2048.1062@0.23.2048.1062" timestamp="1588768476941" />
     <state x="1242" y="411" width="670" height="676" key="search.everywhere.popup/0.23.2048.1064@0.23.2048.1064" timestamp="1588202578286" />
+    <state x="1242" y="411" width="670" height="677" key="search.everywhere.popup/0.23.2048.1065@0.23.2048.1065" timestamp="1595744237034" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -642,6 +526,11 @@
           <line>19</line>
           <option name="timeStamp" value="89" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/1249minRemoveToMakeValid.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -649,84 +538,5 @@
         <watch expression="TreeNode" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/783minDiffInBST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/986intervalIntersection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/855ExamRoom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="62" column="52" selection-start-line="62" selection-start-column="52" selection-end-line="62" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/670maximumSwap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/680validPalindrome.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/700searchBST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/784letterCasePermutation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/767reorganizeString.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/953isAlienSorted.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

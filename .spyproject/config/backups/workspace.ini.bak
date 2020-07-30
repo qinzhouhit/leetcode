@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['300lengthOfLIS.py', '211WordDictionary.py', '269alienOrder.py', '560subarraySum.py']
+recent_files = ['300lengthOfLIS.py', '211WordDictionary.py', '353SnakeGame.py']
 
