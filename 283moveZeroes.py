@@ -7,6 +7,7 @@ S:
 '''
 
 class Solution:
+    # T: O(n); S: O(1)
     def moveZeroes(self, nums):
         """
         Do not return anything, modify nums in-place instead.
@@ -19,7 +20,7 @@ class Solution:
             if nums[i] != 0:
                 nums[i], nums[zero_ind] = nums[zero_ind], nums[i]
                 zero_ind += 1
-        print (nums)
+        # print (nums)
 
     def moveZeroes1(self, nums):
         if not any(nums):
@@ -33,7 +34,7 @@ class Solution:
         while zero_ind < len(nums):
             nums[zero_ind] = 0
             zero_ind += 1
-        print (nums)
+        # print (nums)
 
 
 obj = Solution()
