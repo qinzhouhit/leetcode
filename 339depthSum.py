@@ -7,6 +7,8 @@ S:
 '''
 
 class Solution:
+    # T: O(N), N as the total number of nested elements in the input list.
+    # S: O(D), D as the maximum level of nesting in the input.
 	def depthSum(self, nestedList):
 		if len(nestedList) == 0:
 			return 0

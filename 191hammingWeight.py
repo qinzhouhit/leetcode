@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar: T:S:'''from typing import Listclass Solution:    # n & (n-1) flips the least-significant 1 of n to 0    def hammingWeight(self, n: int) -> int:        res = 0        while n != 0:            n &= (n - 1)            res += 1        return res        def hammingWeight(self, n: int) -> int:        return bin(n).count('1')

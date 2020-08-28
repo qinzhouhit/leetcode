@@ -44,13 +44,15 @@ class Solution:
 
         length = len(prices)
         # those left_profits and right_profits are for one transaction gain
-        # left_profits[i] for prices[0:i+1]
+        # left_profits[i] for prices[0:i+1], i.e., buying at 0
         left_profits = [0] * length
         # pad the right DP array with an additional zero for convenience.
-        # right_profits[i] for prices[i:]
+        # right_profits[i] for prices[i:], i.e., selling at end
         # Have to pad extra 0 for case that only one transaction happened
         # i.e., left_profits[N-1] and empty right subsequence
-        right_profits = [0] * (length + 1)
+        # if [0] * length, then in the last pass, change
+        #  right_profits[i+1] to right_profits[i]
+        right_profits = [0] * (length + 1) 
 
         # construct the bidirectional DP array
         for l in range(1, length):

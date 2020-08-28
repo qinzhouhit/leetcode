@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar: T:S:'''from typing import Listclass Solution:    def isMatch(self, s: str, p: str) -> bool:        
