@@ -30,13 +30,13 @@ class Solution:
         candidate = 0
 
         for i in range(1, n):
-            if Celebrity.knows(candidate, i):
+            if knows(candidate, i):
                 candidate = i # candidate can not be some index j after i...
 
         for i in range(n):
-            if candidate != i and Celebrity.knows(candidate, i):
+            if candidate != i and knows(candidate, i):
                 return -1
-            if candidate != i and not Celebrity.knows(i, candidate):
+            if candidate != i and not knows(i, candidate):
                 return -1
 
         return candidate
