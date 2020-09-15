@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar: 1375T:S:'''from typing import Listclass Solution:    # T: O(N), S: O(1)    def maxChunksToSorted(self, arr: List[int]) -> int:        right = 0; res = 0        for idx, val in enumerate(arr):            right = max(right, val)            if right == idx:                res += 1        return res

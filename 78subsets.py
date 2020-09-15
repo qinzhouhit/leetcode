@@ -24,7 +24,7 @@ class Solution:
     #             all_subsets.append(all_subsets[idx]+[num])
     #     return all_subsets
 
-    # DFS recursively
+    # DFS recursively, T and S: O(N*2^N)
     def subsets1(self, nums):
         res = []
         self.dfs(nums, 0, [], res)
@@ -54,16 +54,16 @@ class Solution:
     def subsets3(self, nums):
         res = []
         for i in range(len(nums)+1):
-            self.dfs(i, 0, [], res, nums)
+            self.dfs3(i, 0, [], res, nums)
         return res
 
-    def dfs(self, n, start, cur, res, nums):
+    def dfs3(self, n, start, cur, res, nums):
         if n == len(cur):
             res.append(cur.copy())
             return
         for i in range(start, len(nums)):
             cur.append(nums[i])
-            self.dfs(n, i+1, cur, res, nums)
+            self.dfs3(n, i+1, cur, res, nums)
             cur.pop()
 
 

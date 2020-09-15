@@ -12,7 +12,7 @@ class Solution:
         res = []
         nums.sort()
         for i in range(len(nums)-2):
-            # We do not need to consider i after nums[i]>0,
+            # We do not need to consider i after nums[i]>0, (already sorted!)
             # since sum of 3 positive will be always greater than zero.
             if nums[i] > 0: break
             # If the number is the same as the number before,

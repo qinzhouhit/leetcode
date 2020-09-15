@@ -14,6 +14,7 @@ class ListNode:
 
 # iterative
 class Solution:
+    # keep a referece (curr) to head and pass along the head to the next
     def reverseList(self, head):
         prev = None
         while head:
@@ -22,18 +23,18 @@ class Solution:
             curr.next = prev
             prev = curr
         return prev
+ 
 
-# recursive
-class Solution1:
-    def reverseList(self, head):
+    # recursive
+    def reverseList1(self, head):
         return self.reverse(head)
 
     def reverse(self, node, prev=None):
         if not node:
             return prev
-        n = node.next
+        nxt = node.next
         node.next = prev
-        return self.reverse(n, node)
+        return self.reverse(nxt, node)
 
 
 nd1 = ListNode(1)

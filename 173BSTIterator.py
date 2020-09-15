@@ -5,7 +5,7 @@ Similar:
 T:
 S:
 '''
-
+from typing import List
 
 
 # Definition for a binary tree node.
@@ -56,7 +56,7 @@ class BSTIterator:
 # method 1: inorder traverse
 # inorder traverse the tree and flatten it
 # T: O(N), S: O(N) for the nodes_sorted, compromise the condition of O(h)
-class BSTIterator:
+class BSTIterator1:
 
     def __init__(self, root: TreeNode):
         self.nodes_sorted = []

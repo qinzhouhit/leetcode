@@ -6,6 +6,8 @@ Similar:
 T:
 S:
 '''
+from typing import List
+
 
 class Solution:
     # TODO: two pointers/ start from the end. T: O(n+m), S: O(1)
@@ -15,11 +17,10 @@ class Solution:
 
         # while there are still elements to compare
         while p1 >= 0 and p2 >= 0:
-            if nums1[p1] < nums2[p2]:
+            if nums1[p1] < nums2[p2]: # <= is also fine
                 nums1[p] = nums2[p2]
                 p2 -= 1
-            else:# add missing elements from nums2
-                nums1[:p2 + 1] = nums2[:p2 + 1]
+            else:
                 nums1[p] = nums1[p1]
                 p1 -= 1
             p -= 1
@@ -33,11 +34,13 @@ class Solution:
 
 
 
-    # TODO: two pointers. T: O(n+m), S: O(m)
+    # TODO: two pointers, from beginning T: O(n+m), S: O(m)
     def merge2(self, nums1, m, nums2, n):
-        nums1_copy = nums1[:m]
+        nums1_copy = nums1[:m] # Make a copy of nums1.
         nums1[:] = []
         ptr1 = 0; ptr2 = 0
+        # Compare elements from nums1_copy and nums2
+        # and add the smallest one into nums1.
         while ptr1 < m and ptr2 < n:
             if nums1_copy[ptr1] < nums2[ptr2]:
                 nums1.append(nums1_copy[ptr1])
@@ -45,10 +48,11 @@ class Solution:
             else:
                 nums1.append(nums2[ptr2])
                 ptr2 += 1
-        if ptr1 < m:
+        if ptr1 < m: # still elements in nums1
             nums1[ptr1+ptr2:] = nums1_copy[ptr1:]
         if ptr2 < n:
             nums1[ptr1+ptr2:] = nums2[ptr2:]
+
 
     # TODO: just sort. T: O((n+m)log(n+m)), S: O(1)
     def merge1(self, nums1, m, nums2, n):
