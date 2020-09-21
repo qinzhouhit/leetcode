@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar: 304, 307, 308T:S:'''from typing import Listclass Solution:    def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:        

@@ -7,8 +7,44 @@ S:
 '''
 
 class Solution:
+    
+    # O(N) for S and T
+    def isValid2(self, s: str) -> bool:
+        hashmap = {")": "(", "}": "{", "]":"["}
+        stack = []
+        for c in s:
+            if c not in hashmap:
+                stack.append(c)
+            else:
+                tmp = stack.pop() if stack else "#"
+                if hashmap[c] != tmp:
+                    return False
+        
+        return stack == []
+    
+    # concise; but O(N^2)
+    def isValid1(self, s: str) -> bool:
+        """
+        :type s: str
+        :rtype: bool
+        """
+        n = len(s)
+        if n == 0:
+            return True
+        
+        if n % 2 != 0:
+            return False
+            
+        while '()' in s or '{}' in s or '[]' in s:
+            s = s.replace('{}','').replace('()','').replace('[]','')
+        
+        if s == '':
+            return True
+        else:
+            return False
+    
     # @return a boolean
-    def isValid(self, s):
+    def isValid(self, s: str) -> bool:
         stack = []
         dict = {"]":"[", "}":"{", ")":"("}
         for char in s:

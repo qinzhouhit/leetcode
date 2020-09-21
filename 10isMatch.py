@@ -5,7 +5,7 @@ Similar:
 T: O(m*n), m and n as length of s and p
 S: O(m*n)
 '''
-
+from typing import List
 
 class Solution:
     # The DP table and the string s and p use the same indexes i and j, but

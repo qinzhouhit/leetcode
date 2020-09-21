@@ -5,6 +5,78 @@ Similar:
 T:
 S:
 '''
+from typing import List
+
+
+
+# ordered dictionary
+# Time complexity: O(1) both for put and get since all operations with 
+# ordered dictionary : get/in/set/move_to_end/popitem 
+# (get/containsKey/put/remove) are done in a constant time.
+# Space complexity: O(capacity) since the space is used only for an ordered dictionary 
+# with at most capacity + 1 elements. 
+
+# self-made, with no heritance version
+class LRUCache2:
+
+    def __init__(self, capacity: int):
+        self.capacity  = capacity
+        self.h = OrderedDict()
+
+    def get(self, key: int) -> int:
+        if key not in self.h:
+            return -1
+        
+        self.h.move_to_end(key) # quite important!!!
+        return self.h[key]
+        
+
+    def put(self, key: int, value: int) -> None:
+        if key in self.h:
+            self.h.move_to_end(key)
+        self.h[key] = value
+        if len(self.h) > self.capacity:
+            self.h.popitem(last = False)
+
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
+from collections import OrderedDict
+class LRUCache1(OrderedDict):
+
+    def __init__(self, capacity):
+        """
+        :type capacity: int
+        """
+        self.capacity = capacity
+
+    def get(self, key):
+        """
+        :type key: int
+        :rtype: int
+        """
+        if key not in self:
+            return - 1
+        
+        self.move_to_end(key)
+        return self[key]
+
+    def put(self, key, value):
+        """
+        :type key: int
+        :type value: int
+        :rtype: void
+        """
+        if key in self:
+            self.move_to_end(key)
+        self[key] = value
+        if len(self) > self.capacity:
+            # The pairs are returned in LIFO order if last is true or 
+            # FIFO order if false.
+            self.popitem(last = False)
+
 
 # Hashmap + DoubleLinkedList
 # T: O(1) for put and get

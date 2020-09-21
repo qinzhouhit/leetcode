@@ -16,6 +16,7 @@ from collections import deque
 #         self.right = None
 
 class Solution:
+    # O(N) for S and T, not intuitive
     def levelOrder2(self, root):
         res = []
         if not root:
@@ -46,13 +47,14 @@ class Solution:
         
         return res
     
+    
     def levelOrder1(self, root):
         res = []
         if not root: return res
 
         level = [root]
 
-        while root and level:
+        while level:
             currentNodes = []
             nextLevel = []
             for node in level:

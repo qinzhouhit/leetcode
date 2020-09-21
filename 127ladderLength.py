@@ -7,13 +7,60 @@ Similar: 433
 T: O(L * 26 * n)
 S: O(n)
 '''
-
+from typing import List
 import collections
 import string
 
+
 class Solution:
-    # method to go
-    def ladderLength(self, beginWord, endWord, wordList):
+    # official, BFS
+    # T: O(M^2 * N), M the length of each word  nad N the size of wordList
+    # S: all_combo_dict + visited + queue
+    # S: O(M^2 * N) + O(M*N) + O(M*N) -> O(M^2 * N)
+    def ladderLength5(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
+        if endWord not in wordList or not endWord or \
+            not beginWord or not wordList:
+            return 0
+
+        # Since all words are of same length.
+        L = len(beginWord)
+
+        # Dictionary to hold combination of words that can be formed,
+        # from any given word. By changing one letter at a time.
+        all_combo_dict = collections.defaultdict(list)
+        for word in wordList: # this is O(M*N)
+            for i in range(L):
+                # Key is the generic word; Value is a list of words which have 
+                # the same intermediate generic word.
+                all_combo_dict[word[:i] + "*" + word[i+1:]].append(word)
+
+
+        # Queue for BFS; BFS time: O(N * M^2)
+        queue = collections.deque([(beginWord, 1)])
+        # Visited to make sure we don't repeat processing same word.
+        visited = {beginWord: True}
+        while queue:
+            current_word, level = queue.popleft()      
+            for i in range(L):
+                # Intermediate words for current word
+                intermediate_word = current_word[:i] + "*" + current_word[i+1:]
+
+                # Next states are all the words which share the same intermediate state.
+                for word in all_combo_dict[intermediate_word]:
+                    # If at any point if we find what we are looking for
+                    # i.e. the end word - we can return with the answer.
+                    if word == endWord:
+                        return level + 1
+                    # Otherwise, add it to the BFS Queue. Also mark it visited
+                    if word not in visited:
+                        visited[word] = True
+                        queue.append((word, level + 1))
+                all_combo_dict[intermediate_word] = []
+        return 0
+    
+    
+    # BFS, TLE
+    def ladderLength4(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         # wordList = set(wordList)
         queue = collections.deque([[beginWord, 1]])
         while queue:
@@ -29,7 +76,7 @@ class Solution:
         return 0
 
 
-    # method1
+    # method1, TLE
     def ladderLength1(self, beginWord, endWord, wordList):
         len_ = 2
         front, back = set([beginWord]), set([endWord])
@@ -49,7 +96,7 @@ class Solution:
         return 0
 
 
-    # method2
+    # method2, TLE
     def ladderLength2(self, beginWord, endWord, wordList):
         front = {beginWord}
         back = {endWord}

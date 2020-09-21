@@ -1,5 +1,5 @@
 '''
-keys:
+keys: at most one transaction
 Solutions:
 Similar: 53
 T:
@@ -7,6 +7,15 @@ S:
 '''
 
 class Solution:
+    # https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39038/Kadane's-Algorithm-Since-no-one-has-mentioned-about-this-so-far-%3A)-(In-case-if-interviewer-twists-the-input)
+    # T: O(N), S: O(1)
+    '''
+    the logic is to calculate the difference (maxCur += prices[i] - prices[i-1]) 
+    of the original array, and find a contiguous subarray giving maximum 
+    profit. If the difference falls below 0, reset it to zero.
+    Easy to see that we want continuous postive difference to accumulate to
+    the maximum profit. The intermediate difference will be cancelled.
+    '''
     def maxProfit1(self, prices):
         maxCur = 0; maxSoFar = 0
         for i in range(1, len(prices)):
@@ -15,7 +24,7 @@ class Solution:
             maxSoFar = max(maxCur, maxSoFar)
         return maxSoFar
 
-    # T: O(N), S: O(1)
+    # T: O(N), S: O(1), the method to go
     def maxProfit(self, prices):
         maxProfit, minPrice = 0, float('inf')
         for price in prices:

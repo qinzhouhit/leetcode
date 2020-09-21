@@ -5,11 +5,12 @@ Similar:
 T:
 S:
 '''
-
+from typing import List
 import numpy as np
 
 class Solution:
-	def numIslands(self, grid):
+    # T: O(M*N) for S and T, S: stacks
+	def numIslands2(self, grid: List[List[str]]) -> int:
 		if not any(grid):
 			return 0
 
@@ -31,6 +32,36 @@ class Solution:
 		self.dfs(grid, i-1, j)
 		self.dfs(grid, i, j+1)
 		self.dfs(grid, i, j-1)
+        
+    # BFS, T: O(M*N); S: O(min(M, N))
+    def numIslands1(self, grid: List[List[str]]) -> int:
+        if not any(grid):
+            return 0
+
+        res = 0
+        rows, cols = len(grid), len(grid[0])
+        for r in range(rows):
+            for c in range(cols):
+                if grid[r][c] == "1":
+                    res += 1
+                    grid[r][c] == "*"
+                    neighbors = deque([(r, c)])
+                    while neighbors:
+                        r1, c1 = neighbors.popleft()
+                        if r1 > 0 and grid[r1-1][c1] == "1":
+                            neighbors.append((r1-1, c1))
+                            grid[r1-1][c1] = "*"
+                        if r1 < rows-1 and grid[r1+1][c1] == "1":
+                            neighbors.append((r1+1, c1))
+                            grid[r1+1][c1] = "*"
+                        if c1 > 0 and grid[r1][c1-1] == "1":
+                            neighbors.append((r1, c1-1))
+                            grid[r1][c1-1] = "*"
+                        if c1 < cols-1 and grid[r1][c1+1] == "1":
+                            neighbors.append((r1, c1+1))
+                            grid[r1][c1+1] = "*"
+        return res
+        
 
 tar = [[1, 1, 1, 1, 0],
 [1, 1, 0, 1, 0],

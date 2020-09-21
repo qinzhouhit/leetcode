@@ -25,14 +25,14 @@ class Node:
 
 class Solution:
     # TODO: BFS
-    # T: O(N), we process each node only once
+    # T: O(N+M), we process each node (N in total) and each edge (M in total)
     # S: O(N), for hash map of visited, and for recursion queue (O(W))
     def cloneGraph1(self, node: 'Node') -> 'Node':
         if not node:
-            return node
+            return node # it should be node, not []!!!
 
-        # Dictionary to save the visited node and it's respective clone
-        # as key and value respectively. This helps to avoid cycles.
+        # Dictionary to save the visited node, key: node of original graph,
+        # value: cloned node of cloned graph. This helps to avoid cycles.
         visited = {}
 
         # Put the first node in the queue
@@ -51,12 +51,14 @@ class Solution:
                     visited[neighbor] = Node(neighbor.val, [])
                     # Add the newly encountered node to the queue.
                     queue.append(neighbor)
-                # Add the clone of the neighbor to the neighbors of the clone node "n".
+                # If visited, add the clone of the neighbor to the neighbors 
+                # of the clone node "n".
                 visited[n].neighbors.append(visited[neighbor])
 
         # Return the clone of the node from visited.
         return visited[node]
 
+class Solution1:
     # TODO: DFS iterative
     def cloneGraph2(self, node: 'Node') -> 'Node':
         if not node:
@@ -73,7 +75,28 @@ class Solution:
                     stack.append(neighbor)
                 visited[n].neighbors.append(visited[neighbor])
         return visited[node]
+    
+    # DFS, recursive
+    def cloneGraph3(self, node):
+        if not node:
+            return 
+        nodeCopy = Node(node.val, [])
+        dic = {node: nodeCopy} # k: original, v: cloned
+        self.dfs(node, dic)
+        return nodeCopy # i.e., dic[node]
 
+    def dfs(self, node, dic):
+        for neighbor in node.neighbors:
+            if neighbor not in dic:
+                neighborCopy = Node(neighbor.val, [])
+                dic[neighbor] = neighborCopy
+                dic[node].neighbors.append(neighborCopy)
+                self.dfs(neighbor, dic)
+            else:
+                dic[node].neighbors.append(dic[neighbor])
+
+
+class Solution2:
     # TODO: DFS recursive
     # T: O(N), we process each node only once
     # S: O(N), for hash map of visited, and for recursion stack (O(H))

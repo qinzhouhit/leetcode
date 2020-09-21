@@ -22,7 +22,7 @@ class Solution:
     for-loop and (b) at each leaf when we add n elements to an ArrayList. 
     So this is a total of O(n) additional work per node.
     '''
-    def permuteUnique3(self, nums):
+    def permuteUnique4(self, nums):
         res = []
         if not nums: return res
         used = [False] * len(nums)
@@ -46,13 +46,11 @@ class Solution:
             self.dfs(nums, used, path, res)
             used[i] = False
             path.pop()
-        
-        
     
     
     ######
     # backtrack version
-    def permuteUnique2(self, nums):
+    def permuteUnique3(self, nums):
         self.res=[]
         def dfs(tmp, counter):
             if len(tmp)==len(nums):
@@ -66,6 +64,30 @@ class Solution:
                     counter[x]+=1
         dfs([],Counter(nums))
         return self.res
+    
+    
+    #####
+    # self-made
+    def permuteUnique2(self, nums: List[int]) -> List[List[int]]:
+        def backtrack(nums, path):
+            if len(path) == len(nums) and path not in res:
+                res.append(path[:])
+            
+            for num in ct:
+                # print ("what")
+                if ct[num] > 0:
+                    ct[num] -= 1
+                    path.append(num)
+                    backtrack(nums, path)
+                    path.pop()
+                    ct[num] += 1
+        
+        res = []
+        ct = Counter(nums)
+        # print (ct)
+        backtrack(nums, [])
+        return res
+    
     
     ######
     # a version based on 46
