@@ -10,11 +10,12 @@ S:
 
 
 class Solution:
+    # T: O(n*)
     def countAndSay(self, n):
         s = '1'
         for _ in range(n-1):
             digit, temp, count = s[0], '', 0
-            for l in s:
+            for l in s: 
                 if digit == l: # digit not change, ct += 1
                     count += 1
                 else: # when the digit changes, ct = 1

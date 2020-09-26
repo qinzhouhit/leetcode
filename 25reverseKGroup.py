@@ -96,7 +96,7 @@ class Solution:
         return pre
 
 
-    # non-recursivem T: O(N), S: O(1), constant
+    # iterative T: O(N), S: O(1), constant
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         len_ = 0
         tmp = head
@@ -121,6 +121,7 @@ class Solution:
 
             len_ -= k
         return dummy.next
+
 
 node1 = ListNode(1)
 node2 = ListNode(2)
