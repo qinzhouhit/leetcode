@@ -13,8 +13,10 @@ class ListNode:
         self.next = next
 
 class Solution:
+    ######
     # official recursive
-    def reverseLinkedList(self, head, k):
+    # T: O(N); S: O(N/k) for recursion stack
+    def reverseLinkedList1(self, head, k):
         # Reverse k nodes of the given linked list.
         # This function assumes that the list contains
         # at least k nodes.
@@ -23,22 +25,19 @@ class Solution:
             # Keep track of the next node to process in the
             # original list
             next_node = ptr.next
-
             # Insert the node pointed to by "ptr"
             # at the beginning of the reversed list
             ptr.next = new_head
             new_head = ptr
-
             # Move on to the next node
             ptr = next_node
-
             # Decrement the count of nodes to be reversed by 1
             k -= 1
 
         # Return the head of the reversed list
         return new_head
 
-    def reverseKGroup2(self, head: ListNode, k: int) -> ListNode:
+    def reverseKGroup1(self, head: ListNode, k: int) -> ListNode:
         count = 0
         ptr = head
         # First, see if there are atleast k nodes
@@ -51,23 +50,21 @@ class Solution:
         if count == k:
             # Reverse the first k nodes of the list and
             # get the reversed list's head.
-            reversedHead = self.reverseLinkedList(head, k)
-
+            reversedHead = self.reverseLinkedList1(head, k)
             # Now recurse on the remaining linked list. Since
             # our recursion returns the head of the overall processed
             # list, we use that and the "original" head of the "k" nodes
             # to re-wire the connections.
             # head: original head of the linked list
             # head.next should be the return node (its head node) of reverseKGroup
-            head.next = self.reverseKGroup2(ptr, k)
+            head.next = self.reverseKGroup1(ptr, k)
             return reversedHead
         return head # if less than k node
-
-
-
-    # recursive
+    
+    
+    ###### recursive
     # recursion length is n/k, hence you need O(n/k) memory to store implicit stack.
-    def reverseKGroup1(self, head: ListNode, k: int) -> ListNode:
+    def reverseKGroup3(self, head: ListNode, k: int) -> ListNode:
         # 1. test weather we have more then k node left,
         # if less then k node left we just return head
         node = head
@@ -80,24 +77,26 @@ class Solution:
         # 2.reverse k node at current level
         # pre is the "head" of the remaining linked list
         # e.g., 1->2->3->4->5, k=2, then first pre is node 5
-        pre = self.reverseKGroup1(node, k)
-        while count > 0:
-            tmp = head.next # store head.next
+        pre = self.reverseKGroup3(node, k)
+        while count:
+            nxt = head.next # store head.next
             # making sure that the original head.next connects to the pre
             # i.e., the original head essential becomes the new tail in the reversed linked list
             # e.g., 1->2->3->4->5, 3 is head and 5 is pre; in the reversed
             # it should be 3->5, so head.next = pre (3.next = 5)
+            # i.e., 5 is the newHead in the 1st recursion sol.
             head.next = pre
             # pre becomes the original head, e.g., 3 is pre (head of the "finished" linked list)
             # e.g., 4 (will be new head) 3->5 (3 and 5 are finished, don't have to touch it)
             pre = head
-            head = tmp # move head to the next node
+            head = nxt # move head to the next node
             count -= 1
         return pre
 
 
+    ######
     # iterative T: O(N), S: O(1), constant
-    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
+    def reverseKGroup4(self, head: ListNode, k: int) -> ListNode:
         len_ = 0
         tmp = head
         # have the length of the linked list
@@ -121,6 +120,70 @@ class Solution:
 
             len_ -= k
         return dummy.next
+    
+
+    ######
+    # S: O(1), iterative 
+    def reverseLinkedList2(self, head, k):
+        
+        # Reverse k nodes of the given linked list.
+        # This function assumes that the list contains 
+        # atleast k nodes.
+        new_head, ptr = None, head
+        while k:
+            # Keep track of the next node to process in the
+            # original list
+            next_node = ptr.next
+            # Insert the node pointed to by "ptr"
+            # at the beginning of the reversed list
+            ptr.next = new_head
+            new_head = ptr
+            # Move on to the next node
+            ptr = next_node
+            # Decrement the count of nodes to be reversed by 1
+            k -= 1
+        # Return the head of the reversed list
+        return new_head
+                
+    
+    def reverseKGroup2(self, head: ListNode, k: int) -> ListNode:
+        
+        ptr = head
+        ktail = None
+        # Head of the final, moified linked list
+        new_head = None
+        # Keep going until there are nodes in the list
+        while ptr:
+            count = 0
+            # Start counting nodes from the head
+            ptr = head
+            # Find the head of the next k nodes
+            while count < k and ptr:
+                ptr = ptr.next
+                count += 1
+            # If we counted k nodes, reverse them        
+            if count == k:
+                # Reverse k nodes and get the new head
+                revHead = self.reverseLinkedList2(head, k)
+                # new_head is the head of the final linked list
+                if not new_head:
+                    new_head = revHead
+                # ktail is the tail of the previous block of 
+                # reversed k nodes
+                if ktail:
+                    ktail.next = revHead  
+                ktail = head 
+                head = ptr
+        
+        # attach the final, possibly un-reversed portion
+        if ktail:
+            ktail.next = head
+        return new_head if new_head else head
+
+
+    
+    
+    
 
 
 node1 = ListNode(1)

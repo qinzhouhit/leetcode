@@ -20,7 +20,7 @@ class Solution:
             if nums[i] != 0:
                 nums[i], nums[zero_ind] = nums[zero_ind], nums[i]
                 zero_ind += 1
-        # print (nums)
+
 
     def moveZeroes1(self, nums):
         if not any(nums):
