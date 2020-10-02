@@ -15,17 +15,14 @@ class TreeNode:
 """
 
 class Solution:
-    """
-    @param root: the root of tree
-    @return: the vertical order traversal
-    """
     # easy to avoid the sorting, use max_ and min_
+    # BFS; T: O(NlogN); S: O(N), N as number of nodes in the tree
     def verticalOrder(self, root):
-        # write your code here
         if not root: return []
 
         import collections
-        queue, res = collections.deque([(root, 0)]), collections.defaultdict(list)
+        queue = collections.deque([(root, 0)])
+        res = collections.defaultdict(list)
         while queue:
             node, col = queue.popleft()
             if node:
@@ -34,5 +31,5 @@ class Solution:
                     queue.append((node.left, col - 1)) # left column
                 if node.right:
                     queue.append((node.right, col + 1)) # right column
-        # sorted(res): return the sorted keys
+        # sorted(res): return the sorted keys (ascending)
         return [res[i] for i in sorted(res)]

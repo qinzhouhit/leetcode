@@ -5,6 +5,7 @@ Similar:
 T:
 S:
 '''
+from typing import List
 
 class Solution:
     #####

@@ -10,6 +10,8 @@ from typing import List
 class Solution:
     # intuitive
     # https://leetcode.com/problems/expression-add-operators/discuss/71895/Java-Standard-Backtrace-AC-Solutoin-short-and-clear
+    # T: O(N*4^N) for 4 recursive paths, N for length of num
+    # S: O(N)
     def addOperators1(self, num: str, target: int) -> List[str]:
         self.ans = []
         if not num or len(num) == 0: return self.ans
@@ -20,10 +22,10 @@ class Solution:
         if pos == len(num):
             if val == target:
                 self.ans.append(path)
-            return
+                return
         
         for i in range(pos, len(num)): # to divide the string into operands
-            if i != pos and num[pos] == '0': # avoiding "05"-like cases
+            if i != pos and num[pos] == '0': # avoiding "05"-like cases, run ("105", 5)
                 break
             cur = int(num[pos:i+1]) # operand
             if pos == 0: # first "number"
