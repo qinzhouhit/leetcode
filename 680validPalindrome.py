@@ -27,8 +27,10 @@ class Solution:
 
     # greedy; O(N) for T and O(1) for S
     def validPalindrome1(self, s: str) -> bool:
+        
         def isPali(i, j):
             return all(s[k] == s[j-k+1] for k in range(i, j))
+        
         for i in range(len(s)//2):
             if s[i] != s[~i]: # ~ means counting from the end of the string
                 j = len(s) - 1 - i

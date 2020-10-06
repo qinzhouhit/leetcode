@@ -5,6 +5,7 @@ Similar:
 T: O(n)
 S: O(n)
 '''
+from typing import List
 
 class Solution:
     """
@@ -12,7 +13,8 @@ class Solution:
     @param k: a target value
     @return: the maximum length of a subarray that sums to k
     """
-    def maxSubArrayLen(self, nums, k):
+    # O(n) for S and T
+    def maxSubArrayLen(self, nums: List[int], k: int) -> int:
         # Write your code here
         dict_ = {}
         sum_ = 0; maxLen = 0

@@ -1,7 +1,7 @@
 '''
 keys: 
 Solutions:
-Similar:340
+Similar: 340
 T:
 S:
 '''
@@ -9,9 +9,10 @@ from typing import List
 
 
 class Solution:
+    # O(n) for S and T
     # shorter, prefix sum
     # whenever the sums has increased by a value of k, 
-    # we've found a subarray of sums=k.
+    # we've found a subarray of sums = k.
     # https://leetcode.com/problems/subarray-sum-equals-k/discuss/341399/Python-clear-explanation-with-code-and-example
     def subarraySum2(self, nums: List[int], k: int) -> int:
         count = 0
@@ -21,8 +22,8 @@ class Solution:
         
         for i in range(len(nums)):
             sums += nums[i]
-            count += d.get(sums-k,0)
-            d[sums] = d.get(sums,0) + 1
+            count += d.get(sums-k, 0)
+            d[sums] = d.get(sums, 0) + 1
         return count
     
     # hashmap

@@ -16,6 +16,7 @@ class TreeNode:
 
 class Solution:
 	# T: O(|s| * |t|)
+    # https://leetcode.com/problems/subtree-of-another-tree/discuss/102741/Python-Straightforward-with-Explanation-(O(ST)-and-O(S%2BT)-approaches)
 	def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
 		def isMatch(s, t):
 			if (s is None and t is not None) or (s is not None and t is None):
@@ -33,6 +34,7 @@ class Solution:
 			return True
 		if s is None:
 			return False
+        return self.isSubtree(s.left, t) or self.isSubtree(s.right, t)
 
 
 class Solution2:

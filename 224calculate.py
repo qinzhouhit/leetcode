@@ -5,11 +5,14 @@ Similar:
 T:
 S:
 '''
+from typing import List
 
 class Solution:
+    # O(N) for S and T
     def calculate(self, s: str) -> int:
         if s is None:
             return 0
+        
         stack = []; num = 0; res = 0; sign = 1
         for str_ in s:
             if str_.isdigit():

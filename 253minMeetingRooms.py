@@ -1,10 +1,11 @@
 '''
-keys:
+keys: heapq
 Solutions:
 Similar:
 T:
 S:
 '''
+from typing import List
 
 
 import heapq
@@ -52,7 +53,7 @@ class Solution:
         for pair in intervals:
             if heap and pair[0] >= heap[0]: # using the same room
                 heapq.heapreplace(heap, pair[1]) # pop the min, and push new end time
-            else: # create a new room
+            else: # create a new room, track ending time
                 heapq.heappush(heap, pair[1])
         return len(heap)
 

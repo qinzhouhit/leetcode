@@ -9,6 +9,8 @@ from typing import List
 
 
 class Solution:
+    # O(N) for S and T
+    # https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/discuss/108231/C%2B%2BJava-DP-with-explanation-O(n)
     def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -> List[int]:
         w = [] # for all the sum of subarrays, from left to right
         cur_sum = 0
@@ -41,3 +43,9 @@ class Solution:
                 ans = i, j, l
         return ans
             
+    
+    
+    
+    
+    
+    
