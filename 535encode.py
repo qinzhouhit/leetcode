@@ -11,6 +11,7 @@ import string
 import random
 
 class Codec:
+    # https://leetcode.com/problems/encode-and-decode-tinyurl/discuss/100268/Two-solutions-and-thoughts
     alphabet = string.ascii_letters + '0123456789'
 
     def __init__(self):

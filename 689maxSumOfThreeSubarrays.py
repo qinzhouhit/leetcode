@@ -1,5 +1,5 @@
 '''
-keys: Why using three consecutive intervals? Why are the swapping mechnism?
+keys: 
 Solutions:
 Similar:
 T:
@@ -7,6 +7,7 @@ S:
 '''
 from typing import List
 
+# Why using three consecutive intervals? What is the swapping mechnism?
 
 class Solution:
     # O(N) for S and T
