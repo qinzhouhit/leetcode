@@ -12,7 +12,7 @@ class Solution:
     # An improve could be that only use list which has a O(1) complexity appending,
     # and only concatenate once at the end. The time complexity will be O(n),
     # but the code need more lines.
-    def convertToTitle(self, n: int) -> str:
+    def convertToTitle1(self, n: int) -> str:
         import string
         if n <= 0:
             return ""

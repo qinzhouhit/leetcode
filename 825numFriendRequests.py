@@ -11,7 +11,7 @@ class Solution:
 	# T: O(A^2 + N), N as number of people, A as number of ages
 	# S: O(A)
     def numFriendRequests(self, ages: List[int]) -> int:
-        count = [0]*121
+        count = [0]*121 # age count
         for age in ages:
             count[age] += 1
         
@@ -22,5 +22,6 @@ class Solution:
                 if a1 < a2: continue
                 if a1 < 100 < a2: continue
                 ans += ct1 * ct2
-                if a1 == a2: ans -= ct1
+                if a1 == a2: 
+                    ans -= ct1 # A requests himself
         return ans

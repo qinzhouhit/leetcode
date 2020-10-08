@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar:T:S:'''from typing import Listclass Solution:    def splitArray(self, nums: List[int], m: int) -> int:                
