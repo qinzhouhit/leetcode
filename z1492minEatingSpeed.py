@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar:T:S:'''from typing import Listclass Solution:    """    @param piles: an array    @param H: an integer    @return: the minimum integer K    """    def minEatingSpeed(self, piles, H):        # Write your code here        

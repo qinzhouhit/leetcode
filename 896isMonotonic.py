@@ -18,9 +18,8 @@ class Solution:
                 increasing = False
             if A[i] < A[i+1]:
                 decreasing = False
-
+        
         return increasing or decreasing
-
 
 	# O(N) for T and O(1) for S
 	# with the array [1, 2, 2, 3, 0], 
