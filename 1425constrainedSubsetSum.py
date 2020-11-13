@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar:T:S:'''from typing import List# https://leetcode.com/problems/constrained-subsequence-sum/discuss/597751/JavaC++Python-O(N)-Decreasing-Dequeclass Solution:    def constrainedSubsetSum(self, nums: List[int], k: int) -> int:        

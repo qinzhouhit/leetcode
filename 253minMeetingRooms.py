@@ -10,6 +10,19 @@ from typing import List
 
 import heapq
 class Solution:
+    # heapq, T:O(nlogn), S:O(n)
+    def minMeetingRooms2(self, intervals):
+        intervals.sort(key = lambda x: x[0])
+        heap = [] # stores the end time of intervals, i.e., # of rooms
+
+        for start, end in intervals:
+            if heap and start >= heap[0]: # using the same room
+                heapq.heapreplace(heap, end) # pop the min, and push new end time
+            else: # create a new room, track ending time
+                heapq.heappush(heap, end)
+        return len(heap)
+    
+    
     # short version of minMeetingRooms1
     # draw the intervals to better understand
     def minMeetingRooms(self, intervals):
@@ -26,6 +39,7 @@ class Solution:
                 e += 1 # then next meeting
         return res
 
+    # https://leetcode.com/problems/meeting-rooms-ii/discuss/67860/My-Python-Solution-With-Explanation
     def minMeetingRooms1(self, intervals):
         starts = sorted(i[0] for i in intervals)
         ends = sorted(i[1] for i in intervals)
@@ -45,17 +59,7 @@ class Solution:
         return numRoom
 
 
-    # heapq, T:O(nlogn), S:O(n)
-    def minMeetingRooms2(self, intervals):
-        intervals.sort(key = lambda x: x[0])
-        heap = [] # stores the end time of intervals, i.e., # of rooms
-
-        for pair in intervals:
-            if heap and pair[0] >= heap[0]: # using the same room
-                heapq.heapreplace(heap, pair[1]) # pop the min, and push new end time
-            else: # create a new room, track ending time
-                heapq.heappush(heap, pair[1])
-        return len(heap)
+    
 
 
 obj = Solution()

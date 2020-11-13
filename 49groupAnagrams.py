@@ -24,7 +24,7 @@ class Solution:
         groups = {}
         for str_ in strs:
             k = tuple(sorted(str_))
-            print (k)
+            # print (k)
             groups[k] = groups.get(k, [])+[str_]
         return list(groups.values())
 
