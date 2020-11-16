@@ -1,0 +1,1 @@
+'''keys: Solutions:Similar:T:S:'''from typing import List# https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/discuss/830480/C%2B%2B-O(N)-Sliding-window-Explanation-with-Illustrationsclass Solution:    def findLengthOfShortestSubarray(self, arr: List[int]) -> int:        
