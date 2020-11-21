@@ -14,11 +14,14 @@ class Solution:
     # whenever the sums has increased by a value of k, 
     # we've found a subarray of sums = k.
     # https://leetcode.com/problems/subarray-sum-equals-k/discuss/341399/Python-clear-explanation-with-code-and-example
+    # We can also do
+    # if (sum == k) count++;
+    # in for loop and avoid map.put(0, 1);
     def subarraySum2(self, nums: List[int], k: int) -> int:
         count = 0
         sums = 0
         d = dict()
-        d[0] = 1
+        d[0] = 1 # for a sum of zero there is one solution - empty sub-array. 
         
         for i in range(len(nums)):
             sums += nums[i]
