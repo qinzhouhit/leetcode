@@ -5,6 +5,8 @@ Similar:
 T:
 S:
 '''
+from collections import deque
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -37,11 +39,11 @@ class Solution:
     def isSymmetric1(self, root):
         if root is None:
             return True
-        stack = [(root.left, root.right)]
+        stack = deque([(root.left, root.right)])
         while stack:
-            left, right = stack.pop()
+            left, right = stack.popleft()
             if left is None and right is None:
-                continue
+                continue # attention here!!!
             if left is None or right is None:
                 return False
             if left.val == right.val:
@@ -50,3 +52,40 @@ class Solution:
             else:
                 return False
         return True
+    
+# advanced triple node
+class TriNode:
+    def __init__(self, val=0, left=None, right=None, mid=None):
+        self.val = val
+        self.left = left
+        self.right = right
+        self.mid= mid
+    
+class Solution1:
+    def isSymmetric(self, root):
+        if not root:
+            return True
+        q = deque([root.left, root.right])
+        while q:
+            node1 = q.popleft()
+            node2 = q.popleft()
+            if node1 is None and node2 is None:
+                continue
+            if node1 is None or node2 is None or node1.val != node2.val:
+                return False
+            if node1.val == node2.val:
+                q.append(node1.left)
+                q.append(node2.right)
+                q.append(node1.right)
+                q.append(node2.left)
+                q.append(node1.mid)
+                q.append(node2.mid)
+            
+    
+    
+    
+    
+    
+    
+    
+    
