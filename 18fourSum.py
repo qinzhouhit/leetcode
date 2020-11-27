@@ -10,12 +10,21 @@ S:
 
 
 class Solution:
-    def fourSum(self, nums, target):
+    # 2 pointers
+    def fourSum2(self, nums, target):
+        nums.sort()
+        res = []
+        for i in range(len(nums)-3):
+            
+
+
+
+    def fourSum1(self, nums, target):
         def findNsum(nums, target, N, result, results):
             if len(nums) < N or N < 2 or target < nums[0]*N or target > nums[-1]*N:  # early termination
                 return
             if N == 2: # two pointers solve sorted 2-sum problem
-                l,r = 0,len(nums)-1
+                l, r = 0,len(nums)-1
                 while l < r:
                     s = nums[l] + nums[r]
                     if s == target:

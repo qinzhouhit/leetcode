@@ -27,8 +27,8 @@ class Solution:
                 curr += 1
             elif nums[curr] == 2:
                 nums[curr], nums[p2] = nums[p2], nums[curr]
-                p2 -= 1
-            else:
+                p2 -= 1 # notice that we don't do curr += 1 here
+            else: # nums[curr] == 1
                 curr += 1
                 
                 # 

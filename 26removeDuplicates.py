@@ -8,6 +8,18 @@ S:
 from typing import List
 
 class Solution:
+    # educative.io
+    def removeDuplicates2(self, nums: List[int]) -> int:
+        nxtNonRep = 1 # front 
+        ptr = 1 # end
+        while ptr < len(nums):
+            if nums[nxtNonRep-1] != nums[ptr]:
+                nums[nxtNonRep] = nums[ptr]
+                nxtNonRep += 1
+            ptr += 1
+        return nxtNonRep
+        
+    
     # official, two pointer, T: O(N), S: O(1)
     def removeDuplicates1(self, nums: List[int]) -> int:
         l = 0

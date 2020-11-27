@@ -36,6 +36,38 @@ class Solution:
                     l += 1; r -= 1 # search for new combinations
         return res
 
+    # educative.io version
+    def threeSum1(self, nums):
+        nums.sort()
+        triplets = []
+        
+        def helper(nums, target, l, triplets):
+            r = len(nums) - 1
+            while l < r:
+                tmp = nums[l] + nums[r]
+                if tmp == target:
+                    triplets.append([-target, nums[l], nums[r]])
+                    l += 1
+                    r -= 1
+                    while l < r and nums[l] == nums[l-1]:
+                        l += 1
+                    while l < r and nums[r] == nums[r+1]:
+                        r -= 1
+                elif tmp < target:
+                    l += 1
+                else:
+                    r -= 1
+                    
+        for i in range(len(nums)):
+            if i > 0 and nums[i-1] == nums[i]:
+                continue
+            helper(nums, -nums[i], i+1, triplets)
+        return triplets
+    
+    
+        
+                
+                
     # def threeSum(self, nums):
     #     res=[]; tmp=[]
     #     len_=len(nums)

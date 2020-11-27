@@ -40,6 +40,31 @@ class Solution:
                 elif sum > target:
                     r -= 1
         return result
+    
+    # educative.io version
+    # T: O(NlogN) for sort
+    # S: O(N) for sort
+    def threeSumClosest1(self, nums, target):
+        nums.sort()
+        
+        smallest_diff = float("inf")
+        for i in range(len(nums)-2):
+            l = i + 1
+            r = len(nums) - 1
+            while l < r:
+                # print (i, l, r)
+                diff_tmp = target - (nums[i] + nums[l] + nums[r])
+                if diff_tmp == 0:
+                    return target
+                    
+                if abs(diff_tmp) < abs(smallest_diff) or abs(diff_tmp) == abs(smallest_diff) and diff_tmp < 0:
+                    smallest_diff = diff_tmp
+            
+                if diff_tmp > 0:
+                    l += 1
+                else:
+                    r -= 1
+        return target - smallest_diff
 
 
 obj=Solution()
