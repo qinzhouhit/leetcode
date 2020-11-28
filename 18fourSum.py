@@ -10,12 +10,39 @@ S:
 
 
 class Solution:
-    # 2 pointers
+    # 2 pointers, educative.io
+    # T: O(nlogn + n^3)
+    # S: O(N) for sorting
     def fourSum2(self, nums, target):
         nums.sort()
-        res = []
+        self.res = []
+
+        def search_pairs(nums, target, first, second):
+            l = second + 1
+            r = len(nums) - 1
+            while l < r:
+                tmp_sum = nums[first]+nums[second]+nums[l]+nums[r]
+                if tmp_sum == target:
+                    self.res.append([nums[first], nums[second], nums[l], nums[r]])
+                    l += 1
+                    r -= 1
+                    while l < r and nums[l] == nums[l-1]:
+                        l += 1
+                    while l < r and nums[r] == nums[r+1]:
+                        r -= 1
+                elif tmp_sum < target:
+                    l += 1
+                else:
+                    r -= 1
+
         for i in range(len(nums)-3):
-            
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            for j in range(i+1, len(nums)-2):
+                if j > i + 1 and nums[j] == nums[j-1]:
+                    continue
+                search_pairs(nums, target, i, j)
+        return self.res
 
 
 
