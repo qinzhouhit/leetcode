@@ -22,6 +22,28 @@ https://leetcode.com/problems/merge-intervals/solution/321556
 '''
 
 class Solution:
+    # educative.io
+    # T: O(NlogN); S: O(N)
+    def merge2(self, intervals: List[List[int]]) -> List[List[int]]:
+        if len(intervals) <= 1:
+            return intervals
+        intervals.sort(key=lambda x:x[0])
+        res = []
+        start = intervals[0][0]
+        end = intervals[0][1]
+        for i in range(1, len(intervals)):
+            cur = intervals[i]
+            if cur[0] > end:
+                res.append([start, end]) # it's actually the previous one
+                start = cur[0]
+                end = cur[1]
+            else: # cur[0] <= end, overlapping
+                end = max(cur[1], end) # no need to update start since we sort by start
+        res.append([start, end])
+        return res
+
+
+
     
     def merge1(self, intervals: List[List[int]]) -> List[List[int]]:
         if not intervals: return []

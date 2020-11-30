@@ -1,21 +1,24 @@
 '''
 keys: heapq
-Solutions:
-Similar:
+Solutions: 
+Similar: 
+1) Given a list of intervals, find the point where the maximum number of intervals overlap.
+2) 
 T:
 S:
 '''
 from typing import List
 
-
+# keep track of the mutual exclusiveness of the overlapping meetings.
 import heapq
 class Solution:
     # heapq, T:O(nlogn), S:O(n)
+    # keep track of the ending time of all the meetings currently happening
     def minMeetingRooms2(self, intervals):
         intervals.sort(key = lambda x: x[0])
-        heap = [] # stores the end time of intervals, i.e., # of rooms
+        heap = [] # stores the end time of active and overlapping meetings
 
-        for start, end in intervals:
+        for start, end in intervals: # heap[0]: earliest meeting ending time
             if heap and start >= heap[0]: # using the same room
                 heapq.heapreplace(heap, end) # pop the min, and push new end time
             else: # create a new room, track ending time
