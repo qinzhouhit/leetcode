@@ -8,7 +8,27 @@ S: O(1)
 from typing import List
 
 class Solution:
-    
+    # educative.io, cyclic sort
+    def firstMissingPositive3(self, nums: List[int]) -> int:
+        i = 0; n = len(nums)
+        while i < n:
+            idx = nums[i] - 1
+            # the key difference is "nums[i] > 0 and nums[i] <= n"
+            # ignore all numbers that are out of the range of the array
+            # (i.e., all negative numbers and all numbers greater than 
+            # or equal to the length of the array)
+            if nums[i] > 0 and nums[i] <= n and nums[idx] != nums[i]:
+                nums[idx], nums[i] = nums[i], nums[idx]
+            else:
+                i += 1
+        for i in range(n):
+            # print (i, nums[i])
+            if nums[i] != i+1:
+                return i+1
+        return n + 1
+
+
+
     # hash swap
     def firstMissingPositive1(self, nums: List[int]) -> int:
         for i in range(len(nums)):
