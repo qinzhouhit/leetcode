@@ -14,6 +14,17 @@ class ListNode:
 
 # iterative
 class Solution:
+    # self-made
+    def reverseList2(self, head: ListNode) -> ListNode:
+        tmp = None # name "tmp" as cur head or sth
+        while head:
+            nxt = head.next
+            head.next = tmp
+            tmp = head
+            head = nxt
+        return tmp
+
+
     # keep a referece (curr) to head and pass along the head to the next
     def reverseList(self, head):
         prev = None

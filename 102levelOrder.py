@@ -16,6 +16,27 @@ from collections import deque
 #         self.right = None
 
 class Solution:
+    # educative.io version, easy to remember
+    # O(N) for S and T
+    def levelOrder3(self, root: TreeNode) -> List[List[int]]:
+        result = []
+        if not root: return result
+        # TODO: Write your code here
+        q = deque([root])
+        while q:
+            lvl_size = len(q)
+            lvl_vals = []
+            for _ in range(lvl_size):
+                node = q.popleft()
+                lvl_vals.append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            result.append(lvl_vals)
+        return result
+
+
     # O(N) for S and T, not intuitive
     def levelOrder2(self, root):
         res = []

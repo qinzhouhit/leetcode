@@ -17,6 +17,25 @@ class TreeNode:
 
 
 class Solution:
+    # educative.io version, same as 102 except use deque for res
+    def levelOrderBottom2(self, root: TreeNode) -> List[List[int]]:
+        result = deque()
+        if not root: return result
+        # TODO: Write your code here
+        q = deque([root])
+        while q:
+            lvl_size = len(q)
+            lvl_vals = []
+            for _ in range(lvl_size):
+                node = q.popleft()
+                lvl_vals.append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            result.appendleft(lvl_vals)
+        return result
+
     # bfs + queue
     def levelOrderBottom(self, root):
         from collections import deque

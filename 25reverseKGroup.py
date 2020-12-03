@@ -13,6 +13,114 @@ class ListNode:
         self.next = next
 
 class Solution:
+
+    # educative.io version2, reverse the sublist for alternating k nodes
+    # i.e., skip every k nodes
+    def reverseKGroup3(self, head: ListNode, k: int) -> ListNode:
+        while k <= 1 or not head:
+            return head
+        prev = None; cur = head
+        while True:
+            last_node_prev_part = prev
+            last_node_cur_sublist = cur
+            # reverse k nodes
+            ptr = 0
+            while cur and ptr < k:
+                nxt = cur.next
+                cur.next = prev
+                prev = cur # prev is the current head of sublist
+                cur = nxt
+                ptr += 1
+            # connect three parts
+            if last_node_prev_part:
+                last_node_prev_part.next = prev
+            else:
+                head = prev 
+            last_node_cur_sublist.next = cur # cur is the head of the rest nodes
+            # skip k nodes
+            ptr = 0
+            while cur and ptr < k:
+                prev = cur
+                cur = cur.next
+                ptr += 1
+            if not cur:
+                break
+            prev = last_node_cur_sublist
+        return head
+
+    # educative.io version, reverse the sublist with less than k nodes
+    def reverseKGroup2(self, head: ListNode, k: int) -> ListNode:
+        while k <= 1 or not head:
+            return head
+        
+        prev = None
+        cur = head
+        while True:
+            last_node_prev_part = prev
+            last_node_cur_sublist = cur
+            ptr = 0
+            while cur and ptr < k:
+                nxt = cur.next
+                cur.next = prev
+                prev = cur # prev is the head of cur sublist
+                cur = nxt # cur will be the head of next sublist
+                ptr += 1
+            # connect the prev part with cur sublist
+            if last_node_prev_part:
+                last_node_prev_part.next = prev
+            else:
+                head = prev
+            # connect the cur sublist with the rest linked list nodes
+            last_node_cur_sublist.next = cur
+            
+            if not cur: # no more nodes left to reverse
+                break 
+            # connect the cur sublist to the next one
+            prev = last_node_cur_sublist
+        return head
+
+
+    # educative.io, required the same as this question
+    def reverseKGroup3(self, head: ListNode, k: int) -> ListNode:
+        while k <= 1 or not head:
+            return head
+        
+        # have the length of the linked list
+        len_ = 0; tmp = head
+        while tmp:
+            len_ += 1
+            tmp = tmp.next
+        
+        prev = None
+        cur = head
+        while len_ >= k:
+            last_node_prev_part = prev
+            last_node_cur_sublist = cur
+            ptr = 0
+            while cur and ptr < k:
+                nxt = cur.next
+                cur.next = prev
+                prev = cur # prev is the head of cur sublist
+                cur = nxt # cur will be the head of next sublist
+                ptr += 1
+            # connect the prev part with cur sublist
+            if last_node_prev_part:
+                last_node_prev_part.next = prev
+            else:
+                head = prev
+            # connect the cur sublist with the rest linked list nodes
+            last_node_cur_sublist.next = cur
+            len_ -= k
+
+            if not cur: # no more nodes left to reverse
+                break 
+            # connect the cur sublist to the next one
+            prev = last_node_cur_sublist
+        return head
+            
+
+
+
     ######
     # official recursive
     # T: O(N); S: O(N/k) for recursion stack
