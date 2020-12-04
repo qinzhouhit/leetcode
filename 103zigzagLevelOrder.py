@@ -16,6 +16,31 @@ class TreeNode:
         self.right = None
 
 class Solution:
+    # educative.io version
+    def zigzagLevelOrder5(self, root: TreeNode) -> List[List[int]]:
+        result = []
+        if not root: return result
+        from collections import deque
+        q = deque([root])
+        flag = 1
+        while q:
+            lvl_size = len(q)
+            lvl_vals = deque()
+
+            for _ in range(lvl_size):
+                node = q.popleft()
+                if flag:
+                    lvl_vals.append(node.val)
+                else:
+                    lvl_vals.appendleft(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            flag ^= 1
+            result.append(list(lvl_vals))
+        return result
+        
     
     # based on LC 102
     def zigzagLevelOrder4(self, root: TreeNode) -> List[List[int]]:
