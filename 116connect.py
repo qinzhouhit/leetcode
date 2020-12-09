@@ -16,7 +16,31 @@ class Node:
         self.next = next
 
 class Solution:
-    def connect(self, root):
+    # educative.io, O(N) for S and T
+    def connect1(self, root: 'Node') -> 'Node':
+        if not root:
+            return None
+        q = deque([root])
+        while q:
+            len_ = len(q)
+            prev = None
+            # we dont need to process last node of each level as 
+            # cur.next = None since by default next is None
+            for _ in range(len_):
+                cur = q.popleft()
+                if prev:
+                    prev.next = cur
+                prev = cur 
+
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+
+        return root
+
+
+    def connect(self, root: 'Node') -> 'Node':
         if not root: return []
 
         import collections
@@ -27,10 +51,10 @@ class Solution:
             node = queue.popleft()
             if node:
                 node.next = queue[0]
-                if node.left: queue+=[node.left]
-                if node.right: queue+=[node.right]
+                if node.left: queue += [node.left]
+                if node.right: queue += [node.right]
             elif queue: # pay attention!!!
-                queue+=[None]
+                queue += [None]
         return root
 
 
