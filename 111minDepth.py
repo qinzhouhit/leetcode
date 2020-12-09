@@ -17,6 +17,21 @@ class TreeNode:
         self.right = right
 
 class Solution:
+    # DFS
+    def minDepth2(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        res, stack = sys.maxint, [(root, 1)]
+        while stack:
+            node, level = stack.pop()
+            if node and not node.left and not node.right:
+                res = min(res, level)
+            if node:
+                stack.append((node.left, level+1))
+                stack.append((node.right, level+1))
+        return res
+
+
     # a beautiful recursion
     def minDepth5(self, root: TreeNode) -> int:
         if not root: return 0
@@ -35,7 +50,7 @@ class Solution:
             return 0
 
         children = [root.left, root.right]
-        # if we're at leaf node
+        # if we're at leaf node, scalable for n-ary tree
         if not any(children):
             return 1
 
@@ -62,19 +77,7 @@ class Solution:
                     stack.append((depth+1, c))
         return min_depth
 
-    # DFS
-    def minDepth2(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-        res, stack = sys.maxint, [(root, 1)]
-        while stack:
-            node, level = stack.pop()
-            if node and not node.left and not node.right:
-                res = min(res, level)
-            if node:
-                stack.append((node.left, level+1))
-                stack.append((node.right, level+1))
-        return res
+    
 
     # DFS (dont understand...)
     def minDepth1(self, root: TreeNode) -> int:
