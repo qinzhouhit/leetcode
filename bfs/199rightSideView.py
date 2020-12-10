@@ -53,7 +53,7 @@ class Solution:
         return rightside
 
 
-    # bfs sentinel
+    # bfs sentinel; use a sentinel node to separate the levels.
     def rightSideView2(self, root: TreeNode) -> List[int]:
         if root is None:
             return []
@@ -82,6 +82,22 @@ class Solution:
         
         return rightside
 
+    # recursive DFS
+    def rightSideView3(self, root: TreeNode) -> List[int]:
+        if root is None:
+            return []
+        
+        rightside = []
+        
+        def helper(node: TreeNode, level: int) -> None:
+            if level == len(rightside):
+                rightside.append(node.val)
+            for child in [node.right, node.left]:
+                if child:
+                    helper(child, level + 1)
+                
+        helper(root, 0)
+        return rightside
 
 
 
