@@ -6,9 +6,9 @@ T:
 S:
 '''
 from typing import List
+# with parenthesis but only +/-
 
 class Solution:
-
     # O(N) for S and T
     def calculate(self, s: str) -> int:
         if s is None:
