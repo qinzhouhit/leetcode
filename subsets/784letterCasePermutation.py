@@ -6,8 +6,26 @@ T: O(2^n),  where n is the number of alphabet chars,
 because every char can be in 2 states (lower and upper).
 S:
 '''
+from typing import List
 
 class Solution:
+    # educative.io
+    # 2^N permutations at the most and while processing each permutation we convert it 
+    # into a character array, the overall time complexity of the algorithm will be 
+    # O(N*2^N)
+​    # S: O(N*2^N), output space
+    def letterCasePermutation2(self, S):
+        perms = [S]
+        for idx, c in enumerate(S):
+            if c.isalpha(): # is character
+                n = len(perms)
+                for j in range(n):
+                    cur = list(perms[j])
+                    cur[idx] = cur[idx].swapcase()
+                    perms.append("".join(cur))
+        return perms
+
+
     # build incrementally, one character by one character
     def letterCasePermutation1(self, S):
         res = ['']

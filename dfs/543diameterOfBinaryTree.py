@@ -1,5 +1,5 @@
 '''
-keys:
+keys: diameter = leftTreeHeight + rightTreeHeight + 1
 Solutions:
 Similar: 124, 687
 T:
@@ -33,16 +33,17 @@ class Solution:
     
     # T: O(N), N as # of nodes
     # S: O(log(N)), recursion stack as size of tree height
+    # the path is the depth of the left subtree plus the depth of the right subtree
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        self.ans = 0
+        self.ans = 1 # treat ans as number of nodes
         self.helper(root)
-        return self.ans
-
+        return self.ans - 1 # number of edges, which is nodes number minus one
+          
     def helper(self, node):
-        if node == None: return -1
+        if node is None: return 0
         l = self.helper(node.left) # l: diamater of left subtree
         r = self.helper(node.right)
-        self.ans = max(l + 1 + r + 1, self.ans) # l+r+2: leftTree+root+rightTree
-        return max(l, r) + 1
+        self.ans = max(l + r + 1, self.ans) # leftTree+rightTree+node
+        return max(l, r) + 1 # +1: node
 
 

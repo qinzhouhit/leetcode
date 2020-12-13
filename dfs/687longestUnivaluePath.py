@@ -5,6 +5,8 @@ Similar: 124, 543
 T:
 S:
 '''
+from typing import List
+
 
 # Definition for a binary tree node.
 # class TreeNode:

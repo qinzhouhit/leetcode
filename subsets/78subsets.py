@@ -24,6 +24,24 @@ class Solution:
     #             all_subsets.append(all_subsets[idx]+[num])
     #     return all_subsets
 
+    # educative.io, bfs
+    # T: the number of subsets doubles as we add each element to all the existing subsets,
+    # therefore, we will have a total of O(2^N) subsets
+    # we construct a new subset from an existing set, therefore, the time complexity of 
+    # the above algorithm will be O(N*2^N).
+    # S: O(N*2^N), i.e., O(2^N) subsets and each one takes O(N)
+    def subsets4(self, nums):
+        subsets = []
+        subsets.append([])
+        for num in nums:
+            n = len(subsets)
+            for i in range(n):
+                tmp = list(subsets[i])
+                tmp.append(num)
+                subsets.append(tmp)
+        return subsets
+
+
     # DFS recursively, T and S: O(N*2^N)
     def subsets1(self, nums):
         res = []

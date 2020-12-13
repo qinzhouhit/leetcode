@@ -1,13 +1,14 @@
 '''
 keys:
 Solutions:
-Similar:
+Similar: 227, 772
 T:
 S:
 '''
 from typing import List
 
 class Solution:
+
     # O(N) for S and T
     def calculate(self, s: str) -> int:
         if s is None:

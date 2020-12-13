@@ -13,6 +13,27 @@ from typing import List
 
 
 class Solution:
+    # educative.io, bfs
+    # O(N*2^N) for S and T
+    def subsetsWithDup4(self, nums):
+        nums.sort()
+        subsets = [[]]
+        start, end = 0, 0
+        for i in range(len(nums)):
+            start = 0
+            # if current and the previous elements are same, create new subsets 
+            # only from the subsets added in the previous step
+            if i > 0 and nums[i] == nums[i-1]:
+                print (start, end, subsets)
+                start = end
+            end = len(subsets)
+            for j in range(start, end):
+                tmp = list(subsets[j])
+                tmp.append(nums[i])
+                subsets.append(tmp)
+        return subsets
+             
+
     #####
     # recommended, just skip repeated element
     def subsetsWithDup(self, nums):
