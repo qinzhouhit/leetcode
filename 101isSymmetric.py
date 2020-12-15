@@ -13,7 +13,27 @@ class TreeNode:
         self.left = left
         self.right = right
         
+
 class Solution:
+    # level traversal
+    def isSymmetric2(self, root: TreeNode) -> bool:
+        if not root:
+            return True
+        q = deque([root])
+        while q:
+            len_ = len(q)
+            level = []
+            for _ in range(len_):
+                node = q.popleft()
+                level.append(node.val if node else "#")
+                if node:
+                    q.append(node.left)
+                    q.append(node.right)
+            if level != level[::-1]:
+                return False
+        return True
+                
+            
     # recursive
     def isSymmetric(self, root: TreeNode) -> bool:
         if root is None:
@@ -34,6 +54,7 @@ class Solution:
             return outer and inner
         else:
             return False
+            
 
     # iterative
     def isSymmetric1(self, root):
@@ -53,6 +74,7 @@ class Solution:
                 return False
         return True
     
+
 # advanced triple node
 class TriNode:
     def __init__(self, val=0, left=None, right=None, mid=None):
