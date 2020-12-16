@@ -2,11 +2,11 @@
 
 Created and maintained by qinzhouhit. Commerical use prohibited.
 
-With notes on ideas, intuitive comments, time and space complexity analysis.
+With notes of ideas, intuitive comments, time and space complexity analysis.
 
 
 
-Not an ad, but strongly recommend LeetCode premium, some of the articles in Solution are quite useful.
+Strongly recommend LeetCode premium, some of the articles in Solution are quite useful.
 
 Recommended Youtuber: [Huahua Youtube](https://www.youtube.com/user/xxfflower), [Nick White](https://www.youtube.com/channel/UC1fLEeYICmo3O9cUsqIi7HA)
 
