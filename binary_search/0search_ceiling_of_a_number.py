@@ -33,7 +33,7 @@ def search_ceiling_of_a_number(arr, key):
     return l if l < len(arr) else -1
 
 
-# similar one 
+# similar one, floor of a given number
 '''
 Given an array of numbers sorted in ascending order, find the floor of a given number ‘key’.
 The floor of the ‘key’ will be the biggest element in the given array smaller than or 

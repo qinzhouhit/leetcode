@@ -17,7 +17,7 @@ class Solution:
                 return i
 
 
-    # some other solutions
+    # some other solutions; O(N) for S and T
     def singleNumber1(self, nums):
         dic = {}
         for num in nums:
@@ -26,6 +26,7 @@ class Solution:
             if val == 1:
                 return key
 
+    # T: O(N), S: O(1)
     def singleNumber2(self, nums):
         # the key is associativity law for xor operation
         # so, x ^ x = 0, 0 ^ x = x, odd number of x will be left.

@@ -10,6 +10,25 @@ from typing import List
 
 from collections import Counter
 class Solution:
+    # educative.io version
+    # where we return the two numbers
+    # O(1) for S and O(N) for T
+    def singleNumber4(self, nums: List[int]) -> int:
+        n1xn2 = 0
+        for num in nums:
+            n1xn2 ^= num # n1 xor n2 since other number appear in pair
+        # get the rightmost bit that is 1
+        rightmost_bit = 1
+        while rightmost_bit & n1xn2 == 0: 
+            rightmost_bit = rightmost_bit << 1 # move bit "1" to left by one
+        num1, num2 = 0, 0
+        for num in nums:
+            if (num & rightmost_bit) != 0:
+                num1 ^= num 
+            else:
+                num2 ^= num
+        return num1, num2 # but not sure which one is the first number
+
     # TODO: bitwise operator
     # O(1) for S and O(N) for T
     def singleNumber3(self, nums: List[int]) -> int:
