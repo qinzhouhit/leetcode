@@ -60,6 +60,20 @@ class Solution:
         # Return top k frequent elements
         return unique[n - k:]
     
+    # educative.io heap
+    # T: O(N+N*logK); S: O(N)
+    def topKFrequent4(self, nums: List[int], k: int) -> List[int]:
+        ct = Counter(nums)
+        h = []
+        for num, freq in ct.items():
+            heappush(h, (freq, num))
+            if len(h) > k:
+                heappop(h)
+        res = []
+        while h:
+            res.append(heappop(h)[1])
+        return res
+
     
     # T: O(Nlogk)
     # https://leetcode.com/problems/top-k-frequent-elements/solution/
@@ -76,7 +90,7 @@ class Solution:
         # O(N log k) time; iterable = keys, key = values, i.e., count.get
         return heapq.nlargest(k, count.keys(), key=count.get) 
     
-    # sefl-made
+    # self-made
     def topKFrequent21(self, nums: List[int], k: int) -> List[int]: 
    		tmp = {}
    		for num in nums:

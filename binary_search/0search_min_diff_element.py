@@ -21,19 +21,19 @@ def search_min_diff_element(arr, target):
 	while l <= r:
 		mid = l + (r - l) // 2
 		if target < arr[mid]:
-			r = mid - 1
+			r = mid - 1 # notice that r could be -1 if mid = 0, so DONT return r
 		elif target > arr[mid]:
 			l = mid + 1
 		else:
 			return arr[mid]
 
 	# at the end of the while loop, 'start == end+1'
-		# we are not able to find the element in the given array
-		# return the element which is closest to the 'key'
-		# --------arr[l]--target-----------arr[r]----------------
-		if abs(target - arr[l]) < abs(target - arr[r]): # closer to arr[l]
-			return arr[l]
-		return arr[r]
+	# we are not able to find the element in the given array
+	# return the element which is closest to the 'key'
+	# --------arr[l]--target-----------arr[r]----------------
+	if abs(target - arr[l]) < abs(target - arr[r]): # closer to arr[l]
+		return arr[l]
+	return arr[r] 
 
 print(search_min_diff_element([4, 6, 10], 7))
 # print(search_min_diff_element([4, 6, 10], 4))	

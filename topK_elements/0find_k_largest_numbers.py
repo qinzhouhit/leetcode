@@ -19,7 +19,7 @@ def find_k_largest_numbers(nums, k):
 	# O((N−K)*logK)
 	for i in range(k, len(nums)):
 		if nums[i] > minHeap[0]:
-			heappoppush(minHeap, nums[i])
+			heappushpop(minHeap, nums[i])
 	return list(minHeap)
 
 
@@ -30,5 +30,5 @@ def find_k_largest_numbers1(nums, k):
 		heappush(maxHeap, -nums[i])
 	for i in range(k, len(nums)):
 		if -nums[i] > maxHeap[0]:
-			heappoppush(maxHeap, -nums[i])
+			heappushpop(maxHeap, -nums[i])
 	return list(maxHeap)
