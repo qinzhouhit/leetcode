@@ -41,6 +41,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="243" />
+    <option name="y" value="25" />
+    <option name="width" value="1197" />
+    <option name="height" value="834" />
+  </component>
   <component name="ProjectId" id="1bHZAQCjR4LH8bCM3pf5Lv8MmQK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -247,14 +253,14 @@
     </configuration>
     <list>
       <item itemvalue="Python.107levelOrderBottom" />
+      <item itemvalue="Python.1249minRemoveToMakeValid" />
       <item itemvalue="Python.232MyQueue" />
       <item itemvalue="Python.29divide" />
-      <item itemvalue="Python.od_processing" />
       <item itemvalue="Python.670maximumSwap" />
       <item itemvalue="Python.784letterCasePermutation" />
       <item itemvalue="Python.855ExamRoom" />
       <item itemvalue="Python.953isAlienSorted" />
-      <item itemvalue="Python.1249minRemoveToMakeValid" />
+      <item itemvalue="Python.od_processing" />
     </list>
     <recent_temporary>
       <list>

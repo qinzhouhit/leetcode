@@ -13,8 +13,8 @@ at each point of time we are only storing maximum of k nodes in the queue.
 Time complexity: O( n.k.log(k) )
 Space complexity: O(k), only k nodes are stored at a time
 or O(k)+O(n) if the space for returning result is considered
-'''
-from typing import List
+'''from typing import List
+
 from heapq import heappush, heappop, heapreplace, heapify
 
 # Definition for singly-linked list.
@@ -77,15 +77,57 @@ class Solution:
             curr.next = node
             curr = curr.next
             return dummy.next
-        
-        
+
+    # heap, seems illegal to change ListNode class
+    # could use a wrapper here
+    # T: O(Nlogk), S: O(k), k is the number of lists
+    def mergeKLists3(self, lists: List[ListNode]) -> ListNode:  
+        class Wrapper():
+            def __init__(self, node):
+                self.node = node
+            def __lt__(self, other):
+                return self.node.val < other.node.val
+  
+        minHeap = []
+        for root in lists:
+            if root:
+                heappush(minHeap, root)
+        head, tail = None, None
+        while minHeap:
+            node = heappop(minHeap)
+            if not head:
+                head = tail = node
+            else:
+                tail.next = node
+                tail = tail.next # insert the node ahead of tail
+            if node.next:
+                heappush(minHeap, node.next)
+        return head    
+
+
+    # naive method: append the nodes vals in the list and sort, then 
+    # construct a new link list
+    # T: O(NlogN); S: O(N)
+    def mergeKLists0(self, lists: List[ListNode]) -> ListNode:     
+        self.nodes = []
+        head = point = ListNode(0)
+        for l in lists:
+            while l:
+                self.nodes.append(l.val)
+                l = l.next
+        for x in sorted(self.nodes):
+            point.next = ListNode(x)
+            point = point.next
+        return head.next
+
+
     # T: O(Nlogk), k as the number of linked lists, O(logk) for comparison,
     # i.e., pop and insertion to priority queue
     # S: O(n) for new linked list
     def mergeKLists1(self, lists: List[ListNode]) -> ListNode:            
         dummy = ListNode(None)
         cur = dummy
-        q = PriorityQueue()
+        q = PriorityQueue() # heap is not working
         for node in lists:
             if node:
                 q.put((node.val, node))
@@ -95,14 +137,9 @@ class Solution:
             if cur.next:
                 q.put((cur.next.val, cur.next))
         return dummy.next
+
         
-    # naive method: append the nodes vals in the list and sort, then 
-    # construct a new link list
-    # T: O(NlogN); S: O(N)
-
-
-
-
+    
 
 
 

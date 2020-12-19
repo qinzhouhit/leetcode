@@ -7,9 +7,37 @@ S: O(1)
 '''
 from typing import List
 
+
 import collections
 class Solution:
-    # T: O(N); S: O(1)
+    # heapq, educative.io version
+    def leastInterval2(self, tasks: List[str], n: int) -> int:
+        res = 0
+        freqCt = Counter(tasks)
+        maxHeap = []
+        for task, freq in freqCt.items():
+            heappush(maxHeap, (-freq, task))
+        while maxHeap:
+            waitList = []
+            ct = n + 1 # try to excute n+1 tasks since idle needed every k tasks
+            while ct and maxHeap:
+                res += 1
+                freq, task = heappop(maxHeap)
+                # since it break every n intervals
+                # A -> B -> idle -> A ..., n = 2, you need to heappop 3 times
+                # before excuting A again
+                if -freq > 1: 
+                    waitList.append((freq+1, task))
+                ct -= 1
+            # puting the waitList into heap, for next round
+            for freq, task in waitList:
+                heappush(maxHeap, (freq, task))
+            if maxHeap: # is still tasks left, then you need to take the idles
+                res += ct # have "ct" idle for the next round
+        return res
+
+
+    # T: O(N); S: O(1), official, greedy
     def leastInterval1(self, tasks: List[str], n: int) -> int:
         # frequencies of the tasks
         frequencies = [0] * 26
@@ -24,7 +52,7 @@ class Solution:
         
         while frequencies and idle_time > 0:
             idle_time -= min(f_max - 1, frequencies.pop())
-        idle_time = max(0, idle_time)
+        idle_time = max(0, idle_time) # every n interval is just "miminum" requirement
 
         return idle_time + len(tasks)
     
