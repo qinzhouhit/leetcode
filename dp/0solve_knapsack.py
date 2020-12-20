@@ -1,7 +1,7 @@
 '''
-keys: 
+keys:
 Solutions:
-Similar: 
+Similar:
 T:
 S:
 '''
@@ -15,20 +15,22 @@ Items: { Apple, Orange, Banana, Melon }
 Weights: { 2, 3, 1, 4 }
 Profits: { 4, 5, 3, 7 }
 Knapsack capacity: 5
+
+0/1 knapsack problem: for each step, we can choose one item or skip it
 '''
 
 # recursion
 # T: O(2^n), n as the total number of items
 # S: O(n) for the recursive stack since it is dfs
 def solve_knapsack(profits, weights, capacity):
-	return helper(profits, weigths, capacity, 0)
+	return helper(profits, weights, capacity, 0)
 
-def helper(profits, weigths, capacity, curIdx):
+def helper(profits, weights, capacity, curIdx):
 	if capacity <= 0 or curIdx >= len(profits):
 		return 0
 
 	profit_include = 0
-	if weigths[curIdx] <= capacity: # including the curIdx
+	if weights[curIdx] <= capacity: # including the curIdx
 		profit_include = profits[curIdx] + helper(profits, weights, \
 			capacity-weights[curIdx], curIdx+1)
 	# exclduing the curIdx item
@@ -42,16 +44,16 @@ def helper(profits, weigths, capacity, curIdx):
 def solve_knapsack1(profits, weights, capacity):
 	# padding capacity is because we can actually reach idx at "capacity"
 	memo = [[-1 for _ in range(capacity+1)] for _ in range(len(profits))]
-	return helper(profits, weigths, capacity, 0)
+	return helper(profits, weights, capacity, 0, memo)
 
-def helper1(profits, weigths, capacity, curIdx):
+def helper1(profits, weights, capacity, curIdx, memo):
 	if capacity <= 0 or curIdx >= len(profits):
 		return 0
 	if memo[curIdx][capacity] != -1:
 		return memo[curIdx][capacity]
 
 	profit_include = 0
-	if weigths[curIdx] <= capacity: # including the curIdx
+	if weights[curIdx] <= capacity: # including the curIdx
 		profit_include = profits[curIdx] + helper(profits, weights, \
 			capacity-weights[curIdx], curIdx+1)
 	# exclduing the curIdx item
@@ -68,7 +70,7 @@ def solve_knapsack2(profits, weights, capacity):
 	# first col will be 0 since no capacity for any item
 	# first row will be profit[0] since one item/ weight
 	for c in range(capacity+1):
-		if weight[0] <= c: # 0 is because we update the 0-th row
+		if weights[0] <= c: # 0 is because we update the 0-th row
 			dp[0][c] = profits[0]
 
 	for i in range(1, len(profits)):
@@ -79,7 +81,7 @@ def solve_knapsack2(profits, weights, capacity):
 			profit2 = dp[i-1][c] # skip the item
 			dp[i][c] = max(profit1, profit2)
 	trace_back(dp, profits, weights, capacity)
-	return res
+	return dp[-1][-1]
 
 def trace_back(dp, profits, weights, capacity):
 	n = len(weights)
@@ -100,12 +102,12 @@ def trace_back(dp, profits, weights, capacity):
 def solve_knapsack3(profits, weights, capacity):
 	dp = [0]*(capacity+1)
 	for c in range(capacity):
-		if weights[0] < c:
+		if weights[0] <= c:
 			dp[c] = profits[0]
 	print (dp)
 	for i in range(1, len(profits)):
-# 		for c in range(capacity, 0, -1): # or include 0, does not matter
-		 for c in range(0, capacity+1):
+		for c in range(capacity, 0, -1): # or include 0, does not matter
+		# for c in range(0, capacity+1): # this is wrong since one increases capacity every time..
 			profit1, profit2 = 0, 0
 			if weights[i] <= c:
 				profit1 = profits[i] + dp[c - weights[i]]

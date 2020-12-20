@@ -15,16 +15,20 @@ class Solution:
         
         # Construct a monotone increasing sequence of digits
         for digit in num:
-            while k and numStack and numStack[-1] > digit:
-                numStack.pop()
+            while k and numStack and digit < numStack[-1]:
+                numStack.pop() # pop the bigger previous one
                 k -= 1
         
             numStack.append(digit)
         
-        # - Trunk the remaining K digits at the end
+        # - Trunk the remaining/last K digits at the end
         # - in the case k==0: return the entire list
+        # The lstrip() method removes any leading characters (space 
+        # is the default leading character to remove)
+        # this is for cases like num = "9", k = 1, since res should be "0"
         finalStack = numStack[:-k] if k else numStack
         
         # trip the leading zeros
+        # or "0" is for cases like num = "10", k = 2, res will be ""
         return "".join(finalStack).lstrip('0') or "0"
 

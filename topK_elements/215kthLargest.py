@@ -15,6 +15,8 @@ class Solution:
     ##########
     # some solution, left partition small version, recommended
     # https://www.youtube.com/watch?v=zyskis1Gw0c
+    # T: O(N) on average and O(N^2) the worst
+    # S: O(1) for S.
     def findKthLargest1(self, nums: List[int], k: int) -> int:
         if not nums: return 0
         # partition on the numbers in [left, right]
@@ -85,7 +87,7 @@ class Solution:
             
     
     ##########
-    # official
+    # official quick select
     def findKthLargest1(self, nums, k):
 
         def partition(left, right, pivot_index):
