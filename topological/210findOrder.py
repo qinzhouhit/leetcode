@@ -10,6 +10,45 @@ from typing import List
 # the presence of a cycle in the graph shows us that a proper
 # ordering of prerequisites is not possible at all
 
+
+
+# educative.io, topological sort
+def findOrder2(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+    sortedOrder = []
+    if numCourses <= 0:
+        return False
+
+    inDegree = {i: 0 for i in range(numCourses)}
+    graph = {i: [] for i in range(numCourses)}
+
+    for pair in prerequisites:
+        # Take course pair[1] before pair[0] !!!
+        parent, child = pair[1], pair[0]
+        inDegree[child] += 1
+        graph[parent].append(child)
+
+    sources = deque()
+    for k, v in inDegree.items():
+        if v == 0:
+            sources.append(k)
+
+    while sources:
+        vertex = sources.popleft()
+        sortedOrder.append(vertex)
+        for child in graph[vertex]:
+            inDegree[child] -= 1
+            if inDegree[child] == 0:
+                sources.append(child)
+
+    # above is the same as 207 except the below one
+    if len(sortedOrder) != numCourses:
+        return []
+    return sortedOrder
+
+
+
+
+
 import collections
 class Solution:
     # https://leetcode.com/problems/course-schedule-ii/discuss/59455/Fast-python-DFS-solution-with-inline-explanation

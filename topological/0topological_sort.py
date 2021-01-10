@@ -47,7 +47,7 @@ def topological_sort(vertices, edges):
 
 	# find all source nodes, i.e., 0 inDegree
 	sources = deque()
-	for k, v in inDegree.iteritems():
+	for k, v in inDegree.items():
 		if v == 0:
 			sources.append(k)
 
