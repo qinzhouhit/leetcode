@@ -13,6 +13,41 @@ import random
 
 class Solution:
     ##########
+    # T: best and average O(n) time, quick selection, worst case O(N^2) if already sorted
+    # S: O(N) for recursion
+    # [1, 2, 3, 4, 5], 2largest, 4smallest (=5+1-2)
+    def findKthLargest(self, nums, k):
+        # convert the kth largest to (N-k+1)-th smallest
+        return self.findKthSmallest(nums, len(nums)+1-k, 0, len(nums)-1)
+
+    def findKthSmallest(self, nums, k, start, end):
+        pos = self.partition(nums, start, end)
+        if k-1 < pos: # search left part
+            return self.findKthSmallest(nums, k, start, pos-1) # pos-1 here, inclusive
+        elif k-1 > pos:
+            return self.findKthSmallest(nums, k, pos+1, end)
+        else: # k-1 == pos, kth smallest => index at k-1
+            return nums[pos]
+
+    # choose the right-most element as pivot
+    # pivot is at the k-1 index, we have found our required number
+    def partition(self, nums, low, high):
+        if low == high:
+            return low
+        pivot = nums[high]
+        # alternative of random pivot
+        # pivotIdx = random.randint(low, high)
+        # nums[pivotIdx], nums[high] = nums[high], nums[pivotIdx]
+        for i in range(low, high):
+            if nums[i] < pivot:
+                nums[low], nums[i] = nums[i], nums[low]
+                low += 1
+        # swap the pivot (pivot) to the right index
+        nums[low], nums[high] = nums[high], nums[low]
+        return low
+
+
+    ##########
     # some solution, left partition small version, recommended
     # https://www.youtube.com/watch?v=zyskis1Gw0c
     # T: O(N) on average and O(N^2) the worst
@@ -134,32 +169,7 @@ class Solution:
         return select(0, len(nums) - 1, len(nums) - k)
     
     
-    ##########
-    # O(n) time, quick selection
-    def findKthLargest(self, nums, k):
-   		# convert the kth largest to (N-k+1)-th smallest
-   		return self.findKthSmallest(nums, len(nums)+1-k)
-   
-    def findKthSmallest(self, nums, k):
-   		if nums:
-   			pos = self.partition(nums, 0, len(nums)-1)
-   			if k > pos+1:
-   				return self.findKthSmallest(nums[pos+1:], k-pos-1)
-   			elif k < pos+1:
-   				return self.findKthSmallest(nums[:pos], k)
-   			else:
-   				return nums[pos]
-   
-   	# choose the right-most element as pivot
-    def partition(self, nums, l, r):
-   		low = l
-   		while l < r:
-   			if nums[l] < nums[r]:
-   				nums[l], nums[low] = nums[low], nums[l]
-   				low += 1
-   			l += 1
-   		nums[low], nums[r] = nums[r], nums[low]
-   		return low
+
     
     
     ##########
