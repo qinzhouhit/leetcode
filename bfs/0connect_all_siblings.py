@@ -1,5 +1,6 @@
 '''
-Given a binary tree, connect each node with its level order successor. The last node of each level should point to the first node of the next level.
+Given a binary tree, connect each node with its level order successor. 
+The last node of each level should point to the first node of the next level.
 keys: 
 Solutions:
 Similar:
@@ -55,3 +56,8 @@ def connect_all_siblings(root):
             nxt = q[0] if q else None
             cur.next = nxt
     return
+
+
+
+
+    

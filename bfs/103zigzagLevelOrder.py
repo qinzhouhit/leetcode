@@ -31,7 +31,7 @@ class Solution:
                 node = q.popleft()
                 if flag:
                     lvl_vals.append(node.val)
-                else:
+                else: # brilliant to use appendleft
                     lvl_vals.appendleft(node.val)
                 if node.left:
                     q.append(node.left)

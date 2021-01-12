@@ -21,7 +21,7 @@ class Solution:
     def minDepth2(self, root: TreeNode) -> int:
         if not root:
             return 0
-        res, stack = sys.maxint, [(root, 1)]
+        res, stack = float("inf"), [(root, 1)]
         while stack:
             node, level = stack.pop()
             if node and not node.left and not node.right:

@@ -12,7 +12,7 @@ import random
 
 
 class Solution:
-    ##########
+    ########## educative.io
     # T: best and average O(n) time, quick selection, worst case O(N^2) if already sorted
     # S: O(N) for recursion
     # [1, 2, 3, 4, 5], 2largest, 4smallest (=5+1-2)
@@ -169,12 +169,58 @@ class Solution:
         return select(0, len(nums) - 1, len(nums) - k)
     
     
+    ########## educative.io
+    # theoretically O(N) method, median of medians
+    def findKthLargest7(self, nums, k):
+        return self.findKthSmallest(nums, len(nums)+1-k, 0, len(nums)-1)
 
+    def findKthSmallest(self, nums, k, start, end):
+        pos = self.partition(nums, start, end)
+        if k-1 < pos: # search left part
+            return self.findKthSmallest(nums, k, start, pos-1) # pos-1 here, inclusive
+        elif k-1 > pos:
+            return self.findKthSmallest(nums, k, pos+1, end)
+        else: # k-1 == pos, kth smallest => index at k-1
+            return nums[pos]
+
+    # choose the right-most element as pivot
+    # pivot is at the k-1 index, we have found our required number
+    def partition(self, nums, low, high):
+        if low == high:
+            return low
+        median = median_of_medians(nums, low, high)
+        for i in range(low, high):
+            if nums[i] == median:
+                nums[i], nums[high] = nums[high], nums[i]
+                break
+        pivot = nums[high]
+        for i in range(low, high):
+            if nums[i] < pivot: # # all elements less than 'pivot' will be before the index 'low'
+                nums[low], nums[i] = nums[i], nums[low]
+                low += 1
+        nums[low], nums[high] = nums[high], nums[low]
+        return low
+
+    def median_of_medians(nums, low, high):
+        n = high - low + 1
+        # if we have less than 5 elements, ignore the partitioning algorithm
+        if n < 5:
+            return nums[low]
+        # partition the given array into chunks of 5 elements
+        partitions = [nums[j:j+5] for j in range(low, high+1, 5)]
+        # for simplicity, lets ignore any partition with less than 5 elements
+        fullPartitions = [
+            partition for partition in partitions if len(partition) == 5]
+        # sort all partitions
+        sortedPartitions = [sorted(partition) for partition in fullPartitions]
+        # find median of all partations; the median of each partition is at index '2'
+        medians = [partition[2] for partition in sortedPartitions]
+        return partition(medians, 0, len(medians)-1)
     
     
     ##########
     # T: O(NogN)
-    def kthLargest(self, nums, k):
+    def findKthLargest6(self, nums, k):
         return sorted(nums)[len(nums)-k]
 
     

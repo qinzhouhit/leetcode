@@ -26,7 +26,7 @@ class LRUCache2:
     def get(self, key: int) -> int:
         if key not in self.h:
             return -1
-        
+        # move the key to the end of key list
         self.h.move_to_end(key) # quite important!!!
         return self.h[key]
         
@@ -92,13 +92,12 @@ class DLinkedNode():
 
 class LRUCache:
     def __init__(self, capacity):
-        self.cache = {} # k: key, v: node object
+        self.cache = {} # k: key, v: node object, node values as key and value
         self.size = 0
         self.capacity = capacity
-        self.head, self.tail = DLinkedNode(), DLinkedNode
+        self.head, self.tail = DLinkedNode(), DLinkedNode() # two dummy node
         self.head.next = self.tail # pseudo head and tail
         self.tail.prev = self.head
-
 
     def _add_node(self, node):
         '''
@@ -108,28 +107,26 @@ class LRUCache:
         node.prev = self.head # head <- node
         node.next = self.head.next # node -> 2nd
 
-        self.head.next.prev = node # node <- 2nd
+        self.head.next.prev = node # node <- 2nd, this step first since we need the .prev
         self.head.next = node # head -> node
 
     def _remove_node(self, node):
         prev = node.prev
-        tmp = node.next # prev <=> node <=> tmp
-
-        prev.next = tmp
-        tmp.prev = prev
+        nxt = node.next # prev <=> node <=> new
+        prev.next = nxt
+        nxt.prev = prev 
 
     def _move_to_head(self, node):
         '''
          move certain node in between to the head
         '''
         self._remove_node(node)
-        self._add_node(node)
+        self._add_node(node) # always add after dummy head
 
     def _pop_tail(self):
-        res = self.tail.prev
+        res = self.tail.prev # tail is dummy
         self._remove_node(res)
         return res
-
 
     def get(self, key: int) -> int:
         node = self.cache.get(key, None) # return cache[key] if exists, or None
@@ -142,7 +139,7 @@ class LRUCache:
     def put(self, key: int, value: int) -> None:
         node = self.cache.get(key)
 
-        if not node:
+        if not node: # no key in the cache
             newNode = DLinkedNode()
             newNode.key = key
             newNode.value = value

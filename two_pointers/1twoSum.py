@@ -7,6 +7,30 @@ S:
 '''
 
 class Solution(object):
+	# O(N) for S and T
+	def twoSum1(self, nums: List[int], target: int) -> List[int]:
+        if not nums:
+            return []
+        d = {}
+        for idx, val in enumerate(nums):
+        	# the order of two IF matters, e.g., [3,2,4], 6. swap the order
+        	# one would have res as [0, 0]
+            if target - val in d:
+                return [d[target-val], idx]
+            if val not in d:
+                d[val] = idx
+
+    # most concise one 
+    def twoSum2(self, nums: List[int], target: int) -> List[int]:
+    	h = {}
+    	for idx, val in enumerate(nums):
+    		residue = target - val
+    		if residue not in h:
+    			h[val] = idx
+    		else:
+    			return [h[residue], idx]
+
+    # wasted
     def twoSum(self, nums, target):
         if len(nums) <= 1:
             return False

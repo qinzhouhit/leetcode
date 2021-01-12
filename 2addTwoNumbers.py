@@ -6,6 +6,7 @@ Similar:
 T:
 S:
 '''
+from typing import List
 
 class ListNode():
     def __init__(self, x):
@@ -13,6 +14,7 @@ class ListNode():
         self.next=None
 
 class Solution():
+    # S and T: O(max(m, n)), m and n as length of l1 and l2
     def addTwoNumbers(self, l1, l2):
         carry = 0
         root = n = ListNode(0)
@@ -24,10 +26,13 @@ class Solution():
             if l2:
                 v2 = l2.val
                 l2 = l2.next
+            # v1+v2+carry, this carry is from last round
             carry, val = divmod(v1+v2+carry, 10)
             n.next = ListNode(val)
             n = n.next
         return root.next
+
+
 
 e1=ListNode(2)
 e2=ListNode(4)

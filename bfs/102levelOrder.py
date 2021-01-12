@@ -16,7 +16,7 @@ from collections import deque
 #         self.right = None
 
 class Solution:
-    # educative.io version, easy to remember
+    # educative.io version, easy to follow
     # O(N) for S and T
     def levelOrder3(self, root: TreeNode) -> List[List[int]]:
         result = []

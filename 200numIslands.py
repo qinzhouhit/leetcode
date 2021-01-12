@@ -1,5 +1,5 @@
 '''
-keys:
+keys: visit an "1", then explore the all the 1s connected to this 1, mark as visited. ct += 1, go to next 1.
 Solutions:
 Similar:
 T:
@@ -10,6 +10,7 @@ import numpy as np
 
 class Solution:
     # T: O(M*N) for S and T, S: stacks
+    # https://leetcode.com/problems/number-of-islands/discuss/56340/Python-Simple-DFS-Solution
 	def numIslands2(self, grid: List[List[str]]) -> int:
 		if not any(grid):
 			return 0
@@ -17,13 +18,13 @@ class Solution:
 		ct = 0
 		for i in range(len(grid)):
 			for j in range(len(grid[0])):
-				if grid[i][j] == 1:
+				if grid[i][j] == "1":
 					self.dfs(grid, i, j)
 					ct += 1
 		return ct
 
 	def dfs(self, grid, i, j):
-		if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != 1:
+		if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != "1":
 			return
 		grid[i][j] = "#"
 		# print (i, j)

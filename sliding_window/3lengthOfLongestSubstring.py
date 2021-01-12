@@ -7,7 +7,7 @@ S:
 '''
 
 class Solution:
-    # @return an integer
+    # return an integer
     def lengthOfLongestSubstring(self, s):
         start = maxLength = 0
         usedChar = {}

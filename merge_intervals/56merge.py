@@ -18,7 +18,6 @@ Facebook Follow-Up
 Question: How do you add intervals and merge them for a large stream of 
 intervals? (Facebook Follow-up Question)
 https://leetcode.com/problems/merge-intervals/solution/321556
-
 '''
 
 class Solution:
@@ -27,7 +26,7 @@ class Solution:
     def merge2(self, intervals: List[List[int]]) -> List[List[int]]:
         if len(intervals) <= 1:
             return intervals
-        intervals.sort(key=lambda x:x[0])
+        intervals.sort(key=lambda x:x[0]) # sort by starting time
         res = []
         start = intervals[0][0]
         end = intervals[0][1]
@@ -39,10 +38,23 @@ class Solution:
                 end = cur[1]
             else: # cur[0] <= end, overlapping
                 end = max(cur[1], end) # no need to update start since we sort by start
-        res.append([start, end])
+        res.append([start, end]) # the last interval left in the first if clause
         return res
 
-
+    # LC official
+    def merge1(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort(key=lambda x: x[0])
+        merged = []
+        for interval in intervals:
+            # if the list of merged intervals is empty or if the current
+            # interval does not overlap with the previous, simply append it.
+            if not merged or merged[-1][1] < interval[0]:
+                merged.append(interval)
+            else:
+            # otherwise, there is overlap, so we merge the current and previous
+            # intervals.
+                merged[-1][1] = max(merged[-1][1], interval[1])
+        return merged
 
     
     def merge1(self, intervals: List[List[int]]) -> List[List[int]]:
