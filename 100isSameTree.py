@@ -5,6 +5,7 @@ Similar:
 T:
 S:
 '''
+from typing import List
 
 # Definition for a binary tree node.
 class TreeNode:
