@@ -7,6 +7,19 @@ S:
 '''
 
 class Solution(object):
+    # latest one
+    def twoSum3(self, nums: List[int], target: int) -> List[int]:
+        if not nums:
+            return []
+        
+        hashmap = {}
+        for idx, val in enumerate(nums):
+            if target-val in hashmap:
+                return [hashmap[target-val], idx]
+            hashmap[val] = idx
+        return []
+
+
 	# O(N) for S and T
 	def twoSum1(self, nums: List[int], target: int) -> List[int]:
         if not nums:

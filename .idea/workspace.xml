@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.spyproject/config/workspace.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/config/workspace.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/698canPartitionKSubsets.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/0can_partition.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/0can_partition.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/416canPartition.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/416canPartition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/336palindromePairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/336palindromePairs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dp/0solve_knapsack.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/338countBits.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
+            <state relative-caret-position="60">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/336palindromePairs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -60,14 +66,15 @@
       <list>
         <option value="$PROJECT_DIR$/dp/0solve_knapsack.py" />
         <option value="$PROJECT_DIR$/../../tmp.py" />
+        <option value="$PROJECT_DIR$/336palindromePairs.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="169" />
+    <option name="x" value="38" />
     <option name="y" value="25" />
-    <option name="width" value="958" />
-    <option name="height" value="834" />
+    <option name="width" value="1112" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectId" id="1bHZAQCjR4LH8bCM3pf5Lv8MmQK" />
   <component name="ProjectLevelVcsManager">
@@ -85,11 +92,6 @@
             <path>
               <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="dp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -119,7 +121,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.tmp">
+  <component name="RunManager" selected="Python.336palindromePairs">
     <configuration name="0solve_knapsack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -225,7 +227,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="670maximumSwap" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="336palindromePairs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -237,7 +239,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/670maximumSwap.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/336palindromePairs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,19 +316,19 @@
       <item itemvalue="Python.232MyQueue" />
       <item itemvalue="Python.29divide" />
       <item itemvalue="Python.od_processing" />
-      <item itemvalue="Python.670maximumSwap" />
       <item itemvalue="Python.953isAlienSorted" />
       <item itemvalue="Python.1249minRemoveToMakeValid" />
       <item itemvalue="Python.0solve_knapsack" />
       <item itemvalue="Python.tmp" />
+      <item itemvalue="Python.336palindromePairs" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.336palindromePairs" />
         <item itemvalue="Python.tmp" />
         <item itemvalue="Python.0solve_knapsack" />
         <item itemvalue="Python.1249minRemoveToMakeValid" />
         <item itemvalue="Python.953isAlienSorted" />
-        <item itemvalue="Python.670maximumSwap" />
       </list>
     </recent_temporary>
   </component>
@@ -334,15 +336,15 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="169" y="25" width="958" height="834" extended-state="0" />
+    <frame x="38" y="25" width="1112" height="875" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.226254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19431715" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32880434" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39945653" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3783784" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -485,7 +487,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/200numIslands.py</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -598,6 +600,11 @@
           <line>109</line>
           <option name="timeStamp" value="93" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/336palindromePairs.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -607,6 +614,28 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../tmp.py" />
+    <entry file="file://$PROJECT_DIR$/dp/0solve_knapsack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/337rob.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/338countBits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -614,17 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../tmp.py">
+    <entry file="file://$PROJECT_DIR$/336palindromePairs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dp/0solve_knapsack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
+        <state relative-caret-position="294">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
         </state>
       </provider>
     </entry>
