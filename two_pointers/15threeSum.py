@@ -1,5 +1,5 @@
 '''
-keys: two pointer
+keys: two pointers
 Solutions:
 Similar:
 T: O(n^2)
@@ -36,7 +36,9 @@ class Solution:
                     l += 1; r -= 1 # search for new combinations
         return res
 
-    # educative.io version
+
+    # educative.io version, two pointers
+    # T: O(n^2), S: O(logn) to O(n), depending on sort
     def threeSum1(self, nums):
         nums.sort()
         triplets = []
@@ -49,9 +51,11 @@ class Solution:
                     triplets.append([-target, nums[l], nums[r]])
                     l += 1
                     r -= 1
-                    while l < r and nums[l] == nums[l-1]:
+                    # check if the cur l-idx val is the same as the previous one
+                    # we check l-1 since we just incremented l by 1
+                    while l < r and nums[l] == nums[l-1]: # l < len(nums) also works
                         l += 1
-                    while l < r and nums[r] == nums[r+1]:
+                    while l < r and nums[r] == nums[r+1]: # r >= 0 also works
                         r -= 1
                 elif tmp < target:
                     l += 1
@@ -60,10 +64,44 @@ class Solution:
                     
         for i in range(len(nums)):
             if i > 0 and nums[i-1] == nums[i]:
-                continue
+                continue # skip the duplicated numbers
             helper(nums, -nums[i], i+1, triplets)
         return triplets
     
+
+
+    # using twoSum
+    # T: O(n^2), O(n) for first number and O(n) for twoSum
+    # S: O(n) for hashset
+    def threeSum0(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        nums.sort() # to remove duplicates later
+        for i in range(len(nums)):
+            if nums[i] > 0:
+                break # first numebr number be negavtive, since sorted
+            if i == 0 or nums[i-1] != nums[i]: # avoid duplicates
+                self.twoSum(nums, i, res)
+        return res
+    
+    def twoSum(self, nums, i, res):
+        seen = set() # avoid duplicate
+        j = i + 1 # second number
+        while j < len(nums):
+            residue = -nums[i] - nums[j]
+            if residue in seen:
+                res.append([nums[i], nums[j], residue])
+                while j + 1 < len(nums) and nums[j] == nums[j+1]:
+                    j += 1 # avoid duplicates
+            seen.add(nums[j])
+            j += 1
+
+
+
+
+
+
+
+
     
         
                 

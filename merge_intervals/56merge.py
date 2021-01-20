@@ -55,8 +55,8 @@ class Solution:
             # intervals.
                 merged[-1][1] = max(merged[-1][1], interval[1])
         return merged
-
-    
+            
+            
     def merge1(self, intervals: List[List[int]]) -> List[List[int]]:
         if not intervals: return []
         
@@ -78,6 +78,24 @@ class Solution:
             else:
                 out.append(i)
         return out
+
+
+    # self-made
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        intervals.sort(key=lambda x:x[0])
+        prev_end = intervals[0][1]
+        prev_start = intervals[0][0]
+        res = []
+        for start, end in intervals[1:]:
+            if start > prev_end:
+                res.append([prev_start, prev_end])
+                prev_start = start
+                prev_end = end
+            else:
+                prev_start = min(start, prev_start) # dont need it since we sort by start
+                prev_end = max(prev_end, end)
+        res.append([prev_start, prev_end]) # the remaining one
+        return res
     
     
     

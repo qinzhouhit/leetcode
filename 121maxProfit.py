@@ -28,8 +28,20 @@ class Solution:
     def maxProfit(self, prices):
         maxProfit, minPrice = 0, float('inf')
         for price in prices:
-            minPrice = min(price, minPrice)
+            minPrice = min(price, minPrice) # the min price appeared so far
             profit = price - minPrice
             maxProfit = max(maxProfit, profit)
         return maxProfit
 
+
+    # brute force
+    def maxProfit0(self, prices: List[int]) -> int:
+        res = 0
+        if not prices:
+            return res
+        n = len(prices)
+        for i in range(n-1):
+            lmin = min(prices[:i+1]) # including i
+            lmax = max(prices[i+1:]) # from i+1
+            res = max(res, lmax-lmin)
+        return res

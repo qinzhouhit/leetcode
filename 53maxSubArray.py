@@ -11,30 +11,32 @@ class Solution:
     #####
     # dp, T: O(N); S: O(1)
     def maxSubArray(self, nums: List[int]) -> int:
+        res = float("-inf")
         for i in range(1, len(nums)):
-            if nums[i-1] > 0:
-                nums[i]+=nums[i-1]
-        return max(nums)
+            if nums[i-1] > 0: # if negative, then we start the subarray from current idx
+                nums[i] += nums[i-1]
+                res = max(res, nums[i])
+        return res
     
     #####
     # divide and conquer
     def cross_sum(self, nums, left, right, p): 
-            if left == right:
-                return nums[left]
+        if left == right:
+            return nums[left]
 
-            left_subsum = float('-inf')
-            curr_sum = 0
-            for i in range(p, left - 1, -1):
-                curr_sum += nums[i]
-                left_subsum = max(left_subsum, curr_sum)
+        left_subsum = float('-inf')
+        curr_sum = 0
+        for i in range(p, left - 1, -1):
+            curr_sum += nums[i]
+            left_subsum = max(left_subsum, curr_sum)
 
-            right_subsum = float('-inf')
-            curr_sum = 0
-            for i in range(p + 1, right + 1):
-                curr_sum += nums[i]
-                right_subsum = max(right_subsum, curr_sum)
+        right_subsum = float('-inf')
+        curr_sum = 0
+        for i in range(p + 1, right + 1):
+            curr_sum += nums[i]
+            right_subsum = max(right_subsum, curr_sum)
 
-            return left_subsum + right_subsum   
+        return left_subsum + right_subsum   
     
     def helper(self, nums, left, right): 
         if left == right:

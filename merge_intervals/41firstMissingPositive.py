@@ -9,23 +9,26 @@ from typing import List
 
 class Solution:
     # educative.io, cyclic sort
+    # O(n) for T and O(1) for S
+    # Place the numbers on their correct indices and ignore all numbers
+    # that are out of the range of the array
+    # The true array should be [1, 2, ..., n] for nums with length n
     def firstMissingPositive3(self, nums: List[int]) -> int:
         i = 0; n = len(nums)
         while i < n:
-            idx = nums[i] - 1
+            idx = nums[i] - 1 # e.g., nums[i] should be at idx nums[i]-1
             # the key difference is "nums[i] > 0 and nums[i] <= n"
             # ignore all numbers that are out of the range of the array
             # (i.e., all negative numbers and all numbers greater than 
             # or equal to the length of the array)
-            if nums[i] > 0 and nums[i] <= n and nums[idx] != nums[i]:
-                nums[idx], nums[i] = nums[i], nums[idx]
+            if 0 < nums[i] <= n and nums[idx] != nums[i]:
+                nums[idx], nums[i] = nums[i], nums[idx] # swap nums[i] to the right position
             else:
                 i += 1
-        for i in range(n):
-            # print (i, nums[i])
+        for i in range(n): # return the one not in position
             if nums[i] != i+1:
                 return i+1
-        return n + 1
+        return n + 1 # the next one
 
 
 

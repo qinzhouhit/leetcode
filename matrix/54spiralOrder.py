@@ -19,7 +19,7 @@ class Solution:
         direction = 0
         
         while startRow <= endRow and startCol <= endCol:
-            # right
+            # right, note that those 
             if direction == 0: 
                 for col in range(startCol, endCol+1):
                     res.append(matrix[startRow][col])

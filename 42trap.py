@@ -1,5 +1,6 @@
 '''
-keys:
+keys: two pointers, get the max of left subset and right subset and 
+use the min of the two max as water level. Use the 
 Solutions:
 Similar:
 T:
@@ -17,7 +18,7 @@ class Solution:
         n = len(height)
         for i in range(n): # the idx in below ranges are important
             l = max(height[0: i+1]) # from leftmost to current element, inclusive
-            r = max(height[i: n]) # from current to rightmost element
+            r = max(height[i: n]) # from current to rightmost element, including i
             res += (min(l, r) - height[i])
         return res
 
@@ -52,6 +53,7 @@ class Solution:
         max_l = height[l]; max_r = height[r]
         res = 0
         while l < r:
+            # the equal case being in any loop is fine
             if max_l < max_r: # left is low
                 res += max_l - height[l] # fill water for cur bin, i.e., idx = l
                 l += 1

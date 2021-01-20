@@ -1,7 +1,7 @@
 '''
 keys: 
 Solutions:
-Similar: 340
+Similar: 340, 974
 T:
 S:
 '''
@@ -21,11 +21,12 @@ class Solution:
         count = 0
         sums = 0
         d = dict()
+        # initial condition!!!
         d[0] = 1 # for a sum of zero there is one solution - empty sub-array. 
         
         for i in range(len(nums)):
             sums += nums[i]
-            count += d.get(sums-k, 0)
+            count += d.get(sums-k, 0) # see if the diff is already existing 
             d[sums] = d.get(sums, 0) + 1
         return count
     
