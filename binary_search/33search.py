@@ -1,5 +1,5 @@
 '''
-keys:
+keys: binary search
 Solutions:
 Similar:
 T:
@@ -44,18 +44,18 @@ class Solution:
 
         l, r = 0, len(nums) - 1
 
-        while l <= r:
+        while l <= r: 
             mid = l + (r - l) // 2
             if target == nums[mid]:
                 return mid
 
-            if nums[l] <= nums[r]: # left side is ascending
+            if nums[l] <= nums[mid]: # left side is ascending
                 if nums[l] <= target <= nums[mid]:
                     r = mid - 1
                 else: # target > nums[mid]
                     l = mid + 1
-            else: # right side is ascending
-                if nums[mid] <= target <= nums[r]: # dealing with right side
+            else: # nums[l] > nums[mid], at least the pivot is between l and mid
+                if nums[mid] <= target <= nums[r]: # dealing with right side of the pivot
                     l = mid + 1
                 else: # target > nums[r]
                     r = mid - 1

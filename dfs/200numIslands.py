@@ -19,8 +19,8 @@ class Solution:
 		for i in range(len(grid)):
 			for j in range(len(grid[0])):
 				if grid[i][j] == "1":
-					self.dfs(grid, i, j)
-					ct += 1
+                    ct += 1
+					self.dfs(grid, i, j) # dfs here only marks all the connected 1s visited
 		return ct
 
 	def dfs(self, grid, i, j):

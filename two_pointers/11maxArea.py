@@ -1,5 +1,5 @@
 '''
-keys:
+keys: two pointers
 Solutions:
 Similar:
 T:
@@ -7,6 +7,21 @@ S:
 '''
 
 class Solution:
+	# O(n) for T and O(1) for S
+	def maxArea1(self, height: List[int]) -> int:
+        if not height:
+            return 0
+        l, r = 0, len(height)-1 # inclusive idx
+        maxArea = 0
+        while l < r:
+            maxArea = max(maxArea, (r-l)*min(height[l], height[r]))
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+        return maxArea
+
+
     def maxArea(self, height):
         L, R, width, res = 0, len(height) - 1, len(height) - 1, 0
         for w in range(width, 0, -1):
