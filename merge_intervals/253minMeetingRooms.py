@@ -15,9 +15,11 @@ class Solution:
     # heapq, T:O(nlogn), S:O(n)
     # keep track of the ending time of all the meetings currently happening
     def minMeetingRooms2(self, intervals):
-        intervals.sort(key = lambda x: x[0])
+        # sorting for O(nlogn)
+        intervals.sort(key = lambda x: x[0]) # since we allocate for the earlier meetings
         heap = [] # stores the end time of active and overlapping meetings
 
+        # O(nlogn), O(n) for n collided meetings, each operation take O(logn)
         for start, end in intervals: # heap[0]: earliest meeting ending time
             if heap and start >= heap[0]: # using the same room
                 heapq.heapreplace(heap, end) # pop the min, and push new end time

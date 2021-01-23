@@ -27,6 +27,7 @@ class LRUCache2:
         if key not in self.h:
             return -1
         # move the key to the end of key list
+        # move to the font: h.move_to_end(key, last=False)
         self.h.move_to_end(key) # quite important!!!
         return self.h[key]
         
@@ -36,7 +37,7 @@ class LRUCache2:
             self.h.move_to_end(key)
         self.h[key] = value
         if len(self.h) > self.capacity:
-            self.h.popitem(last = False)
+            self.h.popitem(last = False) # FIFO, pop the font one
 
 
 # Your LRUCache object will be instantiated and called as such:
@@ -101,12 +102,13 @@ class LRUCache:
 
     def _add_node(self, node):
         '''
-        add the new node right after head
+        always add the new node right after head
         head <=> node <=> (previous) node after head: 2nd
         '''
+        # conenct the node to head and head.next
         node.prev = self.head # head <- node
-        node.next = self.head.next # node -> 2nd
-
+        node.next = self.head.next # node -> 2nd (originally the node after head)
+        # connect the head related pointers
         self.head.next.prev = node # node <- 2nd, this step first since we need the .prev
         self.head.next = node # head -> node
 
