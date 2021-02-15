@@ -1,7 +1,7 @@
 '''
 keys:
 Solutions:
-Similar: 23, merge k sorted linked list
+Similar: 23, merge k sorted linked list, 1439
 T:
 S:
 '''
@@ -27,7 +27,8 @@ class Solution:
                 continue # reaching the end of nums2
             # move to the next number in nums2
             nxt_nums2_idx = cur[3] + 1
-            heappush(minHeap, (cur[1]+nums2[nxt_nums2_idx], cur[1], nums2[nxt_nums2_idx], nxt_nums2_idx))
+            heappush(minHeap, (cur[1]+nums2[nxt_nums2_idx], cur[1], \
+                nums2[nxt_nums2_idx], nxt_nums2_idx))
         return res
 
 
@@ -38,20 +39,20 @@ class Solution:
 	# S: O(k) for the heap
 	def kSmallestPairs1(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
 		minHeap = []
-		for i in range(0, min(k, len(nums1))):
-			for j in range(0, min(k, len(nums2))):
-				if len(minHeap) < k: # only maintain size k
-					heappush(minHeap, -(nums1[i]+nums2[j], nums[i], nums[j]))
-				else: # already k tuples
-					if -(nums1[i] + nums2[j]) < minHeap[0][0]: # < or <=, does not matter
-						break # a larger sum appears
-					else: # a smaller sum appears, update the heap
-						heappop(minHeap)
-						heappush(minHeap, (-(nums1[i] + nums2[j]), nums[i], nums[j]))
-		res = []
-		for _, (nums1, nums2) in minHeap:
-			res.append([nums1, nums2])
-		return res
+        for i in range(0, min(k, len(nums1))):
+            for j in range(0, min(k, len(nums2))):
+                if len(minHeap) < k: # only maintain size k
+                    heappush(minHeap, (-(nums1[i]+nums2[j]), nums1[i], nums2[j]))
+                else: # already k tuples
+                    if -(nums1[i] + nums2[j]) < minHeap[0][0]: # < or <=, does not matter
+                        break # a larger sum appears
+                    else: # a smaller sum appears, update the heap
+                        heappop(minHeap)
+                        heappush(minHeap, (-(nums1[i] + nums2[j]), nums1[i], nums2[j]))
+        res = []
+        for _, nums1, nums2 in minHeap:
+            res.append([nums1, nums2])
+        return res
 
 
 	# brute force

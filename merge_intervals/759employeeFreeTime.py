@@ -18,24 +18,26 @@ class Interval:
 
 class Solution:
 	# maintain the heap
-	# T: O(clogN), N as number of employees, C the number of all intervals
+	# T: O(clogN), N as number of employees, C the number of all intervals/jobs
+    # O(logN) for push and pop in heap of size N
+    # O(c) as number of such operations
 	def employeeFreeTime3(self, schedule: '[[Interval]]') -> '[Interval]':
 		ans = []
 		# 0 means start and 1 means end
         pq = [(emp[0].start, empID, 0) for empID, emp in enumerate(schedule)]
         heapq.heapify(pq)
         # anchor: minimal start time for all employee
-        prev_end = pq[0][0]
-        while pq: # e_id: employee id; e_jx: current job ID
-            start_time, e_id, e_jx = heapq.heappop(pq)
+        prev_end = pq[0][0] # start time!
+        while pq: # e_id: employee id; cur_jobId: current job ID
+            start_time, e_id, cur_jobId = heapq.heappop(pq)
             # no overlap
-            if prev_end < start_time:
-                ans.append(Interval(anchor, start_time))
+            if start_time > prev_end:
+                ans.append(Interval(prev_end, start_time))
             # overlap, update prev_end
-            prev_end = max(prev_end, schedule[e_id][e_jx].end)
+            prev_end = max(prev_end, schedule[e_id][cur_jobId].end)
            	# # if there are more intervals available for the same employee, add their next interval
-            if e_jx + 1 < len(schedule[e_id]): # push next job into it
-                heapq.heappush(pq, (schedule[e_id][e_jx+1].start, e_id, e_jx+1))
+            if cur_jobId + 1 < len(schedule[e_id]): # push next job into it
+                heapq.heappush(pq, (schedule[e_id][cur_jobId+1].start, e_id, cur_jobId+1))
 
         return ans
 

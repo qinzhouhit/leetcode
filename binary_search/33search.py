@@ -54,18 +54,20 @@ class Solution:
                     r = mid - 1
                 else: # target > nums[mid]
                     l = mid + 1
+            # if the right side is ascending
             else: # nums[l] > nums[mid], at least the pivot is between l and mid
                 if nums[mid] <= target <= nums[r]: # dealing with right side of the pivot
                     l = mid + 1
-                else: # target > nums[r]
+                else: # target < nums[mid]
                     r = mid - 1
         return -1
 
     
     # two-pass binary search, one for finding pivot, one for search in subarray
+    # T: O(logN), S: O(1)
     def search1(self, nums: List[int], target: int) -> int:
         n = len(nums)
-        if n == 1:
+        if n == 1: # this is necessary
             return 0 if nums[0] == target else -1
 
         def find_rotate_idx(l, r):
@@ -75,10 +77,10 @@ class Solution:
                 mid = l + (r - l) // 2
                 if nums[mid] > nums[mid + 1]:
                     return mid + 1
-                else: 
-                    if nums[mid] < nums[l]: # peak at left part
-                        r = mid - 1
-                    else:
+                else:  # nums[mid] < nums[mid + 1] # no equal since nums are distinct
+                    if nums[l] > nums[mid]: # peak at left part
+                        r = mid - 1 # mid cant be the pivot since mid -> mid+1 still increasing
+                    else: # 
                         l = mid + 1
 
         def helper(l, r):
@@ -90,12 +92,14 @@ class Solution:
                     l = mid + 1
                 else:
                     r = mid - 1
-            return -1
+            return -1 # remember this!
 
-        rotate_idx = find_rotate_idx(0, n-1)
+        # pivot where the trend changes
+        # [4,5,6,7,0,1,2], rotate_idx = 4
+        rotate_idx = find_rotate_idx(0, n-1) 
         if nums[rotate_idx] == target:
             return rotate_idx
-        if rotate_idx == 0:
+        if rotate_idx == 0: # necessary
             return helper(0, n-1)
         if target < nums[0]:
             return helper(rotate_idx, n-1)

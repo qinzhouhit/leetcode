@@ -7,12 +7,60 @@ S:
 '''
 
 class Solution:
-    def mySqrt(self, x):
-        r=x
-        while r*r>x:
-            r=int((r+x/r)/2)
-        return r
 
+	# T: O(logn), S: O(1)
+	# Fibonacci Formula
+	def climbStairs(self, n: int) -> int:
+		sqrt5 = math.sqrt(5)
+		fibn = math.pow((1+sqrt5)/2, n+1) - math.pow((1-sqrt5)/2, n+1)
+		return int(fibn / sqrt5)
+
+
+	# S: O(1), T: O(n)
+	def climbStairs(self, n: int) -> int:
+		if n == 1:
+			return 1
+		first, second = 1, 2
+		for i in range(3, n+1):
+			third = first + second
+			first = second
+			second = third
+		return second
+
+
+	# dp, self-made, O(n) for S and T
+	def climbStairs(self, n: int) -> int:
+		if n == 1:
+            return 1
+        if n == 2:
+            return 2
+        
+        dp = [0] * n # dp[i]: number of steps to reach i+1
+        dp[0] = 1
+        dp[1] = 2
+        for i in range(2, n):
+            dp[i] = dp[i-1] + dp[i-2]
+    
+        return dp[n-1]
+
+
+
+	# self-made, TLE, O(2^n)
+    def climbStairs(self, n: int) -> int:
+        
+        def helper(remain):
+            if remain < 0:
+                return 0
+            if remain == 0:
+                return 1
+            
+            res = 0
+            res += helper(remain-1)
+            res += helper(remain-2)
+            return res
+        
+
+        return helper(n)
 obj=Solution()
 print(obj.mySqrt(10))
 

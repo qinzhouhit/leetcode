@@ -8,16 +8,17 @@ S:
 
 class Solution:
     # return an integer
+    # sliding window
     def lengthOfLongestSubstring(self, s):
-        start = maxLength = 0
+        startIdx = maxLength = 0
         usedChar = {}
 
-        for i, c in enumerate(s):
-            if c in usedChar and start <= usedChar[c]:
-                start = usedChar[c] + 1
+        for endIdx, c in enumerate(s):
+            if c in usedChar and startIdx <= usedChar[c]:
+                startIdx = usedChar[c] + 1
             else:
-                maxLength = max(maxLength, i - start + 1)
-            usedChar[c] = i
+                maxLength = max(maxLength, endIdx - startIdx + 1)
+            usedChar[c] = endIdx
         return maxLength
 
 

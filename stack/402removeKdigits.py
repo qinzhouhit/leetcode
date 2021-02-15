@@ -15,7 +15,7 @@ class Solution:
         
         # Construct a monotone increasing sequence of digits
         for digit in num:
-            while k and numStack and digit < numStack[-1]:
+            while k and numStack and digit < numStack[-1]: # have smmaller digit comming
                 numStack.pop() # pop the bigger previous one
                 k -= 1
         
@@ -26,6 +26,7 @@ class Solution:
         # The lstrip() method removes any leading characters (space 
         # is the default leading character to remove)
         # this is for cases like num = "9", k = 1, since res should be "0"
+        # excluding the last k digits
         finalStack = numStack[:-k] if k else numStack
         
         # trip the leading zeros

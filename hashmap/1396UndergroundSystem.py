@@ -14,8 +14,9 @@ class UndergroundSystem:
 	# S: O(p+s^2), for p as maximum possible number of passengers making trips
 	# s^2 for all the possible pairs of S stations in the trips
     def __init__(self):
-    	self.check_in = {} # k: userId, v: [stationName, t]
+    	self.check_in = {} # k: userId, v: [checkin stationName, t]
     	# notice how we make self-defined dict
+        # k: (startstation, endstation): v: [cumulative time, number of trips]
     	self.trips = collections.defaultdict(lambda: [0, 0])
 
     # T: O(1)

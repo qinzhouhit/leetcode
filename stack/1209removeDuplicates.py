@@ -13,6 +13,7 @@ class Solution:
 	# stack with revision
 	# O(N) for S and T
     def removeDuplicates(self, s: str, k: int) -> str:
+        # stack pair: char, count of this char
     	stack = [["#", 0]] # cant use tuple here since unable to index
         for c in s:
             if stack[-1][0] != c:

@@ -45,5 +45,43 @@ class Solution:
 	    return board
 
 
+
+	# >>> 1d candy crush
+	# https://leetcode.com/discuss/interview-question/380650/Bloomberg-or-Phone-Screen-or-Candy-Crush-1D
+	'''
+	Input: "aaabbbacd"
+	Output: "acd"
+	Explanation:
+	1. Remove 3 'a': "aaabbbacd" => "bbbacd"
+	2. Remove 3 'b': "bbbacd" => "acd"
+	'''
+	def candyCrush(self, s: str) -> str:
+		if not s:
+			return s
+
+		stack = [[s[0], 1]]
+		for i in range(1, len(s)):
+			if s[i] != s[i-1]:
+				if stack[-1][1] >= 3: # k 
+					stack.pop()
+				if stack and stack[-1][0] == s[i]:
+					stack[-1][1] += 1
+				else:
+					stack.append([s[i], 1])
+			else:
+				stack[-1][1] += 1
+		if stack[-1][1] >= 3:
+			stack.pop()
+
+		return "".join(a*b for a, b in stack)
+
+
+
+
+
+
+
+
+
                 
 

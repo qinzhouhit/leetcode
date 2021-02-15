@@ -1,5 +1,5 @@
 '''
-keys:
+keys: two pointers
 Solutions:
 Similar:
 T:
@@ -18,7 +18,7 @@ class Solution:
         while i < len(A) and j < len(B):
             lo = max(A[i][0], B[j][0])
             hi = min(A[i][1], B[j][1])
-            if lo <= hi:
+            if lo <= hi: # notice that overlapping at one idx, e.g., [5,5], also legit
                 res.append([lo, hi])
 
             # remove the interval with the smallest endpoint

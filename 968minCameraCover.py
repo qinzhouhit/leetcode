@@ -16,6 +16,11 @@ class TreeNode:
 
 # https://leetcode.com/problems/binary-tree-cameras/discuss/211180/JavaC%2B%2BPython-Greedy-DFS
 class Solution:
+    '''
+    Here is our greedy solution:
+    Set cameras on all leaves' parents, thenremove all covered nodes.
+    Repeat step 1 until all nodes are covered.
+    
     # Return 0 if it's a leaf.
     # Return 1 if it's a parent of a leaf, with a camera on this node.
     # Return 2 if it's coverd, without a camera on this node.
@@ -27,6 +32,7 @@ class Solution:
     # If it needs camera, then res++ and we return 1.
     # If it's covered, we return 2.
     # Otherwise, we return 0.
+    '''
     def minCameraCover(self, root: TreeNode) -> int:
         self.res = 0
         def dfs(node):
@@ -34,7 +40,7 @@ class Solution:
             l = dfs(node.left)
             r = dfs(node.right)
             if l == r == 2: # (l != 1 and r != 1)
-                return 0 # leaf node covered wo camera
+                return 0 # leaf node covered without camera
             if l == 0 or r == 0:
                 self.res += 1
                 return 1 # need a camera

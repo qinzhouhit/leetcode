@@ -13,20 +13,20 @@ class Solution:
 	# O(n) for S and T
 	def calculate(self, s: str) -> int:
 		if s is None: return 0
-		num = 0; stack = []; res = 0; sign = "+"
-		for i, c in enumerate(s):
-			if c.isdigit():
-				num = num*10 + int(c)
-			if (c != " " or i == len(s) - 1):
-				if sign == "-":
+		num = 0; stack = []; res = 0; prev_sign = "+"
+		for i, cur in enumerate(s):
+			if cur.isdigit():
+				num = num*10 + int(cur) # consecutive digits
+			if (cur in "+-*/" or i == len(s) - 1): # i == len(s)-1, e.g., "42"
+				if prev_sign == "-":
 					stack.append(-num)
-				if sign == "+":
+				elif prev_sign == "+":
 					stack.append(num)
-				if sign == "*":
+				elif prev_sign == "*":
 					stack.append(stack.pop()*num)
-				if sign == "/":
+				elif prev_sign == "/":
 					stack.append(int(float(stack.pop())/num))
-				sign = s[i]
+				prev_sign = cur
 				num = 0
 		return sum(stack)
 

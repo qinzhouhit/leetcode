@@ -1,5 +1,5 @@
 '''
-keys:
+keys: browse history
 Solutions:
 Similar:
 T:

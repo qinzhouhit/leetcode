@@ -14,7 +14,7 @@ def canFinish(,self numCourses: int, prerequisites: List[List[int]]) -> bool:
     sortedOrder = []
     if numCourses <= 0:
         return False
-
+    # dont use defaultdict to define, will miss nodesa
     inDegree = {i: 0 for i in range(numCourses)}
     graph = {i: [] for i in range(numCourses)}
 

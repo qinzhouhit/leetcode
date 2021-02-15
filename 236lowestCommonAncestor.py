@@ -17,11 +17,12 @@ class TreeNode:
 
 class Solution:
     # O(N) for S and T, recursion
+    # https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/158060/Python-DFS-tm
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if not root:
             return None
         
-        if root == p or root == q:
+        if root == p or root == q: # if p or q is root, then root must be the LCA...
             return root
 
         left = self.lowestCommonAncestor(root.left, p, q)
@@ -33,6 +34,37 @@ class Solution:
             return right
         if not right:
             return left
+
+
+    # official 
+    ans = None
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        
+        def recurse_tree(current_node):
+
+            # If reached the end of a branch, return False.
+            if not current_node:
+                return False
+
+            # Left Recursion
+            left = recurse_tree(current_node.left)
+
+            # Right Recursion
+            right = recurse_tree(current_node.right)
+
+            # If the current node is one of p or q
+            mid = current_node == p or current_node == q
+
+            # If any two of the three flags left, right or mid become True.
+            if mid + left + right >= 2:
+                self.ans = current_node
+
+            # Return True if either of the three bool values is True.
+            return mid or left or right
+
+        # Traverse the tree
+        recurse_tree(root)
+        return self.ans
 
     # iterative; O(N) for S and T
     def lowestCommonAncestor1(self, root, p, q):

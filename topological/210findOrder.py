@@ -22,7 +22,7 @@ def findOrder2(self, numCourses: int, prerequisites: List[List[int]]) -> List[in
     graph = {i: [] for i in range(numCourses)}
 
     for pair in prerequisites:
-        # Take course pair[1] before pair[0] !!!
+        # Must take course pair[1] before pair[0] !!! Different from 207
         parent, child = pair[1], pair[0]
         inDegree[child] += 1
         graph[parent].append(child)
@@ -40,7 +40,7 @@ def findOrder2(self, numCourses: int, prerequisites: List[List[int]]) -> List[in
             if inDegree[child] == 0:
                 sources.append(child)
 
-    # above is the same as 207 except the below one
+    # return the sorted result instead of False/True
     if len(sortedOrder) != numCourses:
         return []
     return sortedOrder

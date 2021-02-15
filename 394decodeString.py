@@ -28,8 +28,38 @@ class Solution:
                 res += str_
         return res
 
+
+
+    # >>> follow up
+    '''
+    如果数字也可以作为encoded string的一部分怎么做。如果数字在[]前，和原题一样视为次数，
+    否则视为encoded string的一部分。
+    比如: 3[a2b] -> a2ba2ba2b
+    '''
+    def decodeString1(self, s: str) -> str:
+        stack = []
+        
+        for i in range(len(s)):
+            if s[i] != ']':
+                stack.append(s[i])
+            else:
+                sub = ''
+                while stack[-1] != '[':
+                    sub += stack.pop() # "b2a"
+                # reverse the substring
+                sub = sub[::-1] # "a2b"
+                stack.pop() # pop "["
+                num = ''
+                while stack and stack[-1].isdigit():
+                    num += stack.pop()
+                num = int(num[::-1])
+                stack += list(sub * num)
+                
+        return ''.join(stack)
+
+
 obj = Solution()
-print (obj.decodeString("2[abc]3[cd]ef"))
+print (obj.decodeString1("3[a2b]")) # 2[abc]3[cd]ef, 3[a2[c]]
 
 
 

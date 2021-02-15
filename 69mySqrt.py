@@ -12,7 +12,7 @@ class Solution:
     # Newton method, iteration
     # T: O(logN); S: O(1), fastest
     # define that error should be less than 1 and proceed iteratively.
-    
+    # x_1 = (x_0 + x/x_0) / 2
     def mySqrt4(self, x):
         if x < 2:
             return x
@@ -59,6 +59,7 @@ class Solution:
     
     
     # pocket calculator 
+    # sqrt(x) = e^(0.5*logx)
     # O(1) for S and T
     def mySqrt1(self, x):
         if x < 2:

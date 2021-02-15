@@ -9,6 +9,22 @@ from typing import List
 import collections
 
 class Solution:
+    # >>> dfs
+    # T: O(n^3)
+    # S: O(n)
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        @lru_cache
+        def wordBreakMemo(s: str, word_dict: FrozenSet[str], start: int):
+            if start == len(s):
+                return True
+            for end in range(start + 1, len(s) + 1):
+                if s[start:end] in word_dict and wordBreakMemo(s, word_dict, end):
+                    return True
+            return False
+
+        return wordBreakMemo(s, frozenset(wordDict), 0)
+
+
     # d is an array that contains booleans
     # d[i] is True if there is a word in the dictionary that
     # ends at ith index of s AND d is also True at the beginning of the word

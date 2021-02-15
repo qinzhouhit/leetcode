@@ -53,7 +53,7 @@ class Solution:
     			if item.isInteger():
     				res += depth * item.getInteger()
     			else:
-    				queue.extend(item.getList())
+    				queue.extend(item.getList()) # extend!!! like unpacking
     		depth += 1
     	return res
 

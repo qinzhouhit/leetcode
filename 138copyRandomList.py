@@ -56,7 +56,7 @@ class Solution:
             dic[cur] = Node(cur.val)
             cur = cur.next
         cur = head
-        while cur: # add the random and pointer info
+        while cur: # add the random and next pointer info
             if cur.random:
                 dic[cur].random = dic[cur.random]
             if cur.next:
