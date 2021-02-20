@@ -23,10 +23,10 @@ class Solution:
         if i == 0: # all nums are in descending order
             nums.reverse() # then it is impossible to find next permutation
             return # return the reversed one as required
-        k = i - 1 # find the last "ascending" position
+        k = i - 1 # find the last "ascending" position, when nums[i-1] < nums[i]
         while nums[j] <= nums[k]: 
             j -= 1 # until we have nums[j] > nums[i-1]
-        nums[k], nums[j] = nums[j], nums[k] # swap j-th and k-th, wont affect the right subarray descending
+        nums[k], nums[j] = nums[j], nums[k] # swap j-th and k-th, wont affect the right subarray being descending
         l, r = k+1, len(nums)-1  # reverse the second part
         while l < r: # reverse the right subarray to make it minimal
             nums[l], nums[r] = nums[r], nums[l]
