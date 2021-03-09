@@ -73,7 +73,7 @@ class LRUCache1(OrderedDict):
         if key in self:
             self.move_to_end(key)
         self[key] = value
-        if len(self) > self.capacity:
+        if len(self.cache) > self.capacity:
             # The pairs are returned in LIFO order if last is true or 
             # FIFO order if false.
             self.popitem(last = False)
@@ -160,6 +160,77 @@ class LRUCache:
             node.value = value
             self._move_to_head(node)
 
+
+# move to end version, we dont need self.size
+class Dnode:
+    def __init__(self):
+        self.key = 0
+        self.val = 0
+        self.prev = None
+        self.next = None
+
+class LRUCache:
+
+    def __init__(self, capacity: int):
+        self.key2node = {} # cache
+        self.head, self.tail = Dnode(), Dnode()
+        self.head.next = self.tail
+        self.tail.prev = self.head
+        self.capacity = capacity
+    
+    def _add_node(self, node):
+        # add at the tail
+        original_last = self.tail.prev
+        node.next = self.tail
+        node.prev = original_last
+        original_last.next = node    
+        self.tail.prev = node
+        
+    def _delete_node(self, node):
+        prev = node.prev
+        nxt = node.next
+        prev.next = nxt
+        nxt.prev = prev
+        
+    def _move_to_end(self, node):
+        self._delete_node(node)
+        self._add_node(node)
+        
+    def _pop_head(self):
+        target = self.head.next
+        self._delete_node(target)
+        return target
+    
+    def get(self, key: int) -> int:
+        # print (self.key2node)
+        if key not in self.key2node:
+            return -1
+        node = self.key2node[key]
+        self._move_to_end(node)
+        return node.val
+        
+
+    def put(self, key: int, value: int) -> None:
+        node = self.key2node.get(key, None)
+        if not node:
+            newNode = Dnode()
+            newNode.key = key
+            newNode.val = value
+            self.key2node[key] = newNode
+            self._add_node(newNode) # at the end
+            
+            if len(self.key2node) > self.capacity:
+                head = self._pop_head()
+                del self.key2node[head.key]
+        else:
+            node.val = value
+            self._move_to_end(node)
+
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)
 
 
 obj = LRUCache(2)

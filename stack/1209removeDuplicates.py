@@ -1,5 +1,5 @@
 '''
-keys:
+keys: stack with tuple recording char and freq.
 Solutions:
 Similar: 1047
 T:
@@ -26,6 +26,7 @@ class Solution:
 
 
     # two pointers
+    # O(N) for S and T
     def removeDuplicates1(self, s: str, k: int) -> str:
     	i = 0; n = len(s)
         ct = [0] * n

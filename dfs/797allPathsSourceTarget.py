@@ -11,6 +11,10 @@ import functools
 
 class Solution:
     '''
+    As a result, for a graph with N nodes, at maximum, there could be 
+    sum_{i=0}^{N-2}{2^i} = 2^{N-1} - 1 number of paths between the 
+    starting and the ending nodes.
+    
     T: O(N*2^N), 2^(N-1) - 1 possible path in the graph
     for each path, could be N-2 intermediate nodes, O(N) to build the path
     S: O(N*2^N), 2^(N-1) - 1 paths times the nodes in the path, i.e., N
@@ -28,11 +32,25 @@ class Solution:
                 path.append(nxt)
                 backtrack(nxt, path)
                 path.pop()
-        
-        
         path = [0]
         backtrack(0, path)
         return res
+
+    # self-made
+    def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
+        
+        def helper(cur, path):
+            if cur == target:
+                res.append(path[:])
+            for neighbor in graph[cur]:
+                helper(neighbor, path+[neighbor])
+
+        path = [0]
+        res = []
+        target = len(graph) - 1 # value of target node
+        helper(0, path)
+        return res
+
 
     # top-down memo
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:

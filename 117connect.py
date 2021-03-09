@@ -25,10 +25,10 @@ class Solution:
         while node: # loop for each level
             needle = levelHead
             
-            while node: # loop for current level
+            while node: # actually the needle connects the next level nodes during this loop
                 if node.left:
                     # since needle and levelHead points to the same object. That means after needle.next = node.left. 
-                    # Same for levelHead.next = node.left. 
+                    # we then have levelHead.next = node.left. 
                     # this is how levelHead move to next level
                     needle.next = node.left 
                     
@@ -45,13 +45,13 @@ class Solution:
                 # node moves to its neighbor in the current level
                 node = node.next
             
-            # this is key part. as said before, levelHead.next = node.left
+            # this is key part. As said before, levelHead.next = node.left
             # so that node moves to its upper level's leftmost node's left child. meaning the head of this next level
             node = levelHead.next
             
             # levelHead.next is used above, make it to none so that next time it won't grab the same level head again.
-            levelHead.next = None
-
+            levelHead.next = None # if not, then the above line of code will point to the same dummy every time...
+        return root
 
 
 
@@ -142,7 +142,7 @@ class Solution:
 
         Q = collections.deque([root])
         while Q:
-            size = len(Q)
+            size = len(Q) # must store the length, or len(q) changes in the loop
             for i in range(size):
                 node = Q.popleft()
                 if i < size - 1:

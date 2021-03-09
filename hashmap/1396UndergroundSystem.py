@@ -1,4 +1,4 @@
-'''
+ '''
 keys:
 Solutions:
 Similar:
@@ -7,9 +7,19 @@ S:
 '''
 from typing import List
 
+'''
+real-world issues: 
+Data storage: store data in database to avoid data loss
+Scalability: millions of users poer day. Using more than one computer 
+to store the data. => concurrency
+Other: fit with other code in the passenger-tracking system
+Delete the checkin data after the checkout:
+However, it would actually be better to delete the data. We don't need it 
+(hence the reason it being overwritten isn't an issue), and in fact keeping 
+it around will slowly increase the memory usage of the program over time
+'''
 
 class UndergroundSystem:
-
 
 	# S: O(p+s^2), for p as maximum possible number of passengers making trips
 	# s^2 for all the possible pairs of S stations in the trips
@@ -29,7 +39,7 @@ class UndergroundSystem:
     	self.trips[(start_station, stationName)][0] += (t - start_t) # cumulative time
     	self.trips[(start_station, stationName)][1] += 1 # ct
     
-    # T: O(1)
+    # T: O(1), so we need total time and number of trips
     def getAverageTime(self, startStation: str, endStation: str) -> float:
         totalTime, ct = self.trips[(startStation, endStation)]
         return totalTime / ct if ct else 0
@@ -44,6 +54,7 @@ class UndergroundSystem1:
 	def checkIn(self, id, stationName, t):
 	    self.user[id] = [stationName, t]
 
+    # this will use more space since we append all the time intervals
 	def checkOut(self, id, stationName, t):
 	    start_station, prev_time = self.user[id]
 	    self.dest[(start_station, stationName)].append(t-prev_time)

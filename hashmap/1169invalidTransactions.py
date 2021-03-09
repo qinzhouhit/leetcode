@@ -27,10 +27,10 @@ class Transaction:
 
 class Solution:
 	# O(nlogn), n as the number of total transactions
-
-
     def invalidTransactions(self, transactions):
     	# * is nice
+        # The asterisk "*" is used in Python to define a variable number of arguments. 
+        # The asterisk character has to precede a variable identifier in the parameter list.
         allTrans = [Transaction(*transaction.split(',')) for transaction in transactions]
         allTrans.sort(key=lambda t: t.time) # O(nlogn) time
 
@@ -61,12 +61,12 @@ class Solution:
 class Solution:
 	# does not work for duplicat transaction cases
 	# ["alice,20,1220,mtv","alice,20,1220,mtv"]
+    # O(n^2) for T
 	def invalidTransactions(self, transactions):
         """
         :type transactions: List[str]
         :rtype: List[str]
         """
-        
         transaction_name = collections.defaultdict(list)
         for transaction in transactions:
             vals = transaction.split(',')
@@ -83,11 +83,37 @@ class Solution:
                         o_time,o_amount,o_city = other
                         if o_city != city and abs(int(o_time)-int(time)) <= 60:
                             ans.add(','.join([name,time,amount,city]))
-                            break
+                            break # break the closest for loop
+                            # we break since we are doing 2 for loops here, terminate 
+                            # ASAP since we will check all transactions twice
         return ans
 
+    # https://leetcode.com/problems/invalid-transactions/discuss/366332/python-sort-solution
+    def invalidTransactions(self, transactions: List[str]) -> List[str]:
+        t = [x.split(',') for x in transactions]
+        t.sort(key = lambda x: (x[0],int(x[1]))) # sort by name and time
+        i = 0 
+        ret = set()
+        while i < len(t):
+            j = i + 1
+            duplicate = False
+            while j < len(t) and t[j][0] == t[i][0] and int(t[j][1]) - int(t[i][1]) <= 60:
+                if t[j][3] != t[i][3]:
+                    duplicate = True
+                j += 1 
+                
+            if duplicate:
+                k = i
+                while k < j:
+                    ret.add(','.join(t[k]))
+                    k += 1 
+            elif int(t[i][2]) > 1000:
+                ret.add(','.join(t[i]))
+            i += 1 
+        return ret 
 
-    # the version did not consider users
+
+    # this version did not consider users
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
     	res = set()
     	trans = [t.split(",") for t in transactions]

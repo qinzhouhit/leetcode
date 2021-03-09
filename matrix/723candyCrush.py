@@ -12,6 +12,8 @@ class Solution:
 	# https://leetcode.com/problems/candy-crush/discuss/191252/Short-Python
 	# T: O((R*C)^2), R and C as number of rows and cols, O(R*C) for the scan
 	# and repeat
+	# worst case is that we scan the board by O(R*C), then for each crush we crush
+	# and then loop the board again
     def candyCrush(self, board: List[List[int]]) -> List[List[int]]:
         if not board:
             return []

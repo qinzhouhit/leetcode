@@ -23,6 +23,7 @@ class Solution:
         return res
 
     # dp based on above method, use extra space for time reduction
+    # O(n) for S and T
     def trap4(self, height):
         if not height:
             return 0

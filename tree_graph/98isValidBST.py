@@ -16,14 +16,14 @@ class Solution:
 
         stack = [(root, -math.inf, math.inf)]
         while stack:
-            root, lower, upper = stack.pop()
-            if not root:
+            node, lower, upper = stack.pop()
+            if not node:
                 continue
-            val = root.val
-            if val <= lower or val >= upper:
+            val = node.val
+            if not (lower < val < upper):
                 return False
-            stack.append((root.right, val, upper))
-            stack.append((root.left, lower, val))
+            stack.append((node.right, val, upper)) # order not matter
+            stack.append((node.left, lower, val))
         return True
 
     # >>> Recursive Traversal with Valid Range; O(n) for S and T
@@ -71,7 +71,6 @@ class Solution:
 
         # another check
         # return output == sorted(output) and len(set(output)) == len(output)
-
     def inOrder(self, root, output):
         if not root:
             return
@@ -79,6 +78,19 @@ class Solution:
         self.inOrder(root.left, output)
         output.append(root.val)
         self.inOrder(root.right, output)
+
+    # >>> self-made
+    def isValidBST(self, root: TreeNode) -> bool:
+
+        def helper(node, lower=float("-inf"), upper=float("inf")):
+            if not node:
+                return True
+            if not ( lower < node.val < upper):
+                return False
+            return helper(node.left, lower, node.val) and \
+                    helper(node.right, node.val, upper)
+            
+        return helper(root)
 
 
     #  >>> self-made, not optimal

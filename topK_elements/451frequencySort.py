@@ -27,7 +27,8 @@ class Solution:
 	    string_builder = []
 	    # end idx is 1 since no letter with freq 0 will be recorded
 	    # does not matter if end idx is -1
-	    for i in range(len(buckets) - 1, 0, -1): 
+	    # for i in range(len(buckets) - 1, 0, -1): # -1 is fine, buckets[0] always empty
+	    for i in range(max_freq, -1, -1):
 	        for c in buckets[i]:
 	            string_builder.append(c * i)
 	            
@@ -55,6 +56,15 @@ class Solution:
     # S: O(N), N as the length of string
     def frequencySort(self, s: str) -> str:
         ct = Counter(s)
+        ct = sorted(ct.items(), key=lambda x: x[1], reverse=True)
+        
+        tmp = []
+        for c, freq in ct:
+            tmp.append(c*freq)
+        return "".join(tmp)
+
+    def frequencySort(self, s: str) -> str:
+        ct = Counter(s)
         h = []
         for c, freq in ct.items():
             heapq.heappush(h, (-freq, c))
@@ -63,3 +73,7 @@ class Solution:
             freq, c = heappop(h)
             res += c*(-freq)
         return res
+
+
+
+        

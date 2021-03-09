@@ -36,10 +36,11 @@ class Solution:
 			return prev
 		prev.next = cur
 		cur.prev = prev
-		tmp = cur.next
+		nxt = cur.next # keep it here
 		tail = self.helper(cur, cur.child) # deal with child first
 		cur.child = None
-		return self.helper(tail, tmp) # no child, then deal with tmp (next node)
+        # no child => equal to self.helper(cur, cur.next)
+		return self.helper(tail, nxt) # no child, then deal with tmp (next node)
 
 
 
@@ -59,7 +60,7 @@ class Solution:
             if cur.next:
                 stack.append(cur.next)
             
-            if cur.child:
+            if cur.child: # append child later so we pop child first
                 stack.append(cur.child)
                 cur.child = None # required
             
@@ -67,3 +68,7 @@ class Solution:
         # detach the dummyHead from the res since we doubly connect them in the prev/cur step
         dummyNode.next.prev = None
         return dummyNode.next
+
+
+
+

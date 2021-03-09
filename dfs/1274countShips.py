@@ -21,6 +21,7 @@ from typing import List
 #		self.y = y
 
 class Solution(object):
+    # O(10logMN)
 	# https://leetcode.com/problems/number-of-ships-in-a-rectangle/discuss/440773/python-divide-and-conquer-with-picture-explanation
 	# In order to have no overlap for these four parts, we need to add a center point by 1
 	def countShips1(self, sea: 'Sea', topRight: 'Point', bottomLeft: 'Point') -> int:
@@ -28,7 +29,7 @@ class Solution(object):
             if bottom.x > top.x or bottom.y > top.y:
             	return 0
             if (top.x, top.y)  == (bottom.x, bottom.y):     
-                return int(sea.hasShips(top, bottom)) 
+                return sea.hasShips(top, bottom) # will return 1/0 for True/False
             else:
                 if not sea.hasShips(top, bottom):
                 	return 0
@@ -47,7 +48,7 @@ class Solution(object):
         res = 0
         if topRight.x > bottomLeft.x and topRight.y > bottomLeft.y and sea.hasShips(topRight, bottomLeft):
         	if topRight.x == bottomLeft.x and topRight.y == bottomLeft.y: # base case
-        		return 1 
+        		return int(sea.hasShips(top, bottom)) 
         	newx = (topRight.x + bottomLeft.x) // 2
         	newy = (topRight.y + bottomLeft.y) // 2
         	res += self.countShips(sea, topRight, Point(newx+1, newy+1)) # upper right
