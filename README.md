@@ -15,3 +15,9 @@ Recommended website: [Huahua Website](https://zxi.mytechroad.com/blog/)
 Recommended repositories on Github: [The famous animation version](https://github.com/MisterBooo/LeetCodeAnimation), [Python solutions](https://github.com/wuduhren/leetcode-python), [A free company tag lists](https://github.com/youhusky/Leetcode_Company)
 
 Personal routine: LeetCode question -> discuss/Leetcode Solution -> Huahua -> my own solution + summary (idea, hints, ST complexity, similar questions)
+
+Other resources: 
+
+AlgoExpert: Good for beginners, with detailed video explanation, but not useful for someone with some experience in coding practice.
+Educative.io: It groups similar questions into different topics. Nice to go through the topics and have a template for each topic.
+Disadvantages of both compared to Leetcode: no discussion from other users.
