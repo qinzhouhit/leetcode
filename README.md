@@ -1,6 +1,7 @@
 ### LeetCode Python3 Solutions
 Created and maintained by qinzhouhit. Commerical use prohibited.
-With notes of ideas, intuitive comments, time and space complexity analysis. Solutions startswith 0 are from educative.io coding questions.
+
+It includes notes of ideas, intuitive comments, time and space complexity analysis. Solutions startswith 0 are from educative.io coding questions.
 
 
 ### Resouces related to LeetCode
@@ -9,10 +10,10 @@ With notes of ideas, intuitive comments, time and space complexity analysis. Sol
 3) Recommended website: [Huahua Website](https://zxi.mytechroad.com/blog/)
 4) Recommended repositories on Github: [The famous animation version](https://github.com/MisterBooo/LeetCodeAnimation), [Python solutions](https://github.com/wuduhren/leetcode-python), [A free company tag lists](https://github.com/youhusky/Leetcode_Company)
 
-Personal routine: LeetCode question -> discuss/LeetCode Solution -> Huahua -> my own solution + summary (idea, hints, ST complexity, similar questions)
+Personal approach: LeetCode question -> my own solution -> Discuss/LeetCode Solution -> Huahua -> summary (idea, hints, ST complexity, similar questions)
 
 
 ### Other resources: 
-1) AlgoExpert: Good for beginners, with detailed video explanation, but not useful for someone with some experience in coding practice. 
+1) AlgoExpert: Good for beginners, with detailed video explanation, but not that useful for someone with some experience in coding practice. 
 2) Educative.io: It groups similar (LeetCode) questions into different topics. Nice to go through the topics and have a template for each topic.
 Disadvantages of both compared to LeetCode: no discussion from other users.
