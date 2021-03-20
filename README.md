@@ -14,7 +14,7 @@ Personal approach: LeetCode question -> my own solution -> Discuss/LeetCode Solu
 
 
 ### Other resources: 
-1) AlgoExpert: Good for beginners, with detailed video explanation, but not that useful for someone with some experience in coding practice. 
+1) AlgoExpert: Good for beginners, with detailed video explanation, but not that useful for someone with some experience in coding practice. I won't suggest it since the questions are not high-frequency questions in interviews.
 2) Educative.io: It groups similar (LeetCode) questions into different topics. Nice to go through the topics and have a template for each topic.
 
 Disadvantages of both compared to LeetCode: no discussion from other users.
