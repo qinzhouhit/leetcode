@@ -6,6 +6,61 @@ T:
 S:
 '''
 
+
+'''
+Integer array, target number 
+
+how many pairs (A[i]+ A[j] == target number) i!=j
+
+                    index: 0,2   1,2
+[1,1,2,3,0]  3 ===> value: 1,2   1,2  3,0  == > 3
+'''
+
+def pairNum(arr, target):
+    # n = len(arr), two loops: O(n^2)
+    # time complexity better: O(n)
+    # one pass
+    # hashmap: {1:2, 2:1, 3:1, 0:1}, ct += 2
+    
+    
+    '''
+    for idx, val in enumerate(arr):
+        if target - val in hashmap:
+            tmp_ct = hashmap[val]
+            tmp_ct -= 1
+            hashmap[val] = tmp_ct
+    '''
+    if not arr:
+        return -1
+    num_ct = {}
+    for num in arr:
+        if num not in num_ct: # Counter()  # 
+            num_ct[num] = 1
+        else:
+            num_ct[num] += 1
+        # if target - num in num_ct:
+        #     num_ct[num] -= 1
+        #     ct += 1
+    ct = 0
+    # num_ct: {1:2, 2:1, 3:1, 0:1}, ct += 2
+    # [1,1,2,3,0]  3 ===> value: 1,2   1,2  3,0  == > 3
+    for num in arr: # 1 
+        if target - num in num_ct:
+            tmp_ct = num_ct[num]
+            tmp_ct -= 1
+            num_ct[num] = tmp_ct
+            # num_ct[num] -= 1
+            if tmp_ct == 0:
+                del num_ct[num]
+            ct += 1
+    return ct
+    
+            
+            
+        
+        
+
+
 class Solution(object):
     # latest one
     def twoSum3(self, nums: List[int], target: int) -> List[int]:

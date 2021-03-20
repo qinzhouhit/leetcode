@@ -30,16 +30,16 @@ class Solution:
         res = []
         start = intervals[0][0]
         end = intervals[0][1]
-        for i in range(1, len(intervals)):
-            cur = intervals[i]
-            if cur[0] > end:
+        for cur_s, cur_e in intervals[1:]:
+            if cur_s > end:
                 res.append([start, end]) # it's actually the previous one
-                start = cur[0]
-                end = cur[1]
+                start = cur_s
+                end = cur_e
             else: # cur[0] <= end, overlapping
-                end = max(cur[1], end) # no need to update start since we sort by start
+                end = max(cur_e, end) # no need to update start since we sort by start
         res.append([start, end]) # the last interval left in the first if clause
         return res
+
 
     # LC official
     def merge1(self, intervals: List[List[int]]) -> List[List[int]]:

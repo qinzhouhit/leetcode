@@ -21,6 +21,21 @@ class Solution:
                     return False
         
         return stack == []
+
+    # self-made
+    def isValid(self, s: str) -> bool:
+        
+        h = {"]": "[", "}": "{", ")": "("}
+        
+        stack = []
+        for c in s:
+            if c not in h:
+                stack.append(c)
+            elif not stack or h[c] != stack[-1]:
+                return False # not stack meaing we directly have "]" coming
+            else: # stack not [] and h[c] == stack[-1]
+                stack.pop()
+        return stack == []
     
     # concise; but O(N^2)
     def isValid1(self, s: str) -> bool:

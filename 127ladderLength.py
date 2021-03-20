@@ -14,7 +14,7 @@ import string
 
 class Solution:
     # official, BFS
-    # T: O(M^2 * N), M the length of each word  nad N the size of wordList
+    # T: O(M^2 * N), M the length of each word and N the size of wordList
     # S: all_combo_dict + visited + queue
     # S: O(M^2 * N) + O(M*N) + O(M*N) -> O(M^2 * N)
     def ladderLength5(self, beginWord: str, endWord: str, wordList: List[str]) -> int:

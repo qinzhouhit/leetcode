@@ -17,13 +17,13 @@ class Solution:
         if n < 0:
             x = 1 / x
             n = -n
-        pow = 1
+        res = 1
         while n:
             if n % 2: # if n & 1, i.e., odd number
-                pow *= x
+                res *= x
             x *= x # for even number, (x^2)^n
             n //= 2 # n >> 1
-        return pow
+        return res
     
     
     # Recursive

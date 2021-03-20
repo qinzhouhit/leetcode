@@ -11,7 +11,7 @@ class Solution:
     # sliding window
     def lengthOfLongestSubstring(self, s):
         startIdx = maxLength = 0
-        usedChar = {}
+        usedChar = {} # v: cur idx of a character
 
         for endIdx, c in enumerate(s):
             if c in usedChar and startIdx <= usedChar[c]:
