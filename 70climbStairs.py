@@ -16,7 +16,7 @@ class Solution:
 		return int(fibn / sqrt5)
 
 
-	# S: O(1), T: O(n)
+	# T: O(n): S: O(1)
 	def climbStairs(self, n: int) -> int:
 		if n == 1:
 			return 1
@@ -42,6 +42,21 @@ class Solution:
             dp[i] = dp[i-1] + dp[i-2]
     
         return dp[n-1]
+
+    # memo
+    def climbStairs(self, n: int) -> int:
+    	def helper(i, n, memo):
+    		if i > n:
+    			return 0
+    		if i == n: # i defines the current step 
+    			return 1
+    		if memo[i]:
+    			return memo[i]
+    		memo[i] = helper(i+1, n, memo) + helper(i+2, n, memo)
+    		return memo[i]
+
+    	memo = [0] * (n+1)
+    	return helper(0, n, memo)
 
 
 

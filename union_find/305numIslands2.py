@@ -17,8 +17,8 @@ from typing import List
 # lot of time when mn is much larger than N. In this case we should consider
 # using a hashmap/dictionary for the underlying data structure to avoid this overhead.
 class DSU:
-	def __init__(self):
-		self.id = {}
+	def __init__(self): 
+		self.id = {} # k: (r,c) of the point, v: its root
 		self.size = {}
 		self.count = 0 # number of connected components
 
@@ -28,7 +28,7 @@ class DSU:
 		self.count += 1
 
 	def find(self, x): # find root, path compression
-		while x != self.id[x]:
+		while x != self.id[x]: # WHILE!!!
 			self.id[x] = self.id[self.id[x]]
 			x = self.id[x]
 		return x
@@ -39,7 +39,7 @@ class DSU:
 		if ra == rb:
 			return # in the same set
 		if self.size[ra] > self.size[rb]:
-			ra, rb = rb, ra # making a the smaller one
+			ra, rb = rb, ra # making a the flat one
 		self.id[ra] = rb # making a part of b
 		self.size[rb] += self.size[ra] # 
 		self.count -= 1
@@ -53,8 +53,8 @@ class Solution:
 				res += [islands.count]
 			else:
 				islands.add(p)
-				for dt in (0,1), (0,-1), (1,0), (-1,0):
-					q = (p[0] + dt[0], p[1] + dt[1])
+				for dt in [(0,1), (0,-1), (1,0), (-1,0)]:
+					q = (p[0] + dt[0], p[1] + dt[1]) # new point
 					if q in islands.id:
 						islands.union(p, q)
 				res += [islands.count]

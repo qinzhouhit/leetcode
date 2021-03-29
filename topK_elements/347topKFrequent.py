@@ -13,8 +13,7 @@ import random
 class Solution:
     # O(N) for S and T, quickselect
     def topKFrequent3(self, nums: List[int], k: int) -> List[int]:
-        count = Counter(nums)
-        unique = list(count.keys())
+        
         def partition(left, right, pivot_index) -> int:
             pivot_frequency = count[unique[pivot_index]]
             # 1. move pivot to end
@@ -50,6 +49,9 @@ class Solution:
             # go right
             else:
                 quickselect(pivot_index + 1, right, k_smallest)
+
+        count = Counter(nums)
+        unique = list(count.keys())
         n = len(unique) 
         # kth top frequent element is (n - k)th less frequent.
         # Do a partial sort: from less frequent to the most frequent, till

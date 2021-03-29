@@ -8,6 +8,42 @@ S:
 
 import collections
 import heapq
+
+
+# https://leetcode.com/problems/top-k-frequent-words/discuss/108348/Python-3-solution-with-O(nlogk)-and-O(n)
+class Word:
+    def __init__(self, freq, word):
+        self.freq = freq
+        self.word = word
+
+    # override its __lt__ and __eq__ functions
+    # since sort will only use __lt__
+    def __lt__(self, other): # less than
+        if self.freq == other.freq:
+            # reversed alphabetical order, so larger letters will be popped out
+            return self.word > other.word 
+        return self.freq < other.freq
+
+    # def __eq__(self, other): # default eq
+    #     return self.count == other.count and self.word == other.word
+
+
+class Solution:
+    # real O(nlogk)
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        ct = collections.Counter(nums)
+        heap = []
+        for word, freq in ct.items():
+            heapq.heappush(heap, Word(freq, word))
+            if len(heap) > k:
+                heapq.heappop(heap)
+        res = []
+        for _ in range(k):
+            res.append(heapq.heappop(heap).word)
+        return res[::-1] # since minheap
+
+
+########
 class Solution:
     # T: O(nlogn), n as length of words
     # S: O(n) for candidates
@@ -20,7 +56,7 @@ class Solution:
         res = sorted(candidates, key = lambda w: (-count[w], w))
         return res[:k]
 
-    # T: O(n + klogn), n as length of words,
+    # T: O(n + nlogn), n as length of words,
     # heapify: O(n), each of k heappop: O(logN)
     # S: O(N), for count
     def topKFrequent1(self, words, k):

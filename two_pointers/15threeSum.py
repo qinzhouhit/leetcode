@@ -7,7 +7,9 @@ S: O(1) for res
 '''
 
 
+
 class Solution:
+    # O(nLogn + nn) => O(n^2)
     def threeSum(self, nums):
         res = []
         nums.sort()
