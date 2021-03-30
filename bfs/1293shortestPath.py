@@ -13,7 +13,8 @@ class Solution:
 
 	# ACed
 	# https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/discuss/451832/Python-Short-BFS-Solution
-	def shortestPath1(self, grid: List[List[int]], k: int) -> int:
+	# O(m*n*k)
+    def shortestPath1(self, grid: List[List[int]], k: int) -> int:
 		m, n = len(grid), len(grid[0])
         queue = collections.deque([[0, 0, 0]])    # row, col, num of obstables met so far
         visited = {(0, 0): 0}                 # row, col   =>   num of obstables met so far

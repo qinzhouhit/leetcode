@@ -31,5 +31,6 @@ class Solution:
         
         # trip the leading zeros
         # or "0" is for cases like num = "10", k = 2, res will be ""
+        # "9", k=1, res should be "0"
         return "".join(finalStack).lstrip('0') or "0"
 

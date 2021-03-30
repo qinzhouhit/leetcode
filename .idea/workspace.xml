@@ -21,16 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/127ladderLength.py" beforeDir="false" afterPath="$PROJECT_DIR$/127ladderLength.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1472BrowserHistory.py" beforeDir="false" afterPath="$PROJECT_DIR$/1472BrowserHistory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20isValid.py" beforeDir="false" afterPath="$PROJECT_DIR$/20isValid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/50myPow.py" beforeDir="false" afterPath="$PROJECT_DIR$/50myPow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dp/0solve_knapsack.py" beforeDir="false" afterPath="$PROJECT_DIR$/dp/0solve_knapsack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashmap/1twoSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/hashmap/1twoSum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashmap/380RandomizedSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/hashmap/380RandomizedSet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/merge_intervals/56merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/merge_intervals/56merge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sliding_window/209minSubArrayLen.py" beforeDir="false" afterPath="$PROJECT_DIR$/sliding_window/209minSubArrayLen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sliding_window/3lengthOfLongestSubstring.py" beforeDir="false" afterPath="$PROJECT_DIR$/sliding_window/3lengthOfLongestSubstring.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12intToRoman.py" beforeDir="false" afterPath="$PROJECT_DIR$/12intToRoman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/198rob.py" beforeDir="false" afterPath="$PROJECT_DIR$/198rob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/256minCost.py" beforeDir="false" afterPath="$PROJECT_DIR$/256minCost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/265minCostII.py" beforeDir="false" afterPath="$PROJECT_DIR$/265minCostII.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/740deleteAndEarn.py" beforeDir="false" afterPath="$PROJECT_DIR$/740deleteAndEarn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs/1293shortestPath.py" beforeDir="false" afterPath="$PROJECT_DIR$/bfs/1293shortestPath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfs/815numBusesToDestination.py" beforeDir="false" afterPath="$PROJECT_DIR$/bfs/815numBusesToDestination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitwise/1239maxLength.py" beforeDir="false" afterPath="$PROJECT_DIR$/bitwise/1239maxLength.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dfs/339depthSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/dfs/339depthSum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dfs/364depthSumInverse.py" beforeDir="false" afterPath="$PROJECT_DIR$/dfs/364depthSumInverse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dfs/437pathSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/dfs/437pathSum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dfs/695maxAreaOfIsland.py" beforeDir="false" afterPath="$PROJECT_DIR$/dfs/695maxAreaOfIsland.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast_slow_pointers/202isHappy.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast_slow_pointers/202isHappy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stack/402removeKdigits.py" beforeDir="false" afterPath="$PROJECT_DIR$/stack/402removeKdigits.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.string_compress">
+  <component name="RunManager" selected="Python.1239maxLength">
     <configuration name="107levelOrderBottom" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,6 +79,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/107levelOrderBottom.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1239maxLength" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bitwise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bitwise/1239maxLength.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,27 +192,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="394decodeString" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/394decodeString.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="od_processing" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,17 +262,17 @@
       <item itemvalue="Python.od_processing" />
       <item itemvalue="Python.161isOneEditDistance" />
       <item itemvalue="Python.301removeInvalidParentheses" />
-      <item itemvalue="Python.394decodeString" />
       <item itemvalue="Python.untitled" />
       <item itemvalue="Python.string_compress" />
+      <item itemvalue="Python.1239maxLength" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1239maxLength" />
         <item itemvalue="Python.string_compress" />
         <item itemvalue="Python.untitled" />
         <item itemvalue="Python.301removeInvalidParentheses" />
         <item itemvalue="Python.161isOneEditDistance" />
-        <item itemvalue="Python.394decodeString" />
       </list>
     </recent_temporary>
   </component>
@@ -303,26 +307,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1157" height="256" key="GridCell.Tab.0.bottom" timestamp="1616035780427">
+    <state width="1157" height="279" key="GridCell.Tab.0.bottom" timestamp="1617135017308">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.bottom/39.25.2009.1127@39.25.2009.1127" timestamp="1616035780427" />
+    <state width="1157" height="279" key="GridCell.Tab.0.bottom/39.25.2009.1127@39.25.2009.1127" timestamp="1617135017308" />
     <state width="1157" height="279" key="GridCell.Tab.0.bottom/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512160" />
-    <state width="1157" height="256" key="GridCell.Tab.0.center" timestamp="1616035780426">
+    <state width="1157" height="279" key="GridCell.Tab.0.center" timestamp="1617135017306">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.center/39.25.2009.1127@39.25.2009.1127" timestamp="1616035780426" />
+    <state width="1157" height="279" key="GridCell.Tab.0.center/39.25.2009.1127@39.25.2009.1127" timestamp="1617135017306" />
     <state width="1157" height="279" key="GridCell.Tab.0.center/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512160" />
-    <state width="1157" height="256" key="GridCell.Tab.0.left" timestamp="1616035780426">
+    <state width="1157" height="279" key="GridCell.Tab.0.left" timestamp="1617135017304">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.left/39.25.2009.1127@39.25.2009.1127" timestamp="1616035780426" />
+    <state width="1157" height="279" key="GridCell.Tab.0.left/39.25.2009.1127@39.25.2009.1127" timestamp="1617135017304" />
     <state width="1157" height="279" key="GridCell.Tab.0.left/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512159" />
-    <state width="1157" height="256" key="GridCell.Tab.0.right" timestamp="1616035780427">
+    <state width="1157" height="279" key="GridCell.Tab.0.right" timestamp="1617135017308">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.right/39.25.2009.1127@39.25.2009.1127" timestamp="1616035780427" />
+    <state width="1157" height="279" key="GridCell.Tab.0.right/39.25.2009.1127@39.25.2009.1127" timestamp="1617135017308" />
     <state width="1157" height="279" key="GridCell.Tab.0.right/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512160" />
+    <state x="1068" y="400" width="670" height="676" key="search.everywhere.popup" timestamp="1617134868090">
+      <screen x="39" y="25" width="2009" height="1127" />
+    </state>
+    <state x="1068" y="400" width="670" height="676" key="search.everywhere.popup/39.25.2009.1127@39.25.2009.1127" timestamp="1617134868090" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -473,14 +481,9 @@
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/Desktop/untitled.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../oa/string_compress.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="110" />
+          <url>file://$PROJECT_DIR$/bitwise/1239maxLength.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="111" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

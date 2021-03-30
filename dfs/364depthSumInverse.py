@@ -25,7 +25,7 @@ class Solution:
 			# level_sum not rest, so the 1st depth vals will be 
 			# calculated multiple times
 			nestedList = nxt_level
-			res += level_sum 
+			res += level_sum # dont reset level_sum, add twice if depth as 2
 		return res
 
 
