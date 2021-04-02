@@ -112,6 +112,26 @@ class Solution:
         return root 
 
 
+    # >>> official level-order
+    def connect(self, root: 'Node') -> 'Node':
+        if not root:
+            return root
+
+        Q = collections.deque([root])
+        while Q:
+            size = len(Q) # must store the length, or len(q) changes in the loop
+            for i in range(size):
+                node = Q.popleft()
+                if i < size - 1:
+                    node.next = Q[0]
+                if node.left:
+                    Q.append(node.left)
+                if node.right:
+                    Q.append(node.right)
+        return root
+        
+
+
     # >>> level-order O(N)
     def connect(self, root: 'Node') -> 'Node':
         if not root:
@@ -135,23 +155,7 @@ class Solution:
         return root
 
 
-    # >>> official level-order
-    def connect(self, root: 'Node') -> 'Node':
-        if not root:
-            return root
-
-        Q = collections.deque([root])
-        while Q:
-            size = len(Q) # must store the length, or len(q) changes in the loop
-            for i in range(size):
-                node = Q.popleft()
-                if i < size - 1:
-                    node.next = Q[0]
-                if node.left:
-                    Q.append(node.left)
-                if node.right:
-                    Q.append(node.right)
-        return root
+    
 
 
 

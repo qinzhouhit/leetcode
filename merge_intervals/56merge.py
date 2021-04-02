@@ -69,15 +69,20 @@ class Solution:
             else:
                 res.append(interval)
         return res
+
     
     def merge(self, intervals):
-        out=[]
-        for i in sorted(intervals, key=lambda i:i[0]):
-            if out and i[0] <= out[-1][-1]:
-                out[-1][-1] = max(out[-1][-1], i[-1])
+        intervals.sort(key=lambda x: x[0])
+        res = []
+        
+        for s, e in intervals:
+            if not res or s > res[-1][1]:
+                res.append([s, e])
             else:
-                out.append(i)
-        return out
+                # dont need to update s since s is definitely larger than prev_s
+                # since we sort by the starting time
+                res[-1][1] = max(res[-1][1], e)
+        return res
 
 
     # self-made
@@ -92,7 +97,7 @@ class Solution:
                 prev_start = start
                 prev_end = end
             else:
-                prev_start = min(start, prev_start) # dont need it since we sort by start
+                # prev_start = min(start, prev_start) # dont need it since we sort by start
                 prev_end = max(prev_end, end)
         res.append([prev_start, prev_end]) # the remaining one
         return res

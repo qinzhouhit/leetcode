@@ -21,8 +21,8 @@ class BrowserHistory:
         # remove all history for forwards, i.e., forward till the current idx
         while len(self.pages)-1 != self.cur:
         	self.pages.pop()
-        self.cur += 1
         self.pages.append(url)
+        self.cur += 1
       
     # T: O(1)
     def back(self, steps: int) -> str:

@@ -22,6 +22,11 @@ from typing import List
 
 class Solution(object):
     # O(10logMN)
+    '''
+    Time complexity: O(n) where n is total number of points inside the rectangle
+    T(n) = 4xT(n/4) + O(1)
+    Apply master theorem: n^(log(4)4) = n is O(O(1)). So T(n) = O(n)
+        '''
 	# https://leetcode.com/problems/number-of-ships-in-a-rectangle/discuss/440773/python-divide-and-conquer-with-picture-explanation
 	# In order to have no overlap for these four parts, we need to add a center point by 1
 	def countShips1(self, sea: 'Sea', topRight: 'Point', bottomLeft: 'Point') -> int:

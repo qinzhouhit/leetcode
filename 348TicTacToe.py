@@ -16,9 +16,11 @@ class TicTacToe:
         """
         self.row = [0]*n
         self.col = [0]*n
-        self.diag = 0; self.anti_diag = 0; self.n = n
+        self.diag = 0
+        self.anti_diag = 0
+        self.n = n
 
-
+    # notice the n marks do not have to be consecutive, i.e., just care about cumulative
     def move(self, row: int, col: int, player: int) -> int:
         """
         Player {player} makes a move at ({row}, {col}).
@@ -38,7 +40,7 @@ class TicTacToe:
         self.col[col] += offset
         if row == col:
             self.diag += offset
-        if row + col == self.n - 1:
+        if row + col == self.n - 1: # anti diagonal
             self.anti_diag += offset
         if self.n in [self.row[row], self.col[col], self.diag, self.anti_diag]:
             return 2

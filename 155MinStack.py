@@ -25,7 +25,7 @@ class MinStack:
         self.q.pop()
 
 
-    def top(self) -> int:
+    def top(self) -> int: # 
         if len(self.q) == 0:
             return None
         else:

@@ -17,11 +17,11 @@ class Solution:
         def wordBreakMemo(s: str, word_dict: FrozenSet[str], start: int):
             if start == len(s):
                 return True
-            for end in range(start + 1, len(s) + 1):
+            for end in range(start + 1, len(s) + 1): # +1 since it is ending idx
                 if s[start:end] in word_dict and wordBreakMemo(s, word_dict, end):
                     return True
             return False
-
+        # you can not use set in lru_cache, then it uses frozenset
         return wordBreakMemo(s, frozenset(wordDict), 0)
 
 
@@ -50,28 +50,29 @@ class Solution:
     # node represents the index of 1st char of the word
     # each edge represents a word
     # 0-->5-->9; graph + BFS, check if path from 0 to 9
-    # T: O(N^2), S: O(N)
+    # T: O(N^3), S: O(N)
     # https://leetcode.com/problems/word-break/discuss/43797/A-solution-using-BFS
     def wordBreak(self, s, wordDict):
         # Modeled as a graph problem - every index is a vertex and every edge 
         # is a completed word
         # The problem thus boils down to if a path exists.
         from collections import deque
-        queue = deque() # for index 
-        visited = []
-        queue.appendleft(0) 
-        visited.append(0)
-        while queue:
-            cur = queue.pop()
-            for i in range(cur, len(s)+1):
-                if i in visited:
-                    continue
-                if s[cur: i] in wordDict:
-                    if i == len(s):
+        wordSet = set(wordDict)
+        q = deque() # for index 
+        visited = set()
+        q.append(0)
+        while q:
+            start = q.popleft() # idx
+            if start in visited:
+                continue
+            for end in range(start+1, len(s)+1):
+                if s[start: end] in wordSet:
+                    q.append(end)
+                    if end == len(s):
                         return True
-                    queue.appendleft(i)
-                    visited.append(i)
+                    visited.add(end)
         return False
+
 
 obj = Solution()
 print (obj.wordBreak1("catsandog",

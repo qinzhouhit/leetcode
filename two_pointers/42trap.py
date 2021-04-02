@@ -36,7 +36,7 @@ class Solution:
         right_max[n-1] = height[n-1]
         for i in range(n-2, -1, -1):
             right_max[i] = max(height[i], right_max[i+1])
-        for i in range(1, n-1):
+        for i in range(1, n-1): # we can hold water at idx 0 and n-1...
             res += min(left_max[i], right_max[i]) - height[i]
         return res
 
