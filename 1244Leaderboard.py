@@ -6,17 +6,23 @@ T:
 S:
 '''
 from typing import List
+from sortedcontainers import SortedDict
 
-
-# sortedDict(), similar to treemap
+# sortedDict(), similar to treemap, BST enabled dictionary
+# keys are sorted ascending, can store -val to make it descending
+# will give you O(logN)
 class Leaderboard:
 
     def __init__(self):
         self.scores = {}
         self.sortedScores = SortedDict()
 
+    '''
+    O(logN) for addScore. This is because each addition to the BST takes a 
+    logarithmic time for search. The addition itself once the location of 
+    the parent is known, takes constant time.
+    '''
     def addScore(self, playerId: int, score: int) -> None:
-
         # The scores dictionary simply contains the mapping from the
         # playerId to their score. The sortedScores contain a BST with 
         # key as the score and value as the number of players that have
@@ -36,10 +42,15 @@ class Leaderboard:
             self.scores[playerId] = newScore
             self.sortedScores[-newScore] = self.sortedScores.get(-newScore, 0) + 1
         
+    '''
+    It takes O(K) for our top function since we simply iterate over the 
+    keys of the TreeMap and stop once we're done considering K scores. 
+    '''
     def top(self, K: int) -> int:
         count, total = 0, 0;
 
         for key, value in self.sortedScores.items():
+            # already sorted by keys 
             times = self.sortedScores.get(key)
             for _ in range(times): 
                 total += -key;
@@ -55,6 +66,11 @@ class Leaderboard:
         
         return total;
 
+    '''
+    O(logN) for reset since we need to search for the score in the BST and then 
+    update/remove it. Note that this complexity is in the case when every player 
+    always maintains a unique score.
+    '''
     def reset(self, playerId: int) -> None:
         preScore = self.scores[playerId]
         if self.sortedScores[-preScore] == 1:
@@ -123,7 +139,8 @@ class Leaderboard:
         return res
     # T: O(1)
     def reset(self, playerId: int) -> None:
-        self.scores[playerId] = 0
+        # self.scores[playerId] = 0
+        del self.scores[playerId]
 
         
 

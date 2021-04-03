@@ -17,9 +17,10 @@ class Solution:
         num_set = set(nums)
 
         for num in num_set:
-            # attempt to build sequences from numbers that are not already part of a longer sequence.
-            # first ensuring that the number that would immediately precede the current number in a sequence is not present
-            if num - 1 not in num_set: # genius step...
+            # attempt to build sequences from numbers that are not already part of a longer
+            # sequence. first ensuring that the number that would immediately precede the 
+            # current number in a sequence is not present
+            if num - 1 not in num_set: # genius step... so we can skip lots of cases
                 current_num = num
                 current_streak = 1
 
