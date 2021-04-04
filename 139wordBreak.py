@@ -13,7 +13,8 @@ class Solution:
     # T: O(n^3)
     # S: O(n)
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        @lru_cache
+
+        @lru_cache # we dont need word_dict/ s as parameter here
         def wordBreakMemo(s: str, word_dict: FrozenSet[str], start: int):
             if start == len(s):
                 return True
@@ -23,6 +24,19 @@ class Solution:
             return False
         # you can not use set in lru_cache, then it uses frozenset
         return wordBreakMemo(s, frozenset(wordDict), 0)
+
+    # self-made
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        @lru_cache(None)
+        def helper(idx):
+            if idx == len(s):
+                return True
+            for end in range(idx+1, len(s)+1):
+                if s[idx:end] in wordDict and helper(end):
+                    return True
+            return False
+        wordDict = frozenset(wordDict)
+        return helper(0)
 
 
     # d is an array that contains booleans
@@ -58,9 +72,8 @@ class Solution:
         # The problem thus boils down to if a path exists.
         from collections import deque
         wordSet = set(wordDict)
-        q = deque() # for index 
+        q = deque([0]) # for starting index 
         visited = set()
-        q.append(0)
         while q:
             start = q.popleft() # idx
             if start in visited:
@@ -70,7 +83,7 @@ class Solution:
                     q.append(end)
                     if end == len(s):
                         return True
-                    visited.add(end)
+                    visited.add(start)
         return False
 
 

@@ -44,6 +44,17 @@ class Solution:
 
 
 	# two pointers + recursion
+	# T: O(n^2)
+	# S: O(n)
+	'''
+	left idx:  4
+	dabe abca ebad
+	left idx:  2
+	ac ab ca
+	left idx:  1
+	b a b
+	left idx:  1
+	'''
 	def shortestPalindrome(self, s: str) -> str:
         n = len(s)
         l = 0
@@ -62,17 +73,26 @@ class Solution:
 	brute force
 	T: O(n^2) for iteration and comparison
 	S: O(n) for rev
-	"abcd"
-	0 abcd dcba
-	1 abc cba
-	2 ab ba
+	s = "abcd"
+	idx rev[i:], s[0:n-i]
+	0 dcba abcd 
+	1 cba abc 
+	2 ba ab 
 	3 a a
+	idx rev[0:i], s[0:n-i]
+	0  abcd
+	1 d abc
+	2 dc ab
+	3 dcb a
 	'''
     def shortestPalindrome(self, s: str) -> str:
         rev = s[::-1]
         n = len(s)
-        for i in range(n):
-            # print (i, s[0:n-i], rev[i:])
-            if s[0:n-i] == rev[i:]:
+        for i in range(n): # try to find largest palin from the front, so s[0:n] => s[0:1]
+            # print (i, rev[0:i], s[0:n-i])
+            if s[0:n-i] == rev[i:]: # check the substring is pilandrome or not
                 return rev[0:i] + s
         return ""
+
+
+

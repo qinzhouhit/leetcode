@@ -1,7 +1,7 @@
 '''
 keys:
 Solutions:
-Similar:
+Similar: 987
 T:
 S:
 '''
@@ -13,6 +13,9 @@ class TreeNode:
         self.val = val
         self.left, self.right = None, None
 """
+
+# in 314, the order should be from left to right
+# in 987, the order should be decided by node value
 
 class Solution:
     # O(N) for S and T
@@ -55,3 +58,9 @@ class Solution:
                     queue.append((node.right, col + 1)) # right column
         # sorted(res): return the sorted keys (ascending)
         return [res[i] for i in sorted(res)]
+
+
+
+
+
+        

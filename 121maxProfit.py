@@ -33,6 +33,15 @@ class Solution:
             maxProfit = max(maxProfit, profit)
         return maxProfit
 
+    # self-made
+    def maxProfit(self, prices: List[int]) -> int:
+        minPrice = float("inf")
+        maxProft = float("-inf")
+        for price in prices:
+            minPrice = min(minPrice, price)
+            maxProft = max(maxProft, price - minPrice)
+        return maxProft
+
 
     # brute force
     def maxProfit0(self, prices: List[int]) -> int:

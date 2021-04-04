@@ -56,6 +56,7 @@ class Solution:
     # heapq method, not optimal
     # T: O(Nlogk), O(N) as the number of nodes for the while loop
     # O(logk) for the heap pop since there may be k elements in heap
+    # https://leetcode.com/problems/merge-k-sorted-lists/discuss/10513/108ms-python-solution-with-heapq-and-avoid-changing-heap-size
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         ## If two elements have the same val,
         # the next tuple items will be compared:
@@ -64,19 +65,16 @@ class Solution:
         # the smallest element gets pushed to the index position 0,
         # But rest of the data elements are not necessarily sorted.
         heapify(heap)
-        dummy = ListNode(None)
-        curr = dummy
-        while heap != []:
-            val, i, node = heap[0] # the smallest node
-            if not node.next: # exhausted one linked-list
-                heappop(heap) # returns the smallest data element from the heap.
-            else:
+        curr = dummy = ListNode(0)
+        while heap:
+            val, i, node = heappop(heap) # returns the smallest data element from the heap.
+            if node.next:
                 # recycling tie-breaker i guarantees uniqueness
                 #  replaces the smallest data element with a new value supplied in the function.
-                heapreplace(heap, (node.next.val, i, node.next))
+                heappush(heap, (node.next.val, i, node.next)) 
             curr.next = node
             curr = curr.next
-            return dummy.next
+        return dummy.next
 
     # heap, seems illegal to change ListNode class
     # could use a wrapper here
@@ -91,18 +89,18 @@ class Solution:
         minHeap = []
         for root in lists:
             if root:
-                heappush(minHeap, root)
-        head, tail = None, None
+                heappush(minHeap, Wrapper(root))
+        head, dummy = None, None # head is the pointer here
         while minHeap:
-            node = heappop(minHeap)
+            node = heappop(minHeap).node
             if not head:
-                head = tail = node
+                dummy = head = node
             else:
-                tail.next = node
-                tail = tail.next # insert the node ahead of tail
+                head.next = node
+                head = head.next # insert the node ahead of tail
             if node.next:
-                heappush(minHeap, node.next)
-        return head    
+                heappush(minHeap, Wrapper(node.next))
+        return dummy    
 
 
     # naive method: append the nodes vals in the list and sort, then 
