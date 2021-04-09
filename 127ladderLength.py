@@ -38,7 +38,7 @@ class Solution:
         # Queue for BFS; BFS time: O(N * M^2)
         queue = collections.deque([(beginWord, 1)])
         # Visited to make sure we don't repeat processing same word.
-        visited = {beginWord: True}
+        visited = set([beginWord])
         while queue:
             current_word, level = queue.popleft()      
             for i in range(L):
@@ -53,9 +53,11 @@ class Solution:
                         return level + 1
                     # Otherwise, add it to the BFS Queue. Also mark it visited
                     if word not in visited:
-                        visited[word] = True
+                        visited.add(word)
                         queue.append((word, level + 1))
-                all_combo_dict[intermediate_word] = []
+                # Both dig and dog will be transformed to d*g. It's unnecessary for us 
+                # to search d*g again for dig while we have already searched d*g for dog.
+                all_combo_dict[intermediate_word] = [] # can only be used once 
         return 0
     
     

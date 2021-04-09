@@ -27,7 +27,7 @@ class Solution:
         		l = mid + 1
         	else:
         		r = mid - 1
-        peak = l
+        peak = l # last val of ascending part
 
         l, r = 0, peak
         while l <= r:
@@ -35,7 +35,7 @@ class Solution:
         	mid_val = mountain_arr.get(mid)
         	if mid_val == target:
         		return mid
-        	elif mid_val > target:
+        	elif target < mid_val:
         		r = mid - 1
         	else:
         		l = mid + 1
@@ -46,7 +46,7 @@ class Solution:
         	mid_val = mountain_arr.get(mid)
         	if mid_val == target:
         		return mid
-        	elif mid_val > target:
+        	elif target < mid_val:
         		l = mid + 1
         	else:
         		r = mid - 1

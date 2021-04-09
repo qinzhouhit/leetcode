@@ -11,6 +11,7 @@ import heapq
 
 
 # https://leetcode.com/problems/top-k-frequent-words/discuss/108348/Python-3-solution-with-O(nlogk)-and-O(n)
+
 class Word:
     def __init__(self, freq, word):
         self.freq = freq
@@ -35,7 +36,7 @@ class Solution:
         heap = []
         for word, freq in ct.items():
             heapq.heappush(heap, Word(freq, word))
-            if len(heap) > k:
+            if len(heap) > k: # without Wrapper class Word, then the highest freq will be popped
                 heapq.heappop(heap)
         res = []
         for _ in range(k):

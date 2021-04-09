@@ -68,14 +68,13 @@ class Solution:
                 return 0
             if remain == 0:
                 return 1
-            
             res = 0
             res += helper(remain-1)
             res += helper(remain-2)
             return res
-        
-
         return helper(n)
+
+
 obj=Solution()
 print(obj.mySqrt(10))
 

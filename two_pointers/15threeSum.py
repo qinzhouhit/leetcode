@@ -9,7 +9,7 @@ S: O(1) for res
 
 
 class Solution:
-    # O(nLogn + nn) => O(n^2)
+    ##### O(nLogn + nn) => O(n^2)
     def threeSum(self, nums):
         res = []
         nums.sort()
@@ -39,7 +39,7 @@ class Solution:
         return res
 
 
-    # educative.io version, two pointers
+    ##### educative.io version, two pointers
     # T: O(n^2), S: O(logn) to O(n), depending on sort
     def threeSum1(self, nums):
         nums.sort()
@@ -72,41 +72,64 @@ class Solution:
     
 
 
-    # using twoSum
+    ##### using twoSum
     # T: O(n^2), O(n) for first number and O(n) for twoSum
     # S: O(n) for hashset
     def threeSum0(self, nums: List[int]) -> List[List[int]]:
+
+        def twoSum(i): # current idx
+            seen = set() # keep track of seen numbers
+            j = i + 1 # second number
+            while j < len(nums):
+                residue = -nums[i] - nums[j] # third number
+                if residue in seen:
+                    res.append([nums[i], nums[j], residue])
+                    while j < len(nums)-1 and nums[j] == nums[j+1]:
+                        j += 1 # avoid duplicates
+                seen.add(nums[j])
+                j += 1
+        
         res = []
         nums.sort() # to remove duplicates later
         for i in range(len(nums)):
             if nums[i] > 0:
                 break # first numebr number be negavtive, since sorted
             if i == 0 or nums[i-1] != nums[i]: # avoid duplicates
-                self.twoSum(nums, i, res)
+                twoSum(i)
         return res
-    
-    def twoSum(self, nums, i, res):
-        seen = set() # avoid duplicate
-        j = i + 1 # second number
-        while j < len(nums):
-            residue = -nums[i] - nums[j]
-            if residue in seen:
-                res.append([nums[i], nums[j], residue])
-                while j + 1 < len(nums) and nums[j] == nums[j+1]:
-                    j += 1 # avoid duplicates
-            seen.add(nums[j])
-            j += 1
 
 
+    ##### self-made verbose version
+    # use set to skip already seen numbers
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        def helper(cur, target):
+            h = set()
+            res = []
+            seen = set()
+            for i in range(cur+1, len(nums)):
+                residue = target - nums[i]
+                if residue in h and residue not in seen:
+                    seen.add(residue)
+                    res.append([residue, nums[i]])
+                else:
+                    h.add(nums[i])
+            return res
+
+        res = []
+        nums.sort()
+        seen = set()
+        # print (nums)
+        for i in range(len(nums)-2):
+            target = -nums[i]
+            if target not in seen:
+                seen.add(target)
+                res2 = helper(i, target)
+                if res2:
+                    for item in res2:
+                        res.append(item+[nums[i]])
+        return res
 
 
-
-
-
-
-    
-        
-                
                 
     # def threeSum(self, nums):
     #     res=[]; tmp=[]

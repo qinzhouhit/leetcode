@@ -38,11 +38,11 @@ class Solution:
     # binary search
     # T: O(logN); S: O(1)
     def mySqrt2(self, x):
-        if x < 2:
+        if x <= 1:
             return x
         
-        left, right = 2, x // 2
-        
+        # x//2 is large enough, since (x^2)/4 will be more than x^2 when x > 2
+        left, right = 2, x // 2 
         while left <= right:
             pivot = left + (right - left) // 2
             num = pivot * pivot
@@ -55,7 +55,7 @@ class Solution:
             
         # the while loop breaks when left > right, so it returns right
         # it's the same as left-1, since before it, left==right
-        return right 
+        return right # right is the smaller one
     
     
     # pocket calculator 

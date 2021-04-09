@@ -8,6 +8,9 @@ S:
 
 
 class Solution():
+
+    # T: O(n^2), n as length of s
+    # S: O(1)
     def longestPalindrome(self, s):
         res = ""
         for i in range(len(s)):
@@ -27,7 +30,7 @@ class Solution():
     def helper(self, s, l, r):
         if l >= 0 and r < len(s) and s[l] == s[r]:
             l -= 1; r += 1
-        return s[l+1:r]
+        return s[l+1:r] # after l -= 1 and r += 1, s[l] != s[r], so we have range as [l+1:r]
 
 obj=Solution()
 obj.longestPalindrome('abacddc')

@@ -19,9 +19,8 @@ class Solution:
     def findItinerary3(self, tickets: List[List[str]]) -> List[str]:
         
         flights = {}
-        # heapq (priotirty queue -> smallest lexcial order)
-        for flight in tickets:
-            origin, destination = flight[0], flight[1]
+        # heapq ( -> smallest lexcial order)
+        for origin, destination in tickets:
             if origin not in flights:
                 flights[origin] = [destination]
             else:
@@ -34,7 +33,7 @@ class Solution:
             destinations = flights[origin]
             while destinations:
                 dfs(heappop(destinations)) # the smallest one
-            path.append(origin)
+            path.append(origin) # append backward from the last one due to recursion
                 
         path = []
         dfs("JFK")
@@ -51,6 +50,7 @@ class Solution:
     stuck until hit the last exit node
     3. The reason we got stuck is because that we hit the exit
     '''
+    # https://leetcode.com/problems/reconstruct-itinerary/discuss/78768/Short-Ruby-Python-Java-C%2B%2B
     def findItinerary2(self, tickets: List[List[str]]) -> List[str]:
         targets = collections.defaultdict(list)
         for a, b in sorted(tickets)[::-1]:
@@ -65,16 +65,18 @@ class Solution:
         visit('JFK')
         return route[::-1]
 
-    # iterative
+    # iterative; O(ElogE), E as number of edges
     def findItinerary1(self, tickets: List[List[str]]) -> List[str]:
         targets = collections.defaultdict(list)
-        for a, b in sorted(tickets)[::-1]:
-            targets[a] += b,
+        # reversed lexical order, so smaller lexical ones will poped out first
+        for a, b in sorted(tickets, reverse=True): 
+            targets[a].append(b)
         route, stack = [], ['JFK']
         while stack:
             while targets[stack[-1]]:
-                stack += targets[stack[-1]].pop(),
-            route += stack.pop(),
+                nxt_stop = targets[stack[-1]].pop() # pop since can be used once and once only
+                stack.append(nxt_stop)
+            route.append(stack.pop())
         return route[::-1]
 
 

@@ -24,17 +24,45 @@ class Solution:
             x *= x # for even number, (x^2)^n
             n //= 2 # n >> 1
         return res
-    
+
+
+    # O(logN) recursion
+    def myPow(self, x, n):
+
+        def helper(x, n):
+            if n == 0:
+                return 1
+            half = helper(x, n//2)
+            if n % 2 == 0:
+                return half * half
+            else:
+                return half * half * x
+
+        if n < 0:
+            x = 1/x
+            n = -n
+        return helper(x, n)
+
     
     # Recursive
     def myPow(self, x, n):
-        if n==0:
+        if n == 0:
             return 1
-        if n<0:
+        if n < 0:
             return self.myPow(1/x, -n)
-        if n%2:
-            return x*self.myPow(x, n-1)
+        if n % 2:
+            return x * self.myPow(x, n-1)
         return self.myPow(x*x, int(n/2))
+
+    # another one, similar to the previous one
+    def myPow(self, x: float, n: int) -> float:
+        if n == 0:
+            return 1
+        elif n < 0:
+            return self.myPow(1/x, -n)
+        elif n % 2:
+            return x*self.myPow(x*x, n//2)
+        return self.myPow(x*x, n//2)
 
 
     # don't use it

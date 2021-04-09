@@ -7,6 +7,8 @@ S:
 '''
 from typing import List
 
+# Search in Rotated Sorted Array
+
 class Solution:
     # advanced version, where duplicates in nums
     def search2(self, nums: List[int], target: int) -> int:
@@ -76,12 +78,12 @@ class Solution:
             while l <= r:
                 mid = l + (r - l) // 2
                 if nums[mid] > nums[mid + 1]:
-                    return mid + 1
+                    return mid + 1 # the rotate idx is the idx after the drop
                 else:  # nums[mid] < nums[mid + 1] # no equal since nums are distinct
-                    if nums[l] > nums[mid]: # peak at left part
-                        r = mid - 1 # mid cant be the pivot since mid -> mid+1 still increasing
-                    else: # 
-                        l = mid + 1
+                    if nums[l] <= nums[mid]: # rotating at right part
+                        l = mid + 1 # mid cant be the pivot since mid -> mid+1 still increasing
+                    else: # nums[l] <= nums[mid]
+                        r = mid - 1
 
         def helper(l, r):
             while l <= r:
@@ -101,10 +103,10 @@ class Solution:
             return rotate_idx
         if rotate_idx == 0: # necessary
             return helper(0, n-1)
-        if target < nums[0]:
+        if target >= nums[0]: # the equal case is included in this part, of course...
+            return helper(0, rotate_idx) 
+        else: # target < nums[0], comparing to nums[0]!
             return helper(rotate_idx, n-1)
-        else:
-            return helper(0, rotate_idx)
 
     
 

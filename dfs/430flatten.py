@@ -20,6 +20,32 @@ class Node:
 
 class Solution:
 
+    # O(N) for S and T, iteration
+    def flatten(self, head: 'Node') -> 'Node':
+        if not head:
+            return 
+        dummyNode = Node(0, None, head, None)
+        prev = dummyNode # prev of head
+        
+        stack = [head]
+        while stack: 
+            cur = stock.pop()
+            prev.next = cur # prev/cur step
+            cur.prev = prev
+            
+            if cur.next:
+                stack.append(cur.next)
+            
+            if cur.child: # append child later so we pop child first
+                stack.append(cur.child)
+                cur.child = None # required
+            
+            prev = cur
+        # detach the dummyHead from the res since we doubly connect them in the prev/cur step
+        dummyNode.next.prev = None
+        return dummyNode.next
+        
+
 	# O(N) for S and T, iteration
 	def flatten1(self, head: 'Node') -> 'Node':
 		if not head:
@@ -44,30 +70,7 @@ class Solution:
 
 
 
-	# O(N) for S and T, iteration
-    def flatten(self, head: 'Node') -> 'Node':
-        if not head:
-            return 
-        dummyNode = Node(0, None, head, None)
-        prev = dummyNode # prev of head
-        
-        stack = [head]
-        while stack: 
-            cur = stock.pop()
-            prev.next = cur # prev/cur step
-            cur.prev = prev
-            
-            if cur.next:
-                stack.append(cur.next)
-            
-            if cur.child: # append child later so we pop child first
-                stack.append(cur.child)
-                cur.child = None # required
-            
-            prev = cur
-        # detach the dummyHead from the res since we doubly connect them in the prev/cur step
-        dummyNode.next.prev = None
-        return dummyNode.next
+	
 
 
 

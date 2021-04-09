@@ -25,8 +25,9 @@ class Solution:
             if k <= curr_missing:
                 return arr[i] + k
             # otherwise, proceed further
-            k -= curr_missing
+            k -= curr_missing # when k > curr_missing
 
+        # after the for loop, k is still positive
         # if the missing number if greater than arr[-1]
         return arr[-1] + k
 

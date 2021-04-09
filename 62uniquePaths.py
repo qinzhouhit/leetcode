@@ -29,11 +29,9 @@ class Solution:
     
     # dfs
     def uniquePaths1(self, m: int, n: int) -> int:
-        
         self.r_max = m-1
         self.c_max = n-1
         self.memo = dict()
-        
         return self.check_path()
     
     def check_path(self, r=0,c=0):
@@ -46,6 +44,7 @@ class Solution:
         if (r,c) not in self.memo:
             self.memo[r,c] = self.check_path(r+1,c) + self.check_path(r,c+1)
         return self.memo[r,c]
+    
     
     # recursive
     def uniquePaths2(self, m: int, n: int) -> int:

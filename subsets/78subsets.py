@@ -56,18 +56,19 @@ class Solution:
 
     # TODO: DFS backtracking
     def subsets(self, nums):
-        res=[]; path=[]
-        self.helper(res, path, 0, nums)
+
+        def helper(path, start):
+            res.append(path[:])
+            for i in range(start, len(nums)):
+                path.append(nums[i])
+                self.helper(path, i+1)
+                path.pop()
+
+        res = []
+        helper([], 0)
         return res
 
-    def helper(self, res, path, start, nums):
-        res.append(path[:])
-        for i in range(start, len(nums)):
-            path.append(nums[i])
-            self.helper(res, path, i+1, nums)
-            path.pop()
-
-
+    
     # TODO: huahua
     def subsets3(self, nums):
         res = []
@@ -84,6 +85,17 @@ class Solution:
             self.dfs3(n, i+1, cur, res, nums)
             cur.pop()
 
+    # self-made
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        def helper(idx, path):
+                # if idx == len(path):
+                res.append(path[:])
+                for i in range(idx, len(nums)):
+                    helper(i+1, path + [nums[i]])
+                
+        res = []
+        helper(0, [])
+        return res
 
 
 

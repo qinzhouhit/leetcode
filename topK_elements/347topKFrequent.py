@@ -11,6 +11,32 @@ from collections import Counter, heapq
 import random
 
 class Solution:
+
+    # https://leetcode.com/problems/top-k-frequent-elements/discuss/740374/Python-5-lines-O(n)-buckets-solution-explained
+    # O(n) for S and T, bucket sort
+    # idea: the frequency of any element can not be more than n
+    def topKFrequent(self, nums, k):
+        bucket = [[] for _ in range(len(nums) + 1)]
+        ct = Counter(nums).items()  
+        for num, freq in ct.items(): 
+            bucket[freq].append(num) # buckets is list of lists now, create one big list out of it.
+        flat_list = list(chain(*bucket))
+        return flat_list[::-1][:k]
+
+    ##### the chain operation is the same as below
+        flat_list = []
+        # traverse from right to left so number with higher frequency come first
+        for i in range(len(buckets) - 1, -1, -1):
+            bucket = buckets[i]
+            if bucket:
+                for num in bucket:
+                    flat_list.append(num)
+        return flat_list[:k]
+
+
+
+
+
     # O(N) for S and T, quickselect
     def topKFrequent3(self, nums: List[int], k: int) -> List[int]:
         

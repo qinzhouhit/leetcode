@@ -1,7 +1,7 @@
 '''
 keys:
 Solutions:
-Similar: 127
+Similar: 127, 126 returns all solutions, 127 only returns path length
 T: O(n*26) -> O(n*26^0.5), l = len(word), n = |wordList|
 S: O(n + k*L), k = number of paths, L: length of a path
 https://leetcode.com/problems/word-ladder-ii/discuss/269012/Python-BFS%2BBacktrack-Greatly-Improved-by-bi-directional-BFS

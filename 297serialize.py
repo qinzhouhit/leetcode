@@ -15,6 +15,10 @@ class TreeNode(object):
         self.right = None
 
 class Codec:
+
+    #####
+    # [1,2,3,null,null,4,5]
+    # serialized: "1 2 # # 3 4 # # 5 # #"
     # preorder
     def serialize(self, root):
         """Encodes a tree to a single string.
@@ -35,8 +39,8 @@ class Codec:
     
     
     def deserialize(self, data):
-        """Decodes your encoded data to tree.
-        
+        """
+        Decodes your encoded data to tree.
         :type data: str
         :rtype: TreeNode
         """

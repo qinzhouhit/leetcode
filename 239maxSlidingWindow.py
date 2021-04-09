@@ -25,22 +25,36 @@ S: O(k)
 # TODO: deque
 from collections import deque
 class Solution:
+    # O(N) for S and T
     def maxSlidingWindow(self, nums, k):
         res = []
-        dq = deque()
+        q = deque()
         # make sure the rightmost one is the smallest/ leftmost one is the biggest
-        for i, n in enumerate(nums):
-            while dq and nums[dq[-1]] <= n:
-                dq.pop()
-            # add in
-            dq += [i]
+        for idx, num in enumerate(nums):
+            while q and num >= nums[q[-1]]:
+                q.pop()
+            # add current num idx
+            q.append(idx)
             # make sure the leftmost one is in-bound
-            if i - dq[0] >= k:
-                dq.popleft()
-            # if i + 1 < k, then we are initializing the dq array
-            if i + 1 >= k:
-                res.append(nums[dq[0]])
+            # check this first, corner case: [1, -1], 1
+            if idx - q[0] >= k:
+                q.popleft()
+            # if i + 1 < k, then we are initializing the q array
+            if idx >= k - 1: # e.g., having at least k elements now
+                res.append(nums[q[0]])
         return res
+
+
+
+    # T: O(N*k); S: O(N-k+1) for output
+    def maxSlidingWindow(self, nums: 'List[int]', k: 'int') -> 'List[int]':
+        n = len(nums)
+        if n * k == 0:
+            return []
+        
+        return [max(nums[i:i + k]) for i in range(n - k + 1)]
+
+
 
 
 

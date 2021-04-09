@@ -8,9 +8,10 @@ S: O(1)
 
 
 class Solution:
+    # T: O(n); S: O(1)
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         l, r = 0, len(numbers) - 1
-        while l < r: # l<=r also works
+        while l <= r: # l < r also works
             s = numbers[l] + numbers[r]
             if s == target:
                 return [l+1, r+1]
@@ -18,6 +19,7 @@ class Solution:
                 l += 1
             else:
                 r -= 1
+
 
     # dictionary
     def twoSum2(self, numbers, target):
@@ -27,8 +29,10 @@ class Solution:
                 return [dic[target-num]+1, i+1]
             dic[num] = i
 
+
     # binary search
     def twoSum3(self, numbers, target):
+
         for i in range(len(numbers)):
             l, r = i+1, len(numbers)-1
             tmp = target - numbers[i]

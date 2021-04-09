@@ -25,7 +25,8 @@ class Solution:
         return self.ans
 
     def helper(self, root):
-        if not root: return 0
+        if not root: 
+            return float("-inf")
         # ignore any path which has an overall negative sum.
         # 0 is like giving up the path, i.e., not go through it
         l = max(0, self.helper(root.left)) # max(0,): since the ans may be negative
@@ -36,16 +37,17 @@ class Solution:
 
     # The only difference will be to ignore the paths with negative sums.
     def maxPathSum(self, root: TreeNode) -> int:
-        def max_gain(node):
+        def helper(node):
             nonlocal max_sum # making the maxsum the same, or use self.max_sum
-            if not node: return 0
-            left_gain = max(max_gain(node.left), 0)
-            right_gain = max(max_gain(node.right), 0)
+            if not node: 
+                return 0
+            left_gain = max(helper(node.left), 0)
+            right_gain = max(helper(node.right), 0)
 
             price_newpath = node.val + left_gain + right_gain
             max_sum = max(max_sum, price_newpath)
             return node.val + max(left_gain, right_gain)
 
         max_sum = float("-inf")
-        max_gain(root)
+        helper(root)
         return max_sum

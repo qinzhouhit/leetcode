@@ -34,3 +34,34 @@ class Solution:
                     q.append((node.right, 2 * col_idx + 1))
             res = max(res, col_idx - level_head_idx + 1)
         return res
+
+
+    # self-made, notice how the index are calculated
+    # it is not cidx + 1 and cidx - 1
+    def widthOfBinaryTree(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        
+        q = deque([[root, 0]])
+        res = float("-inf")
+        while q:
+            lq = len(q)
+            cmin, cmax = float("inf"), float("-inf")
+            for _ in range(lq):
+                node, cidx = q.popleft()
+                cmin = min(cmin, cidx)
+                cmax = max(cmax, cidx)
+                # print (ridx, rmin, rmax, res )
+                res = max(res, cmax-cmin+1)
+                if node.left:
+                    q.append([node.left, 2*cidx])
+                if node.right:
+                    q.append([node.right, 2*cidx+1])
+        return res
+
+
+
+
+
+        
+                

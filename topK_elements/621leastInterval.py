@@ -19,7 +19,8 @@ class Solution:
             heappush(maxHeap, (-freq, task))
         while maxHeap:
             waitList = []
-            ct = n + 1 # try to excute n+1 tasks since idle needed every k tasks
+            # one task + n idle slots
+            ct = n + 1 # try to excute n+1 tasks since idle needed every n tasks
             while ct and maxHeap:
                 res += 1
                 freq, task = heappop(maxHeap)
@@ -37,7 +38,7 @@ class Solution:
         return res
 
 
-    # T: O(N); S: O(1), official, greedy
+    # T: O(N); S: O(1), official, greedy                                                
     def leastInterval1(self, tasks: List[str], n: int) -> int:
         # frequencies of the tasks
         frequencies = [0] * 26
@@ -48,7 +49,7 @@ class Solution:
 
         # max frequency
         f_max = frequencies.pop()
-        idle_time = (f_max - 1) * n
+        idle_time = (f_max - 1) * n # total idle time for f_max task
         
         while frequencies and idle_time > 0:
             idle_time -= min(f_max - 1, frequencies.pop())

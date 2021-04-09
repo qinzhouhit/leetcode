@@ -32,12 +32,6 @@ class DSU:
 			self.id[x] = self.id[self.id[x]] # this line is not necessary
 			x = self.id[x]
 		return x
-	'''
-	def find(self, x):
-		if x != self.id[x]:
-			self.p[x] = self.find(self.p[x])
-		return self.p[x]
-	'''
 
 	def union(self, a, b): # optimized version, making smaller one part of bigger one
 	# union by rank
@@ -66,6 +60,13 @@ class Solution:
 				res += [islands.count]
 		return res
 
+
+	'''
+	def find(self, x):
+		if x != self.id[x]:
+			self.p[x] = self.find(self.p[x])
+		return self.p[x]
+	'''
 
 
 class Solution:

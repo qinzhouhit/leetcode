@@ -17,6 +17,18 @@ class Solution:
                 nums[i] += nums[i-1]
                 res = max(res, nums[i])
         return res
+
+
+    ##### O(N^2)
+    def maxSubArray(self, nums: List[int]) -> int:
+        res = float("-inf")
+        for i in range(len(nums)):
+            cur = 0
+            for j in range(i, len(nums)):
+                cur += nums[j]
+                res = max(res, cur)
+        return res
+
     
     #####
     # divide and conquer

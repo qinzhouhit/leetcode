@@ -16,7 +16,7 @@ class Solution:
     def firstMissingPositive3(self, nums: List[int]) -> int:
         i = 0; n = len(nums)
         while i < n:
-            idx = nums[i] - 1 # e.g., nums[i] should be at idx nums[i]-1
+            idx = nums[i] - 1 # e.g., nums[i] should be at idx, i.e., nums[i]-1
             # the key difference is "nums[i] > 0 and nums[i] <= n"
             # ignore all numbers that are out of the range of the array
             # (i.e., all negative numbers and all numbers greater than 

@@ -34,6 +34,18 @@ class Solution:
             curr.next = prev
             prev = curr
         return prev
+
+    # self-made
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = None
+        return self.helper(head, prev)
+    
+    def helper(self, cur, prev):
+        if not cur:
+            return prev
+        nxt = cur.next
+        cur.next = prev
+        return self.helper(nxt, cur)
  
 
     # recursive

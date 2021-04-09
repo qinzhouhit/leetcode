@@ -1,5 +1,5 @@
 '''
-keys: topological sort
+keys: topological sort, course schedule
 Solutions:
 Similar:
 T: O(V+E) ~ O(V^2), but V^2 edges must result in multiple loops
