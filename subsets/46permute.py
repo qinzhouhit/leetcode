@@ -52,17 +52,17 @@ class Solution:
         
     # remember this one 
     def permute1(self, nums: List[int]) -> List[List[int]]:
-        res = []
-        self.dfs(nums, [], res)
-        return res
+        self.res = []
+        self.dfs(nums, [])
+        return self.res
     
-    def dfs(self, nums, path, res):
+    def dfs(self, nums, path):
         if not nums:
-            res.append(path)
-            return # backtracking
+            self.res.append(path)
+            return # backtracking # not necessary
         for i in range(len(nums)):
             # nums[:i]+nums[i+1:] will be nums excluding i
-            self.dfs(nums[:i]+nums[i+1:], path+[nums[i]], res)
+            self.dfs(nums[:i]+nums[i+1:], path+[nums[i]])
 
     # T: see solution
     # S: O(N!), N as then number of elements

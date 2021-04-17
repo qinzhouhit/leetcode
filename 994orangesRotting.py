@@ -53,11 +53,13 @@ class Solution:
         fresh = 0
         for r in range(rows):
             for c in range(cols):
-                if grid[r][c] == 1: fresh += 1
-                elif grid[r][c] == 2: q.append((r, c)) # as starting point
+                if grid[r][c] == 1: 
+                    fresh += 1
+                elif grid[r][c] == 2: 
+                q.append((r, c)) # as starting point
 
         directions = [(-1,0), (0,1), (1,0), (0,-1)]
-        days = 0
+        minutes = 0
         while q and fresh:
             size = len(q) # how many nodes to expand
             while size:
@@ -69,8 +71,8 @@ class Solution:
                         fresh -= 1
                         grid[dx][dy] = 2
                         q.append((dx, dy))
-            days += 1
-        return days if not fresh else -1
+            minutes += 1
+        return minutes if not fresh else -1
 
 
 					

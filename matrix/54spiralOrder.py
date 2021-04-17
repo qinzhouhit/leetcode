@@ -12,14 +12,15 @@ class Solution:
     # the best solution
     def spiralOrder2(self, matrix: List[List[int]]) -> List[int]:
         res = []
-        if not matrix or not matrix[0]: return res
+        if not matrix or not matrix[0]: 
+            return res
         
-        startRow = 0; endRow = len(matrix)-1
+        startRow = 0; endRow = len(matrix)-1 # those are reachable idx
         startCol = 0; endCol = len(matrix[0]) - 1
         direction = 0
         
         while startRow <= endRow and startCol <= endCol:
-            # right, note that those 
+            # right direction
             if direction == 0: 
                 for col in range(startCol, endCol+1):
                     res.append(matrix[startRow][col])

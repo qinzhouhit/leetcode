@@ -51,7 +51,7 @@ class Leaderboard:
 
         for key, value in self.sortedScores.items():
             # already sorted by keys 
-            times = self.sortedScores.get(key)
+            times = self.sortedScores.get(key) # times == value
             for _ in range(times): 
                 total += -key;
                 count += 1;
