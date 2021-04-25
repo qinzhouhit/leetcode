@@ -1,5 +1,7 @@
 '''
-keys: 
+keys: find common intervals from their FREE time
+notice that we dont need to care which user, we just focus on
+the common time.
 Solutions:
 Similar:
 T:
@@ -23,7 +25,7 @@ class Solution:
     # O(c) as number of such operations
 	def employeeFreeTime3(self, schedule: '[[Interval]]') -> '[Interval]':
 		ans = []
-		# 0 means start and 1 means end
+		# (job_idx_th start time, user ID, job idx)
         pq = [(emp[0].start, empID, 0) for empID, emp in enumerate(schedule)]
         heapq.heapify(pq)
         # anchor: minimal start time for all employee

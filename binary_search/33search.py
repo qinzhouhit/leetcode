@@ -79,11 +79,12 @@ class Solution:
                 mid = l + (r - l) // 2
                 if nums[mid] > nums[mid + 1]:
                     return mid + 1 # the rotate idx is the idx after the drop
-                else:  # nums[mid] < nums[mid + 1] # no equal since nums are distinct
-                    if nums[l] <= nums[mid]: # rotating at right part
-                        l = mid + 1 # mid cant be the pivot since mid -> mid+1 still increasing
-                    else: # nums[l] <= nums[mid]
-                        r = mid - 1
+                # else:  # nums[mid] < nums[mid + 1] # no equal since nums are distinct
+                if nums[l] <= nums[mid]: # rotating at right part
+                    l = mid + 1 # mid cant be the pivot since mid -> mid+1 still increasing
+                else: # nums[l] <= nums[mid]
+                    r = mid - 1
+                    
 
         def helper(l, r):
             while l <= r:
@@ -96,7 +97,7 @@ class Solution:
                     r = mid - 1
             return -1 # remember this!
 
-        # pivot where the trend changes
+        # pivot where the trend changes, the starting idx of second half
         # [4,5,6,7,0,1,2], rotate_idx = 4
         rotate_idx = find_rotate_idx(0, n-1) 
         if nums[rotate_idx] == target:

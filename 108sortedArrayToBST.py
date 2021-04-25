@@ -51,3 +51,82 @@ class Solution:
         return convert(0, len(nums)-1)
 
 
+############################
+# the version in algoexpert
+############################
+
+class BST:
+    def __init__(self, value):
+        self.value = value 
+        self.left = None
+        self.right = None
+
+    def insert(self, value):
+        if value < self.value:
+            if self.left is None:
+                self.left = BST(value)
+            else:
+                self.left.insert(value)
+        else:
+            if self.right is None:
+                self.right = BST(value)
+            else:
+                self.right.insert(value)
+
+# given sorted array of distinct integers
+# construct a BST with minimum height and return the root
+
+
+def minHeightBST(arr):
+    return BSTconstruct(arr, None, 0, len(array)-1)
+
+# solution 1: O(n) for S and T
+def BSTconstruct(arr, node, startIdx, endIdx):
+    if startIdx > endIdx:
+        return
+    midIdx = (startIdx + endIdx) // 2
+    val = arr[midIdx] # value to add
+    if not node:
+        node = BST(val)
+    else:
+        node.insert(val)
+    BSTconstruct(arr, node, startIdx, midIdx-1)
+    BSTconstruct(arr, node, midIdx+1, endIdx)
+    return node
+
+# solution 2: O(n) for S and T
+def BSTconstruct(arr, startIdx, endIdx):
+    if startIdx > endIdx:
+        return None
+    midIdx = (startIdx + endIdx) // 2
+    root = BST(arr[midIdx])
+    root.left = BSTconstruct(arr, startIdx, midIdx-1)
+    root.right = BSTconstruct(arr, midIdx+1, endIdx)
+    return root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,8 @@ class Solution:
 
 
 	# official
+	# T: O(4^n / sqrt(n)), each valid sequence has at most n steps during the 
+	# backtracking procedure
 	def generateParenthesis1(self, n: int) -> List[str]:
 
 		def backtrack(s = "", left = 0, right = 0):
@@ -25,6 +27,25 @@ class Solution:
 		res = []
 		backtrack()
 		return res
+
+	### explicit
+	def helper(path, l, r):
+            if len(path) == n * 2:
+                res.append("".join(path))
+                return
+            if l < n:
+                path.append("(")
+                helper(path, l+1, r)
+                path.pop()
+            if l > r:
+                path.append(")")
+                helper(path, l, r+1)
+                path.pop()
+        
+        res = []
+        helper([], 0, 0)
+        return res
+
 
 
 	# backtracking

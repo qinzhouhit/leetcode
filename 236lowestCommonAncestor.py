@@ -55,7 +55,7 @@ class Solution:
             # If the current node is one of p or q
             mid = current_node == p or current_node == q
 
-            # If any two of the three flags left, right or mid become True.
+            # If any two of the three flags, left, right or mid become True.
             if mid + left + right >= 2:
                 self.ans = current_node
 

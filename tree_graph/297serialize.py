@@ -19,10 +19,10 @@ class Codec:
     #####
     # [1,2,3,null,null,4,5]
     # serialized: "1 2 # # 3 4 # # 5 # #"
-    # preorder
+    # preorder: since it generates unique traversal
     def serialize(self, root):
-        """Encodes a tree to a single string.
-
+        """
+        Encodes a tree to a single string.
         :type root: TreeNode
         :rtype: str
         """
@@ -33,7 +33,7 @@ class Codec:
                 transform(node.right)
             else:
                 vals.append("#")
-        vals = []
+        vals = [] # don't use vals += "", since it keeps creating new string object
         transform(root)
         return " ".join(vals)
     

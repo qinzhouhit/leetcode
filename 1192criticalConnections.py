@@ -6,7 +6,20 @@ T:
 S:
 '''
 
+'''
+naive: one for loop for all the edges
+delete this edge and traverse the graph to see it can visit all the nodes
+'''
+
 # https://www.youtube.com/watch?v=mKUsbABiwBI&t=661s
+'''
+Find a circle, any edge of the circle is not critical connection.
+How to find a cricle: 
+DFS forward: visit each node at most once, keep track the steps from 
+the origin to the current node.
+DFS backward: return the mininum steps of visiting all other nodes
+except parent regarding this node
+'''
 import collections
 class Solution:
     # T: O(n), S: O(n)
@@ -17,11 +30,12 @@ class Solution:
             graph[u].add(v)
             graph[v].add(u)
 
-        jump = [-1]*n # the minimum step of each node
+        # the minimum value/steps/depth seen by each node
+        jump = [-1] * n # the minimum step of each node
         # starting from the current node, explore all the node connecting to this node
         # except for its parents (avoid infinite loop)
         # return the mininum value node (return the value, not the node itself)
-        def dfs(cur, parent, level, jump, res, graph):
+        def dfs(cur:int, parent:int, level:int, jump:list, res:list, graph) -> int:
             '''
             :param cur: current node
             :param parent: parent node
@@ -33,7 +47,7 @@ class Solution:
             '''
             jump[cur] = level + 1 # current dfs depth
             for child in graph[cur]:
-                if child == parent:
+                if child == parent: # dont visit parent, preventing loop
                     continue
                 elif jump[child] == -1: # never visited before, so visit
                     # the min step of cur node is the min step of the children nodes
@@ -41,7 +55,9 @@ class Solution:
                 else: # visited before, no need to visit again
                     jump[cur] = min(jump[cur], jump[child])
 
-            if jump[cur] == level + 1 and cur != 0: # the depth does not change after the exploration
+            # if the depth does not change after the exploration
+            # cur != 0 since we dont want to check the 0 and -1 (dummy) connection
+            if jump[cur] == level + 1 and cur != 0:
                 res.append([parent, cur])
             return jump[cur]
 

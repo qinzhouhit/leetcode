@@ -7,6 +7,19 @@ S:
 '''
 
 class Solution:
+    # brute force, T: O(n^2), S: O(n)
+    def productExceptSelf(self, nums):
+        products = [0] * len(nums)
+
+        for i in range(len(nums)):
+            curProduct = 1
+            for j in range(len(nums)):
+                if i != j:
+                    curProduct *= nums[j]
+            products[i] = curProduct
+        return products
+
+
     '''
     Suppose you have numbers:
     Numbers [1 2 3 4 5]

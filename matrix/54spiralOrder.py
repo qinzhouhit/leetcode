@@ -15,7 +15,7 @@ class Solution:
         if not matrix or not matrix[0]: 
             return res
         
-        startRow = 0; endRow = len(matrix)-1 # those are reachable idx
+        startRow = 0; endRow = len(matrix) - 1 # those are reachable idx
         startCol = 0; endCol = len(matrix[0]) - 1
         direction = 0
         

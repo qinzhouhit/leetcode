@@ -88,8 +88,9 @@ class Solution:
         # Return top k frequent elements
         return unique[n - k:]
     
+
     # educative.io heap
-    # T: O(N+N*logK); S: O(N)
+    # T: O(N + NlogK); S: O(N)
     def topKFrequent4(self, nums: List[int], k: int) -> List[int]:
         ct = Counter(nums)
         h = []

@@ -40,9 +40,29 @@ class Solution:
 
    	# another one: using 1-6 to generate 1-10
    	def rand10(self):
-   		rand30 = 30
-   		while rand30 >= 30:
-   			rand30 = (rand6() - 1) * 6 + rand6() - 1
-   		return rand30 % 10 + 1
+     		rand30 = 30
+     		while rand30 >= 30:
+     			  rand30 = (rand6() - 1) * 6 + rand6() - 1
+     		return rand30 % 10 + 1
+
+    # another one, 1-5 to generate 1-7
+    def rand7(self):
+        rand24 = 24
+        while rand24 >= 24:
+            rand24 = (rand5() - 1) * 5 + rand5() - 1 # 0 - 24
+        return rand24 % 4 + 1
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
