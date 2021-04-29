@@ -8,7 +8,7 @@ S:
 import collections
 
 class Solution:
-    # T: O(NK)
+    # T: O(NK), S: O(NK)
     def groupAnagrams1(self, strs):
         ans = collections.defaultdict(list)
         for s in strs:
@@ -22,10 +22,10 @@ class Solution:
     # T: O(NKlogK), N as length of strs, K as max length of a string in strs
     def groupAnagrams(self, strs):
         groups = {}
-        for str_ in strs:
-            k = tuple(sorted(str_))
+        for s in strs:
+            k = tuple(sorted(s))
             # print (k)
-            groups[k] = groups.get(k, [])+[str_]
+            groups[k] = groups.get(k, []) + [s]
         return list(groups.values())
 
 

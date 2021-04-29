@@ -25,6 +25,7 @@ class Solution:
         return maxSoFar
 
     # T: O(N), S: O(1), the method to go
+    # just keep updating the minimum price
     def maxProfit(self, prices):
         maxProfit, minPrice = 0, float('inf')
         for price in prices:

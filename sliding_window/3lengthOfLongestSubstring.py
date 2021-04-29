@@ -10,6 +10,7 @@ class Solution:
     # return an integer
     # sliding window
     # T: O(n), S: O(min(m, n)), m as size of charset
+    # "tmmzuxt"
     def lengthOfLongestSubstring(self, s):
         startIdx = maxLength = 0
         usedChar = {} # v: latest appearance idx of a character

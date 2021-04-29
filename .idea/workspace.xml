@@ -21,16 +21,26 @@
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/114flatten.py" beforeDir="false" afterPath="$PROJECT_DIR$/114flatten.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/173BSTIterator.py" beforeDir="false" afterPath="$PROJECT_DIR$/173BSTIterator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/394decodeString.py" beforeDir="false" afterPath="$PROJECT_DIR$/394decodeString.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/50myPow.py" beforeDir="false" afterPath="$PROJECT_DIR$/50myPow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/611triangleNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/611triangleNumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/692topKFrequent.py" beforeDir="false" afterPath="$PROJECT_DIR$/692topKFrequent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/binary_search/33search.py" beforeDir="false" afterPath="$PROJECT_DIR$/binary_search/33search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topK_elements/347topKFrequent.py" beforeDir="false" afterPath="$PROJECT_DIR$/topK_elements/347topKFrequent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topological/269alienOrder.py" beforeDir="false" afterPath="$PROJECT_DIR$/topological/269alienOrder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/two_pointers/15threeSum.py" beforeDir="false" afterPath="$PROJECT_DIR$/two_pointers/15threeSum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/121maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/121maxProfit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/123maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/123maxProfit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/153findMin.py" beforeDir="false" afterPath="$PROJECT_DIR$/153findMin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/166fractionToDecimal.py" beforeDir="false" afterPath="$PROJECT_DIR$/166fractionToDecimal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/188maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/188maxProfit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/309maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/309maxProfit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/443compress.py" beforeDir="false" afterPath="$PROJECT_DIR$/443compress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/49groupAnagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/49groupAnagrams.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/62uniquePaths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/688knightProbability.py" beforeDir="false" afterPath="$PROJECT_DIR$/688knightProbability.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/706MyHashMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/706MyHashMap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/70climbStairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/70climbStairs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/714maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/714maxProfit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7reverse.py" beforeDir="false" afterPath="$PROJECT_DIR$/7reverse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/862shortestSubarray.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8myAtoi.py" beforeDir="false" afterPath="$PROJECT_DIR$/8myAtoi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heap/1086highFive.py" beforeDir="false" afterPath="$PROJECT_DIR$/heap/1086highFive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sliding_window/3lengthOfLongestSubstring.py" beforeDir="false" afterPath="$PROJECT_DIR$/sliding_window/3lengthOfLongestSubstring.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topK_elements/215kthLargest.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +71,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.000test">
+  <component name="RunManager" selected="Python.862shortestSubarray">
     <configuration name="000test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="301removeInvalidParentheses" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="862shortestSubarray" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,11 +185,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bfs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sliding_window" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bfs/301removeInvalidParentheses.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sliding_window/862shortestSubarray.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -256,19 +266,19 @@
       <item itemvalue="Python.232MyQueue" />
       <item itemvalue="Python.29divide" />
       <item itemvalue="Python.od_processing" />
-      <item itemvalue="Python.301removeInvalidParentheses" />
       <item itemvalue="Python.untitled" />
       <item itemvalue="Python.string_compress" />
       <item itemvalue="Python.1239maxLength" />
       <item itemvalue="Python.000test" />
+      <item itemvalue="Python.862shortestSubarray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.862shortestSubarray" />
         <item itemvalue="Python.000test" />
         <item itemvalue="Python.1239maxLength" />
         <item itemvalue="Python.string_compress" />
         <item itemvalue="Python.untitled" />
-        <item itemvalue="Python.301removeInvalidParentheses" />
       </list>
     </recent_temporary>
   </component>
@@ -303,25 +313,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1157" height="256" key="GridCell.Tab.0.bottom" timestamp="1617564581345">
+    <state width="1157" height="279" key="GridCell.Tab.0.bottom" timestamp="1619486248572">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.bottom/39.25.2009.1127@39.25.2009.1127" timestamp="1617564581345" />
+    <state width="1157" height="279" key="GridCell.Tab.0.bottom/39.25.2009.1127@39.25.2009.1127" timestamp="1619486248572" />
     <state width="1157" height="279" key="GridCell.Tab.0.bottom/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512160" />
-    <state width="1157" height="256" key="GridCell.Tab.0.center" timestamp="1617564581345">
+    <state width="1157" height="279" key="GridCell.Tab.0.center" timestamp="1619486248572">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.center/39.25.2009.1127@39.25.2009.1127" timestamp="1617564581345" />
+    <state width="1157" height="279" key="GridCell.Tab.0.center/39.25.2009.1127@39.25.2009.1127" timestamp="1619486248572" />
     <state width="1157" height="279" key="GridCell.Tab.0.center/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512160" />
-    <state width="1157" height="256" key="GridCell.Tab.0.left" timestamp="1617564581344">
+    <state width="1157" height="279" key="GridCell.Tab.0.left" timestamp="1619486248571">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.left/39.25.2009.1127@39.25.2009.1127" timestamp="1617564581344" />
+    <state width="1157" height="279" key="GridCell.Tab.0.left/39.25.2009.1127@39.25.2009.1127" timestamp="1619486248571" />
     <state width="1157" height="279" key="GridCell.Tab.0.left/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512159" />
-    <state width="1157" height="256" key="GridCell.Tab.0.right" timestamp="1617564581345">
+    <state width="1157" height="279" key="GridCell.Tab.0.right" timestamp="1619486248572">
       <screen x="39" y="25" width="2009" height="1127" />
     </state>
-    <state width="1157" height="256" key="GridCell.Tab.0.right/39.25.2009.1127@39.25.2009.1127" timestamp="1617564581345" />
+    <state width="1157" height="279" key="GridCell.Tab.0.right/39.25.2009.1127@39.25.2009.1127" timestamp="1619486248572" />
     <state width="1157" height="279" key="GridCell.Tab.0.right/40.25.2008.1127@40.25.2008.1127" timestamp="1615323512160" />
     <state x="1068" y="400" width="670" height="676" key="search.everywhere.popup" timestamp="1617134868090">
       <screen x="39" y="25" width="2009" height="1127" />
@@ -333,7 +343,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/7reverse.py</url>
-          <line>19</line>
+          <line>43</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -348,7 +358,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/105buildTree.py</url>
-          <line>25</line>
+          <line>26</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -368,7 +378,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/4findMedianSortedArrays.py</url>
-          <line>18</line>
+          <line>27</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -463,7 +473,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/hashmap/1233removeSubfolders.py</url>
-          <line>25</line>
+          <line>11</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -485,6 +495,11 @@
           <url>file://$PROJECT_DIR$/000test.py</url>
           <line>22</line>
           <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sliding_window/862shortestSubarray.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="113" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -43,7 +43,8 @@ class Solution:
     
         return dp[n-1]
 
-    # memo
+
+    # memo, O(n) for S and T
     def climbStairs(self, n: int) -> int:
     	def helper(i, n, memo):
     		if i > n:

@@ -28,7 +28,7 @@ class Solution:
 		res.append([idx, sum(cur)//len(cur)])
 		return res[::-1] # starting from small IDs
 
-	# use heapq for each id
+	### use heapq for each id
 	def highFive(self, items: List[List[int]]) -> List[List[int]]:
 		d = collections.defaultdict(list)
 
@@ -43,11 +43,7 @@ class Solution:
 
 
 
-
-
-
-
-	# self-made, T: O(NlogN), S: O(N)
+	### self-made, T: O(NlogN), S: O(N)
     from math import floor
     from collections import defaultdict
     def highFive(self, items: List[List[int]]) -> List[List[int]]:

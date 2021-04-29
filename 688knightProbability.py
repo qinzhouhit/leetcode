@@ -12,12 +12,13 @@ from typing import List
 # dp[k][i][j] = sum(dp[k-1][y][x]) for all (x,y) can move to (j, i)
 class Solution:
     
+    # official
     # T: O(K*N^2); S: O(N^2)
     # final dp[r][c]: probability of on (r,c) after k steps
     # summing up across all cells: the probability of remaining on the board
-    def knightProbability(self, N: int, K: int, r: int, c: int) -> float:
+    def knightProbability(self, N: int, K: int, row: int, column: int) -> float:
         dp = [[0] * N for _ in range(N)]
-        dp[r][c] = 1 # one way, i.e., no hop
+        dp[row][column] = 1 # one way, i.e., no hop
         for _ in range(K):
             dp2 = [[0] * N for _ in range(N)]
             for r, row in enumerate(dp):

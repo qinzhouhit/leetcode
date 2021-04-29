@@ -11,6 +11,7 @@ class Solution:
 
     # TODO: one-pass simulation
     # S: O(1), four costs/ profits followed by four transactions
+    # https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/39611/Is-it-Best-Solution-with-O(n)-O(1).
     def maxProfit1(self, prices: List[int]) -> int:
         t1_cost, t2_cost = float('inf'), float('inf')
         t1_profit, t2_profit = 0, 0
