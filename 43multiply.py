@@ -15,9 +15,9 @@ class Solution:
             for j, e2 in enumerate(reversed(num2)):
                 # int1 = ord(v1) - ord('0')
                 # int2 = ord(v2) - ord('0')
-                res[i+j] += int(e1) * int(e2)
-                res[i+j+1] += int(res[i+j] / 10) # carry
-                res[i+j] %= 10
+                res[i + j] += int(e1) * int(e2)
+                res[i + j + 1] += int(res[i + j] / 10) # carry
+                res[i + j] %= 10
         # have 0 in the beginning
         while len(res) > 1 and res[-1] == 0: 
             res.pop()

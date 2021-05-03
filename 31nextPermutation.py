@@ -15,7 +15,7 @@ class Solution:
     one has to find a "ascending" number to swap with one number in the descending subarray
     '''
     def nextPermutation1(self, nums: List[int]) -> None:
-        i = j = len(nums) - 1
+        i = len(nums) - 1
         # until we find i that nums[i-1] < nums[i], all nums to the right of
         # nums[i-1] are sorted in descending order
         while i > 0 and nums[i-1] >= nums[i]: 
@@ -24,10 +24,12 @@ class Solution:
             nums.reverse() # then it is impossible to find next permutation
             return # return the reversed one as required
         k = i - 1 # find the last "ascending" position, when nums[i-1] < nums[i]
+        j = len(nums) - 1
         while nums[j] <= nums[k]: 
             j -= 1 # until we have nums[j] > nums[i-1]
         nums[k], nums[j] = nums[j], nums[k] # swap j-th and k-th, wont affect the right subarray being descending
         l, r = k+1, len(nums)-1  # reverse the second part
+        # we need to place those numbers in ascending order to get their smallest permutation.
         while l < r: # reverse the right subarray to make it minimal
             nums[l], nums[r] = nums[r], nums[l]
             l += 1

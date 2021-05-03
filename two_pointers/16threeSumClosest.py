@@ -28,16 +28,16 @@ class Solution:
         for i in range(len(nums) - 2):
             l, r = i+1, len(nums) - 1
             while l < r:
-                sum = nums[i] + nums[l] + nums[r]
-                if sum == target:
-                    return sum
+                sum_ = nums[i] + nums[l] + nums[r]
+                if sum_ == target:
+                    return sum_
 
-                if abs(sum - target) < abs(result - target):
-                    result = sum
+                if abs(sum_ - target) < abs(result - target):
+                    result = sum_
 
-                if sum < target:
+                if sum_ < target:
                     l += 1
-                elif sum > target:
+                elif sum_ > target:
                     r -= 1
         return result
     
@@ -49,15 +49,14 @@ class Solution:
         
         smallest_diff = float("inf")
         for i in range(len(nums)-2):
-            l = i + 1
-            r = len(nums) - 1
+            l, r = i + 1, len(nums) - 1
             while l < r:
-                # print (i, l, r)
                 diff_tmp = target - (nums[i] + nums[l] + nums[r])
                 if diff_tmp == 0:
                     return target
                     
-                if abs(diff_tmp) < abs(smallest_diff) or abs(diff_tmp) == abs(smallest_diff) and diff_tmp < 0:
+                if abs(diff_tmp) < abs(smallest_diff) or \
+                   abs(diff_tmp) == abs(smallest_diff) and diff_tmp < 0:
                     smallest_diff = diff_tmp
             
                 if diff_tmp > 0:

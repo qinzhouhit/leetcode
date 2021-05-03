@@ -14,9 +14,12 @@ class Solution:
         l, r = 0, len(height)-1 # inclusive idx
         maxArea = 0
         while l < r:
-            maxArea = max(maxArea, (r-l)*min(height[l], height[r]))
-            if height[l] < height[r]:
-                l += 1
+            maxArea = max( maxArea, (r-l) * min(height[l], height[r]) )
+            # we want to change the smaller one, since it determines the 
+            # water capacity. If we move higher boundary, the water level
+            # is still determined by the lower boundary with shorter interval
+            if height[l] < height[r]: 
+                l += 1 
             else:
                 r -= 1
         return maxArea

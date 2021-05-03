@@ -1,5 +1,5 @@
 '''
-keys: 
+keys: sliding window
 Solutions:
 Similar:
 T:
@@ -7,8 +7,36 @@ S:
 '''
 from typing import List
 
+'''
+Given an array of characters where each character represents a fruit tree, 
+you are given two baskets, and your goal is to put maximum number of fruits
+ in each basket. The only restriction is that each basket can have only one
+  type of fruit.
+
+You can start with any tree, but you can’t skip a tree once you have started.
+ You will pick one fruit from each tree until you cannot, i.e., you will stop
+  when you have to pick from a third fruit type.
+
+Write a function to return the maximum number of fruits in both baskets.
+'''
 
 class Solution:
+    # official sliding window
+    # O(N) for S and T
+    def totalFruit(self, tree):
+        ans = l = 0
+        count = collections.Counter()
+        for r, x in enumerate(tree): # x: fruit type
+            count[x] += 1
+            while len(count) >= 3: # three different fruit types already
+                count[tree[l]] -= 1
+                if count[tree[l]] == 0:
+                    del count[tree[l]]
+                l += 1
+            ans = max(ans, r - l + 1)
+        return ans
+
+
 	# educative.io
 	# T: O(N), S:O(1)
     def totalFruit(self, tree: List[int]) -> int:

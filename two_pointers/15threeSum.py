@@ -9,6 +9,39 @@ S: O(1) for res
 
 
 class Solution:
+    ##### educative.io version, two pointers
+    # T: O(n^2), S: O(logn) to O(n), depending on sort
+    def threeSum1(self, nums):
+        
+        def helper(nums, target, l, triplets):
+            r = len(nums) - 1
+            while l < r:
+                tmp = nums[l] + nums[r]
+                if tmp == target:
+                    triplets.append([-target, nums[l], nums[r]])
+                    l += 1
+                    r -= 1
+                    # check if the cur l-idx val is the same as the previous one
+                    # we check l-1 since we just incremented l by 1
+                    while l < r and nums[l] == nums[l-1]: # l < len(nums) also works
+                        l += 1
+                    while l < r and nums[r] == nums[r+1]: # r >= 0 also works
+                        r -= 1
+                elif tmp < target:
+                    l += 1
+                else:
+                    r -= 1
+        
+        nums.sort()
+        triplets = []
+
+        for i in range(len(nums)): # must start from 0 for case like [0,0,0]
+            if i > 0 and nums[i-1] == nums[i]:
+                continue # skip the duplicated numbers
+            helper(nums, -nums[i], i+1, triplets)
+        return triplets
+
+
     ##### O(nLogn + nn) => O(n^2)
     def threeSum(self, nums):
         res = []
@@ -37,39 +70,6 @@ class Solution:
                         r -= 1
                     l += 1; r -= 1 # search for new combinations
         return res
-
-
-    ##### educative.io version, two pointers
-    # T: O(n^2), S: O(logn) to O(n), depending on sort
-    def threeSum1(self, nums):
-        nums.sort()
-        triplets = []
-        
-        def helper(nums, target, l, triplets):
-            r = len(nums) - 1
-            while l < r:
-                tmp = nums[l] + nums[r]
-                if tmp == target:
-                    triplets.append([-target, nums[l], nums[r]])
-                    l += 1
-                    r -= 1
-                    # check if the cur l-idx val is the same as the previous one
-                    # we check l-1 since we just incremented l by 1
-                    while l < r and nums[l] == nums[l-1]: # l < len(nums) also works
-                        l += 1
-                    while l < r and nums[r] == nums[r+1]: # r >= 0 also works
-                        r -= 1
-                elif tmp < target:
-                    l += 1
-                else:
-                    r -= 1
-                    
-        for i in range(len(nums)):
-            if i > 0 and nums[i-1] == nums[i]:
-                continue # skip the duplicated numbers
-            helper(nums, -nums[i], i+1, triplets)
-        return triplets
-    
 
 
     ##### using twoSum
