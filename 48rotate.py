@@ -19,20 +19,20 @@ class Solution:
     #                      A[~j][i], A[~i][~j], A[j][~i], A[i][j]
 
     def rotate(self, A):
-        # tranpose first, then flip horizontally
+        # transpose first, then flip horizontally
         n = len(A)
 
         for i in range(n):
             for j in range(i+1, n):
-                tmp=A[i][j]
-                A[i][j]=A[j][i]
-                A[j][i]=tmp
+                tmp = A[i][j]
+                A[i][j] = A[j][i]
+                A[j][i] = tmp
 
         for i in range(n):
-            for j in range(int(n/2)):
-                tmp=A[i][j]
-                A[i][j]=A[i][~j]
-                A[i][~j]=tmp
+            for j in range(n // 2):
+                tmp = A[i][j]
+                A[i][j] = A[i][~j]
+                A[i][~j] = tmp
 
         return A
 
