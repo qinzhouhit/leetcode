@@ -21,26 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="4825f556-588c-4dbd-a66b-7c5371046d20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/121maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/121maxProfit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/123maxProfit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/153findMin.py" beforeDir="false" afterPath="$PROJECT_DIR$/153findMin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/166fractionToDecimal.py" beforeDir="false" afterPath="$PROJECT_DIR$/166fractionToDecimal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/188maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/188maxProfit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/309maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/309maxProfit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/443compress.py" beforeDir="false" afterPath="$PROJECT_DIR$/443compress.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/49groupAnagrams.py" beforeDir="false" afterPath="$PROJECT_DIR$/49groupAnagrams.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/62uniquePaths.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/688knightProbability.py" beforeDir="false" afterPath="$PROJECT_DIR$/688knightProbability.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/706MyHashMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/706MyHashMap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/70climbStairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/70climbStairs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/714maxProfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/714maxProfit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7reverse.py" beforeDir="false" afterPath="$PROJECT_DIR$/7reverse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/862shortestSubarray.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8myAtoi.py" beforeDir="false" afterPath="$PROJECT_DIR$/8myAtoi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heap/1086highFive.py" beforeDir="false" afterPath="$PROJECT_DIR$/heap/1086highFive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1345minJumps.py" beforeDir="false" afterPath="$PROJECT_DIR$/1345minJumps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/729MyCalendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/729MyCalendar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/743networkDelayTime.py" beforeDir="false" afterPath="$PROJECT_DIR$/743networkDelayTime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dfs/399calcEquation.py" beforeDir="false" afterPath="$PROJECT_DIR$/dfs/399calcEquation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sliding_window/3lengthOfLongestSubstring.py" beforeDir="false" afterPath="$PROJECT_DIR$/sliding_window/3lengthOfLongestSubstring.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topK_elements/215kthLargest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort_bubble.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort_insertion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort_selection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting/0sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting/readMe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

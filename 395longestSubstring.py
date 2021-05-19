@@ -45,7 +45,8 @@ class Solution:
     def longestSubstring2(self, s: str, k: int) -> int:
         for c in set(s):
             if s.count(c) < k:
-                return max(self.longestSubstring(t, k) for t in s.split(c))
+                return max(self.longestSubstring2(t, k) for t in s.split(c))
+        # if all chars have frequency at least k (>= k)
         return len(s)
 
 
@@ -55,4 +56,8 @@ class Solution:
         c = min(set(s), key=s.count)
         if s.count(c) >= k:
             return len(s)
-        return max(self.longestSubstring(t, k) for t in s.split(c))
+        return max(self.longestSubstring1(t, k) for t in s.split(c))
+
+
+
+

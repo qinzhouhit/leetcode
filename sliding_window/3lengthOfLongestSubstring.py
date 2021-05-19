@@ -25,7 +25,7 @@ class Solution:
 
 
     # self-made
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def lengthOfLongestSubstring1(self, s: str) -> int:
         if not s:
             return 0
         
@@ -42,7 +42,7 @@ class Solution:
 
 
     # official
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def lengthOfLongestSubstring2(self, s: str) -> int:
         chars = [0] * 128 # for frequency track
 
         left = right = 0

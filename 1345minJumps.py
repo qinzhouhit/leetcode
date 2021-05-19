@@ -24,5 +24,32 @@ class Solution:
     		else:
     			g[val] = [i]
 
-    	# 
+    	curs = [0] # store current layers, 0 for idx
+    	visited = {0}
+    	steps = 0
+
+    	# when cur layer exists
+    	while curs:
+    		nxt = [] # next layer
+    		for node in curs: # node is cur idx
+    			if node == n - 1:
+    				return steps
+	    		# check same value
+	    		for nei in g[arr[node]]:
+	    			if nei not in visited:
+	    				visited.add(nei)
+	    				nxt.append(nei)
+	    		# clear the list to prevent redundant search
+	    		# a.clear(): empty the list
+	    		g[arr[node]].clear()
+	    		# check neighbors, as defined in the question
+	    		for nei in [node-1, node+1]:
+	    			if 0 <= nei < len(arr) and nei not in visited:
+	    				visited.add(nei)
+	    				nxt.append(nei)
+    		curs = nxt
+    		steps += 1
+
+    	return -1
+
         
