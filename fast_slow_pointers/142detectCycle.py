@@ -14,7 +14,7 @@ class ListNode:
         self.next = None
 
 class Solution:
-    # TODO: educative.io version, need to calculate the distance
+    ##### TODO: educative.io version, need to calculate the distance
     def detectCycle3(self, head):
         cycle_len = 0
         slow, fast = head, head
@@ -27,6 +27,7 @@ class Solution:
         return self.find_start(head, cycle_len)
 
     def cycle_len_cal(self, slow):
+        # calculate the length of the cycle
         cur = slow
         len_ = 0
         while True:
@@ -48,8 +49,8 @@ class Solution:
 
 
 
-
-    # TODO: two pointer (fast and slow)
+    # The method to go...
+    ##### TODO: two pointer (fast and slow)
     # O(1) for S and O(n) for T
     def getIntersect(self, head):
         slow = head
@@ -71,14 +72,14 @@ class Solution:
 
         # If there is a cycle, the fast/slow pointers will intersect at some
         # node. Otherwise, there is no cycle, so we cannot find an entrance to
-        # a cycle.
+        # a cycle. 
         intersect = self.getIntersect(head)
         if intersect is None:
             return None
 
         # To find the entrance to the cycle, we have two pointers traverse at
         # the same speed -- one from the front of the list, and the other from
-        # the point of intersection.
+        # the point of intersection. When they intersect, the point is the entrance
         ptr1 = head
         ptr2 = intersect
         while ptr1 != ptr2:
@@ -88,7 +89,22 @@ class Solution:
         return ptr1
 
 
-    # TODO: improved pointer (fast and slow)
+    ##### TODO: hashset
+    # O(n) for S and T
+    def detectCycle(self, head: ListNode) -> ListNode:
+        visited = set()
+        node = head
+        while node is not None:
+            if node in visited:
+                return node
+            else:
+                visited.add(node)
+                node = node.next
+        return node
+
+
+
+    ##### TODO: improved pointer (fast and slow)
     # this is hard to think of 
     # O(1) for S and O(n) for T
     def detectCycle2(self, head):
@@ -104,15 +120,7 @@ class Solution:
         return None
 
 
-    # TODO: hashset
-    # O(n) for S and T
-    def detectCycle(self, head: ListNode) -> ListNode:
-        visited = set()
-        node = head
-        while node is not None:
-            if node in visited:
-                return node
-            else:
-                visited.add(node)
-                node = node.next
-        return node
+    
+
+
+

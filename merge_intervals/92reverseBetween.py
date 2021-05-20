@@ -13,6 +13,8 @@ class ListNode:
         self.next = None
 
 class Solution:
+
+    # the lastest version use left and right for m and n
     # self-made; T: O(N), S: O(1)
     def reverseBetween1(self, head: ListNode, m: int, n: int) -> ListNode:
         if m == n:

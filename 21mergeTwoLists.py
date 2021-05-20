@@ -15,6 +15,7 @@ class ListNode:
         self.next = None
 
 class Solution:
+    # T: O(n+m), S: O(1)
     def mergeTwoLists(self, l1, l2):
         dummy = cur = ListNode(0)
         while l1 and l2:
@@ -28,7 +29,9 @@ class Solution:
         cur.next = l1 or l2
         return dummy.next
 
+
     # recursively
+    # O(n+m) for S and T
     def mergeTwoLists2(self, l1, l2):
         if not l1 or not l2:
             return l1 or l2

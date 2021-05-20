@@ -29,17 +29,18 @@ class Solution:
     def maxSlidingWindow(self, nums, k):
         res = []
         q = deque()
+        # q: monotonous decreasing
         # make sure the rightmost one is the smallest/ leftmost one is the biggest
         for idx, num in enumerate(nums):
             while q and num >= nums[q[-1]]:
                 q.pop()
-            # add current num idx
+            # add current num idx anyway
             q.append(idx)
             # make sure the leftmost one is in-bound
             # check this first, corner case: [1, -1], 1
             if idx - q[0] >= k:
                 q.popleft()
-            # if i + 1 < k, then we are initializing the q array
+            # once having k elements, we append the cur max to the res
             if idx >= k - 1: # e.g., having at least k elements now
                 res.append(nums[q[0]])
         return res

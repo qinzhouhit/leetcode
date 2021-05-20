@@ -15,14 +15,16 @@ class ListNode:
 
 class Solution:
     # T: O(N), S: O(1), reverse the second half
+    # and compare the two halves
     def isPalindrome1(self, head):
         fast = slow = head
         # find the mid node, i.e., slow
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-        # reverse the second half
-        node = None # head of the reversed half
+        # reverse the second half, slow is middle node now if odd # nodes
+        # slow is the beginning of second half, if even # nodes
+        node = None # head of the reversed half, working similarly to prev
         while slow:
             nxt = slow.next # nxt is tmp node
             slow.next = node # for the 1st loop, slow.next = None
@@ -36,7 +38,7 @@ class Solution:
             head = head.next
         return True
     
-
+    # ?
     def isPalindrome(self, head: ListNode) -> bool:
         rev = None
         slow = fast = head
@@ -52,6 +54,23 @@ class Solution:
             rev = rev.next
             slow = slow.next
         return not rev
+
+
+    # recursive version, O(n) for S and T
+    def isPalindrome(self, head: ListNode) -> bool:
+
+        self.front_pointer = head
+
+        def recursively_check(current_node=head):
+            if current_node is not None:
+                if not recursively_check(current_node.next):
+                    return False
+                if self.front_pointer.val != current_node.val:
+                    return False
+                self.front_pointer = self.front_pointer.next
+            return True
+
+        return recursively_check()
     
 
     # O(N) for S and T: converting to list
@@ -62,5 +81,9 @@ class Solution:
             vals.append(current_node.val)
             current_node = current_node.next
         return vals == vals[::-1]
+
+
+
+
     
 
