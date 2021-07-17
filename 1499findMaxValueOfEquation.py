@@ -23,4 +23,12 @@ class Solution:
 	# T: O(NlogN)
 	# S: O(N)
     def findMaxValueOfEquation(self, points: List[List[int]], k: int) -> int:
-        
+        q = []
+        res = float("-inf")
+        for x, y in points:
+        	while q and q[0][1] < x - k:  # not(xj - xi >= -k) -> not(xj >= xi - k) -> xj < xi - k
+        		heapq.heappop(q)
+        	if q:  # pop the minimal one of x-y, i.e., max y-x
+        		res = max(res, -q[0][0] + x + y)
+        	heap.heappush(q, (x - y, x))  # maximize yi - xi, i.e., minimize xi - yi
+
