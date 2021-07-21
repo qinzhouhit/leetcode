@@ -33,7 +33,7 @@ class Codec:
                 transform(node.right)
             else:
                 vals.append("#")
-        vals = [] # don't use vals += "", since it keeps creating new string object
+        vals = []  # don't use vals += "", since it keeps creating new string object
         transform(root)
         return " ".join(vals)
     

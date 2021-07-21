@@ -1,4 +1,4 @@
-""" 
+"""
 keys: 
 Solutions:
 Similar:
@@ -21,7 +21,7 @@ class Solution:
         		heapq.heappush(h, (tasks[i][1], tasks[i][2]))  # processing_time, original_idx
         		i += 1
         	if h:
-        		t_diff, original_idx = heapq.heappop(h)
+        		t_diff, original_idx = heapq.heappop(h)  # the shortest processing_time
         		time += t_diff
         		res.append(original_idx)
         	elif i < len(tasks):  # h empty, let the CPU sit idle

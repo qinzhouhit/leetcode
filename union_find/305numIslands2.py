@@ -1,10 +1,10 @@
-'''
+"""
 keys:
 Solutions:
 Similar:
 T:
 S:
-'''
+""" 
 from typing import List
 
 
@@ -18,19 +18,19 @@ from typing import List
 # using a hashmap/dictionary for the underlying data structure to avoid this overhead.
 class DSU:
 	def __init__(self): 
-		self.id = {} # k: (r,c) of the point, v: its root
+		self.parent = {} # k: (r,c) of the point, v: its root/parent
 		self.size = {}
 		self.count = 0 # number of connected components
 
 	def add(self, p): # p here is the tuple (r, c)
-		self.id[p] = p
+		self.parent[p] = p
 		self.size[p] = 1
 		self.count += 1
 
 	def find(self, x): # find root, path compression
-		while x != self.id[x]: # WHILE!!!
-			self.id[x] = self.id[self.id[x]] # this line is not necessary
-			x = self.id[x]
+		while x != self.parent[x]: # WHILE!!!
+			self.parent[x] = self.parent[self.parent[x]] # this line is not necessary
+			x = self.parent[x]
 		return x
 
 	def union(self, a, b): # optimized version, making smaller one part of bigger one
@@ -40,7 +40,7 @@ class DSU:
 			return # in the same set
 		if self.size[ra] > self.size[rb]:
 			ra, rb = rb, ra # making a the flat one
-		self.id[ra] = rb # making a part of b
+		self.parent[ra] = rb # making a part of b, a is the lower rank one
 		self.size[rb] += self.size[ra] # 
 		self.count -= 1
 
@@ -49,13 +49,13 @@ class Solution:
 		res = []
 		islands = DSU()
 		for p in map(tuple, positions):
-			if p in islands.id: # repeated island
+			if p in islands.parent: # repeated island
 				res += [islands.count]
 			else:
 				islands.add(p)
 				for dt in [(0,1), (0,-1), (1,0), (-1,0)]:
 					q = (p[0] + dt[0], p[1] + dt[1]) # new point
-					if q in islands.id:
+					if q in islands.parent:
 						islands.union(p, q)
 				res += [islands.count]
 		return res
